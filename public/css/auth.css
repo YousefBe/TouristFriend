@@ -1,0 +1,316 @@
+/* ================================================================================ */
+/* login & signup */
+/* ================================================================================ */
+.MyCont:before {
+    content: "";
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, rgba(96, 165, 250), rgba(96, 165, 250));
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    z-index: 6;
+    transition: 1.8s ease-in-out;
+}
+
+.image {
+    width: 100%;
+    opacity: 0;
+    animation: fade-in-right 1s forwards ease-in-out;
+}
+.sign-in-form {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* grid-column: 1 / 2;
+    grid-row: 1 / 2; */
+    padding: 0 5rem;
+    overflow: hidden;
+    transition: 0.2s 0.7s ease-in-out;
+}
+
+.signin-signup {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+    transition: 1s 0.7s ease-in-out;
+}
+
+.field-input {
+    max-width: 380px;
+    border-radius: 55px;
+    height: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+.field-input i {
+    color: #acacac;
+    font-size: 1.1rem;
+    line-height: 55px;
+    text-align: center;
+}
+.login-input {
+    outline: none;
+    box-shadow: none !important;
+    font-size: 1.1rem;
+    color: #333;
+}
+.btn {
+    width: 150px;
+    height: 49px;
+    border: none;
+    outline: none;
+    border-radius: 49px;
+    cursor: pointer;
+    background-color: #5995fd;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: 0.5s;
+    border: 2px solid white;
+}
+.panels-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 6;
+}
+.image {
+    width: 100%;
+    transition: 1.1s 0.4s ease-in-out;
+}
+.panel .content {
+    color: #fff;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.6s;
+    animation: fade-in-bottom 1s forwards ease-in-out;
+    opacity: 0;
+}
+.left-panel {
+    padding: 3rem 17% 2rem 12%;
+}
+
+@media (max-width: 870px) {
+    .MyCont {
+        min-height: 800px;
+        height: 100vh;
+    }
+    .MyCont:before {
+        /* display: none; */
+        width: 1500px;
+        height: 1500px;
+        left: 30%;
+        bottom: 50%;
+        transform: translateX(-70%);
+        right: initial;
+        top: initial;
+        transition: 2s ease-in-out;
+    }
+    .signin-signup {
+        width: 100%;
+        left: 50%;
+        top: 95%;
+        transform: translate(-50%, -100%);
+    }
+    .panels-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+    .panel {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .panel .content {
+        padding-right: 15%;
+    }
+    .panel h3 {
+        font-size: 1.2rem;
+    }
+    .panel p {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+    }
+
+    .image {
+        width: 200px;
+    }
+}
+@media (max-width: 570px) {
+    form {
+        padding: 0 1.5rem;
+    }
+    .image {
+        display: none;
+    }
+    .panel .content {
+        padding: 0.5rem 1rem;
+    }
+    .MyCont:before {
+        bottom: 60%;
+        left: 70%;
+    }
+}
+/* ================================================================================ */
+/*eof login & signup */
+/* ================================================================================ */
+
+/* animations */
+
+@keyframes fade-in-right {
+    from {
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade-in-left {
+    from {
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade-in-bottom {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.SignupCont:before {
+    content: "";
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, rgba(96, 165, 250), rgba(96, 165, 250));
+    top: -60%;
+    left: 38%;
+    transform: translateY(-50%);
+    z-index: 6;
+    transition: 1.8s ease-in-out;
+}
+.sign-up-form {
+    padding: 0 5rem;
+    overflow: hidden;
+    transition: 0.2s 0.7s ease-in-out;
+    text-align: center;
+    width: 500px;
+    margin: 0 0 80px 100px;
+}
+.orLogin {
+    width: 500px;
+    z-index: 20;
+}
+.content {
+    transition: all 0.5s ease-in-out;
+}
+@media (max-width: 870px) {
+    .SignupCont {
+        min-height: 800px;
+        height: 100vh;
+    }
+
+    .sign-up-form {
+        width: 100%;
+
+        padding-right: 0;
+        margin-left: 30px;
+    }
+    /* .SignupCont:before {
+        top: -80%;
+        right: -25%;
+        transform: translateY(50%);
+    } */
+    .orLogin {
+        display: flex;
+        position: absolute;
+        text-align: center;
+    }
+
+    .panel h3 {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 570px) {
+    form {
+        padding: 0 1.5rem;
+    }
+    .image {
+        display: none;
+    }
+    .panel .content {
+        padding: 0.5rem 1rem;
+    }
+    .SignupCont:before {
+        bottom: 40%;
+        left: 44%;
+    }
+    .sign-up-form {
+        padding-right: 0;
+        margin-left: 30px;
+    }
+    .content {
+        width: 50%;
+        margin: 70px auto;
+    }
+}
+
+/* 
+
+.input-field {
+    max-width: 380px;
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    height: 55px;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+}
+
+.input-field i {
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    transition: 0.5s;
+    font-size: 1.1rem;
+}
+
+.input-field input {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+} */
