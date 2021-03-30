@@ -16,10 +16,10 @@ class CreateCitiesTable extends Migration
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->float('longtiude');
-            $table->float('latitude');
-            $table->string('details');
-            $table->string('weather');
+            $table->string('longtiude');
+            $table->string('latitude');
+            $table->text('details');
+            $table->text('weather');
             $table->unsignedBigInteger('country_id');
             $table->foreign('country_id')->references('id')->on('countries');
             $table->timestamps();

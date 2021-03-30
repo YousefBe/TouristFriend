@@ -14,6 +14,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(LaratrustSeeder::class);
+        $this->call(CountrySeeder::class);
+        $this->call(CitySeeder::class);
         // \App\Models\User::factory(10)->create();
     }
 }

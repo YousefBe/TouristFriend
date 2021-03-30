@@ -15,15 +15,17 @@ class CreateCountriesTable extends Migration
     {
         Schema::create('countries', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->float('longtiude');
-            $table->float('latitude');
-            $table->string('contnent');
-            $table->string('details');
-            $table->string('weather');
+            $table->string('name')->unique();
+            $table->string('longtiude');
+            $table->string('latitude');
+            $table->enum('contnent', ['Africa', 'Antarctica', 'Asia', 'Australia', 'Europe', 'North America', 'South America']);
+            $table->text('details');
+            $table->text('weather');
             $table->string('currency');
             $table->string('population');
-            $table->string('budget');
+            $table->text('budget');
+            $table->enum('budget_flag', ['low', 'medium', 'expensive']);
+            $table->enum('weather_flag', ['cold', 'moderate', 'hot']);
             $table->timestamps();
         });
     }

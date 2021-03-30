@@ -1,7 +1,4 @@
-@if(Request::is('/')) <nav class="bg-transparent lg:px-16  py-3   relative z-50  nav" x-data="{ open: false }">
-@else 
-<nav class="bg-gray-100 lg:px-16  py-3 shadow  relative z-50 nav" x-data="{ open: false }">
-@endif
+<nav class="bg-white lg:px-16  py-3 shadow  relative z-50 nav" x-data="{ open: false }">
     {{-- Main NavBar --}}
  <div class="flex items-center  justify-between ">
     <a href="{{ route('home') }}" class="flex items-center ml-3">
@@ -14,17 +11,11 @@
 
     <div>
         <ul class="hidden lg:flex ">
-            <a href="{{route('home')}}"  class=" mr-6  p-3 text-base font-bold uppercase   ">
+            <a href="{{route('home')}}"  class=" mr-6  p-3 text-base font-bold uppercase ">
                 {{ __('Home') }}
             </a>
-            <a href="{{route('home')}}"  class=" mr-6  p-3  text-base font-bold uppercase  ">
+            <a href="{{route('home')}}"  class=" mr-6  p-3  text-base font-bold uppercase  " >
                 {{ __('Blog') }}
-            </a>
-            <a href="{{route('home')}}"  class=" mr-6 p-3 text-base font-bold uppercase  ">
-                {{ __('About Us') }}
-            </a>
-            <a href="{{route('contact-us')}}"  class=" mr-6  p-3   text-base font-bold uppercase  ">
-                {{ __('Contact Us') }}
             </a>
             
            @if (Auth::user())
@@ -55,7 +46,7 @@
             </x-slot>
             </x-dropdown>
              @else
-        <a href="{{route('login')}}"  class="   p-3  text-base font-bold uppercase    ">
+        <a href="{{route('login')}}"  class="p-3  text-base font-bold uppercase">
             {{ __('Signup & login') }}
         </a>
            @endif

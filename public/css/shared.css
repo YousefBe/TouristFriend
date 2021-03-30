@@ -36,6 +36,9 @@ main {
 /* ================================================================================ */
 /* home page */
 /* ================================================================================ */
+.section-height {
+    min-height: 690px;
+}
 .homeSvg {
     width: 520px;
     animation: fade-in-left 1s 0.5s forwards ease-in-out;
@@ -47,18 +50,11 @@ main {
     background-position: center;
     background-repeat: no-repeat;
 }
-.customBack {
-    background-image: url("../images/no52.jpg");
-}
+
 .image1 {
     background-image: url("../images//home3.jpg");
 }
-.image2 {
-    background-image: url("../images//home2.jpg");
-}
-.image3 {
-    background-image: url("../images/no1.jpg");
-}
+
 /* .content-para {
     max-width: 800px;
 } */
@@ -80,36 +76,7 @@ main {
 /* ================================================================================ */
 /* Contact Us page */
 /* ================================================================================ */
-.big-circle {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    transform: translate(-40%, 38%);
-    background: rgba(96, 165, 250);
-    bottom: 50%;
-    right: 50%;
-}
-.big-circle:after {
-    content: "";
-    position: absolute;
-    width: 360px;
-    height: 360px;
-    background-color: #fafafa;
-    border-radius: 50%;
-    top: calc(50% - 180px);
-    left: calc(50% - 180px);
-}
-.square {
-    height: 400px;
 
-    transform: translate(181%, 11%);
-    opacity: 0.2;
-}
-
-.form-container {
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-}
 .circle {
     background: linear-gradient(135deg, transparent 20%, rgb(72, 118, 170));
 }
@@ -212,14 +179,7 @@ main {
     }
 }
 @media (max-width: 480px) {
-    .cont {
-        padding: 1.5rem;
-    }
     .contact-info:before {
-        display: none;
-    }
-    .square,
-    .big-circle {
         display: none;
     }
     form,
@@ -231,79 +191,6 @@ main {
 /* ================================================================================ */
 /* eof Contact Us page  */
 /* ================================================================================ */
-
-/* ================================================================================ */
-/* section SVGs  */
-/* ================================================================================ */
-.custom-shape-divider-bottom-1612736598 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-bottom-1612736598 svg {
-    position: relative;
-    display: block;
-    width: calc(149% + 1.3px);
-    height: 269px;
-}
-
-.custom-shape-divider-bottom-1612736598 .shape-fill {
-    fill: #ffffff;
-}
-.custom-shape-divider-top-1612736516 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-top-1612736516 svg {
-    position: relative;
-    display: block;
-    width: calc(149% + 1.3px);
-    height: 269px;
-}
-
-.custom-shape-divider-top-1612736516 .shape-fill {
-    fill: #ffffff;
-}
-.custom-shape-divider-top-1612736823 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-top-1612736823 svg {
-    position: relative;
-    display: block;
-    width: calc(149% + 1.3px);
-    height: 269px;
-}
-
-.custom-shape-divider-top-1612736823 .shape-fill {
-    fill: rgba(96, 165, 250);
-}
-/* ================================================================================ */
-/* eof section SVGs  */
-/* ================================================================================ */
-
-@media (max-width: 767px) {
-    .custom-shape-divider-bottom-1612561398 svg {
-        width: calc(244% + 1.3px);
-        height: 160px;
-    }
-}
 
 /* animations */
 
