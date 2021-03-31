@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
         $this->call(LaratrustSeeder::class);
         $this->call(CountrySeeder::class);
         $this->call(CitySeeder::class);
+        $this->call(HotelSeeder::class);
+        $this->call(RestaurantSeeder::class);
         // \App\Models\User::factory(10)->create();
     }
 }

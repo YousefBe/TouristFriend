@@ -18,7 +18,7 @@ class CreateRestaurantsTable extends Migration
             $table->string('name');
             $table->float('longtiude');
             $table->float('latitude');
-            $table->string('details');
+            $table->text('details');
             $table->string('rate');
 
             $table->unsignedBigInteger('country_id');

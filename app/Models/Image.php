@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Image extends Model
 {
-    public $fillable = ['image'];
+    public $fillable = ['file_name'];
     use HasFactory;
 
     public function country()
