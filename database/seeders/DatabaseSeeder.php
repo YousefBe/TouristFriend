@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CitySeeder::class);
         $this->call(HotelSeeder::class);
         $this->call(RestaurantSeeder::class);
+        $this->call(PointOfInterestSeeder::class);
         // \App\Models\User::factory(10)->create();
     }
 }

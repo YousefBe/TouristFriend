@@ -16,9 +16,9 @@ class CreatePointOfInterestsTable extends Migration
         Schema::create('point_of_interests', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->float('longtiude');
-            $table->float('latitude');
-            $table->string('details');
+            $table->string('longtiude');
+            $table->string('latitude');
+            $table->text('details');
             $table->string('cost');
             $table->string('working_hours');
             $table->unsignedBigInteger('country_id');
