@@ -27,7 +27,19 @@ class CountrySeeder extends Seeder
             'budget_flag' => 'medium',
             'weather_flag' => 'moderate',
         ]);
+        $lebanon->images()->createMany([
+            ['file_name' => 'lebanon0.jpg'],
+            ['file_name' => 'lebanon1.jpg'],
+            ['file_name' => 'lebanon2.png'],
+            ['file_name' => 'lebanon3.png'],
+            ['file_name' => 'lebanon4.png'],
+            ['file_name' => 'lebanon5.png'],
+            ['file_name' => 'lebanon6.jpg'],
+            ['file_name' => 'lebanon7.jpg'],
+            ['file_name' => 'lebanon8.png'],
+        ]);
 
+        // italy
         $italy = Country::create([
             'name' => 'italy',
             'longtiude' =>  " 12.646361",
@@ -45,6 +57,16 @@ class CountrySeeder extends Seeder
             'budget_flag' => 'medium',
             'weather_flag' => 'moderate',
         ]);
+        // images
+        $italy->images()->createMany([
+            ['file_name' => "italy.jpg"],
+            ['file_name' => "italy2.jpg"],
+            ['file_name' => "italy3.jpg"],
+            ['file_name' => "italy4.jpg"],
+            ['file_name' => "italy5.jpg"],
+        ]);
+        // eof italy
+
         $USA = Country::create([
             'name' => 'United States of America ',
             'longtiude' =>  " -95.665",
@@ -79,6 +101,22 @@ class CountrySeeder extends Seeder
             'budget_flag' => 'medium',
             'weather_flag' => 'hot',
         ]);
+        $USA->images()->createMany([
+            ['file_name' => "USA.jpg"],
+            ['file_name' => "USA10.jpg"],
+            ['file_name' => "USA11.jpg"],
+            ['file_name' => "USA12.jpg"],
+            ['file_name' => "USA2.jpg"],
+            ['file_name' => "USA3.jpg"],
+            ['file_name' => "USA4.jpg"],
+            ['file_name' => "USA5.jpg"],
+            ['file_name' => "USA6.jpg"],
+            ['file_name' => "USA7.jpg"],
+            ['file_name' => "USA8.jpg"],
+            ['file_name' => "USA9.jpg"],
+
+        ]);
+
         $Morocco = Country::create([
             'name' => 'Morocco',
             'longtiude' =>  " -6.472819048546225",
@@ -115,6 +153,19 @@ class CountrySeeder extends Seeder
             'budget_flag' => 'low',
             'weather_flag' => 'hot',
         ]);
+        $Morocco->images()->createMany([
+            ['file_name' => "morocco1.jpg"],
+            ['file_name' => "morocco2.jpg"],
+            ['file_name' => "morocco3.jpg"],
+            ['file_name' => "morocco4.jpg"],
+            ['file_name' => "morocco5.jpg"],
+            ['file_name' => "morocco6.jpg"],
+            ['file_name' => "morocco7.jpg"],
+            ['file_name' => "morocco8.jpg"],
+            ['file_name' => "morocco9.jpg"],
+            ['file_name' => "morocco10.jpg"],
+            ['file_name' => "morocco11.jpg"],
+        ]);
         $Czech = Country::create([
             'name' => 'Czech',
             'longtiude' =>  " 15.4749",
@@ -128,6 +179,13 @@ class CountrySeeder extends Seeder
             'budget_flag' => 'medium',
             'weather_flag' => 'cold',
         ]);
+        $Czech->images()->createMany([
+            ['file_name' => "Czech.jpg"],
+            ['file_name' => "Czech2.jpg"],
+            ['file_name' => "Czech3.jpg"],
+            ['file_name' => "Czech4.jpg"],
+            ['file_name' => "Czech5.jpg"],
+        ]);
         $Canada = Country::create([
             'name' => 'Canada',
             'longtiude' =>  "-113.38790643461951",
@@ -140,6 +198,12 @@ class CountrySeeder extends Seeder
             'budget' => 'A vacation to Canada for one week usually costs around CA$1,289 for one person.',
             'budget_flag' => 'expensive',
             'weather_flag' => 'cold',
+        ]);
+        $Canada->images()->createMany([
+            ['file_name' => "Canada.jpg"],
+            ['file_name' => "Canada2.jpg"],
+            ['file_name' => "Canada3.jpg"],
+            ['file_name' => "Canada4.jpg"],
         ]);
     }
 }
