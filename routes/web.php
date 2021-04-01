@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\AdminController;
+use App\Models\City;
 use App\Models\Country;
 
 /*
@@ -18,12 +19,9 @@ use App\Models\Country;
 */
 
 Route::get('/', function () {
-    // $files = Storage::files('public/countries/');
-    // dd($files);
-
-    // dd(scandir('../storage/app/public/countries/'));
+    // dd(scandir('../storage/app/public/cities/'));
     return view('landing.welcome', [
-        'country' => Country::find(6)
+        'city' => City::find(18)
     ]);
 })->name('home');
 

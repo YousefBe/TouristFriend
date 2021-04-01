@@ -23,6 +23,13 @@ class CitySeeder extends Seeder
             'weather' => "The best time to visit Baalbek in Lebanon is from may until october, when you will have a pleasant or warm temperature and limited rainfall. The highest average temperature in Baalbek is 28°C in july and the lowest is 9°C in january.",
             'country_id' => 1,
         ]);
+        $Baalbek->images()->createMany([
+            ['file_name' => "Baalbek.jpg"],
+            ['file_name' => "Baalbek2.jpg"],
+            ['file_name' => "Baalbek3.jpg"],
+            ['file_name' => "Baalbek4.jpg"],
+            ['file_name' => "Baalbek5.jpg"],
+        ]);
         $Beirut = City::create([
             'name' => "Beirut",
             'longtiude' => "35.512123",
@@ -31,6 +38,16 @@ class CitySeeder extends Seeder
             'weather' => "Average temperatures in Beirut vary greatly. Considering humidity, temperatures feel nice most of the year, excluding some hot weeks in the summer, with a low chance of precipitation most of the year.",
             'country_id' => 1,
         ]);
+        $Beirut->images()->createMany([
+            ['file_name' => "Beirut.jpg"],
+            ['file_name' => "Beirut2.jpg"],
+            ['file_name' => "Beirut3.jpg"],
+            ['file_name' => "Beirut4.jpg"],
+            ['file_name' => "Beirut5.jpg"],
+            ['file_name' => "Beirut6.jpg"],
+            ['file_name' => "Beirut7.png"],
+            ['file_name' => "Beirut9.jpg"],
+        ]);
         $Tripoli = City::create([
             'name' => "Tripoli",
             'longtiude' => "35.84972",
@@ -38,6 +55,15 @@ class CitySeeder extends Seeder
             'details' => "Tripoli is the second-largest, second-most-populous and one of the biggest cities in Lebanon. This city located in the northern region of Lebanon. Tripoli has a population of 229,398 people. Like Beirut, Tripoli is an ancient city with great archaeological importance due to its rich architectural heritage that has developed throughout the centuries of its existence. Tripoli served as an important financial center and a port during the early centuries of its establishment and has remained a major port in Lebanon. The city has important tourist attractions like the clock tower and the Palm Islands Nature Reserves. Tripoli is an important religious center too with mosques and churches, educational centers, and transport and communication center.",
             'weather' => "In Tripoli, the summers are warm, muggy, arid, and clear and the winters are cool, wet, windy, and mostly clear. Over the course of the year, the temperature typically varies from 52°F to 86°F and is rarely below 46°F or above 88°F.",
             'country_id' => 1,
+        ]);
+        $Tripoli->images()->createMany([
+            ['file_name' => "Tripoli.jpg"],
+            ['file_name' => "Tripoli2.jpg"],
+            ['file_name' => "Tripoli3.jpg"],
+            ['file_name' => "Tripoli4.jpg"],
+            ['file_name' => "Tripoli5.jpg"],
+            ['file_name' => "Tripoli6.jpg"],
+            ['file_name' => "Tripoli7.jpg"],
         ]);
         // eof lebanon
 
@@ -52,6 +78,14 @@ class CitySeeder extends Seeder
             We consider the best time to visit Florence is between May and September when warm weather ushers in art and music festivals, open-air dining and the kind of Italian lifestyle you dream of experiencing",
             'country_id' => 2,
         ]);
+        $Florence->images()->createMany([
+            ['file_name' => "Florence.jpg"],
+            ['file_name' => "Florence2.jpg"],
+            ['file_name' => "Florence3.jpg"],
+            ['file_name' => "Florence4.jpg"],
+            ['file_name' => "Florence5.jpg"],
+            ['file_name' => "Florence6.jpg"],
+        ]);
         $rome = City::create([
             'name' => "rome",
             'longtiude' => "12.51133",
@@ -59,6 +93,13 @@ class CitySeeder extends Seeder
             'details' => "Rome, Italy, commonly referred to as the Eternal City, is a top travel destination that draws millions of visitors each year. An exuberant and modern world capital, Rome offers travelers fascinating reminders of its imperial past at every turn. It's also an international hub for contemporary fashion, design, art, and culture.",
             'weather' => "There’s no bad time to visit Rome. The eternal city is stunning in all seasons, but October has the upper hand. The weather in Rome, Italy is cold during the winter and sweltering in the summer, but Rome in October is warm during the day and cool at night. Romans call it Ottobrata Romana, recognizing October’s beautiful weather and magical sunsets.",
             'country_id' => 2,
+        ]);
+        $rome->images()->createMany([
+            ['file_name' => "rome1.png"],
+            ['file_name' => "rome2.jpg"],
+            ['file_name' => "rome3.jpg"],
+            ['file_name' => "rome4.jpg"],
+            ['file_name' => "rome5.jpg"],
         ]);
         $Venice = City::create([
             'name' => "Venice",
@@ -69,7 +110,13 @@ class CitySeeder extends Seeder
             'weather' => "Mediterranean climate with hot and humid summers, and cold winters",
             'country_id' => 2,
         ]);
-
+        $Venice->images()->createMany([
+            ['file_name' => "Venice1.jpg"],
+            ['file_name' => "Venice2.jpg"],
+            ['file_name' => "Venice3.jpg"],
+            ['file_name' => "Venice4.jpg"],
+            ['file_name' => "Venice5.jpg"],
+        ]);
         // eof italy
 
         // USA
@@ -98,6 +145,28 @@ class CitySeeder extends Seeder
             Based on the tourism score, the best times of year to visit Washington, D.C. for warm-weather activities are for the entire month of June and from mid August to early October.",
             'country_id' => 3,
         ]);
+        $Washington‏->images()->createMany([
+            ['file_name' => "Washington1.jpg"],
+            ['file_name' => "Washington2.jpg"],
+            ['file_name' => "Washington3.jpg"],
+            ['file_name' => "Washington4.jpg"],
+            ['file_name' => "Washington5.jpg"],
+            ['file_name' => "Washington6.jpg"],
+            ['file_name' => "Washington7.jpg"],
+            ['file_name' => "Washington8.jpg"],
+            ['file_name' => "Washington9.jpg"],
+            ['file_name' => "Washington10.jpg"],
+            ['file_name' => "Washington11.jpg"],
+            ['file_name' => "Washington12.jpg"],
+            ['file_name' => "Washington13.jpg"],
+            ['file_name' => "Washington14.jpg"],
+            ['file_name' => "Washington15.jpg"],
+            ['file_name' => "Washington16.jpg"],
+            ['file_name' => "Washington17.jpg"],
+            ['file_name' => "Washington18.jpg"],
+            ['file_name' => "Washington19.jpg"],
+            ['file_name' => "Washington29.jpg"],
+        ]);
         $NewYork‏ = City::create([
             'name' => "NewYork‏",
             'longtiude' => "-73.47084470009882",
@@ -117,6 +186,20 @@ class CitySeeder extends Seeder
             Over the course of the year, the temperature typically varies from 28°F to 85°F and is rarely below 14°F or above 92°F.
             Based on the tourism score, the best times of year to visit New York City for warm-weather activities are from mid June to early July and from early August to late September.",
             'country_id' => 3,
+        ]);
+        $NewYork‏->images()->createMany([
+            ['file_name' => "NewYork.jpg"],
+            ['file_name' => "NewYork2.jpg"],
+            ['file_name' => "NewYork3.jpg"],
+            ['file_name' => "NewYork4.jpg"],
+            ['file_name' => "NewYork5.jpg"],
+            ['file_name' => "NewYork6.jpg"],
+            ['file_name' => "NewYork7.jpg"],
+            ['file_name' => "NewYork8.jpg"],
+            ['file_name' => "NewYork9.jpg"],
+            ['file_name' => "NewYork10.jpg"],
+            ['file_name' => "NewYork11.jpg"],
+            ['file_name' => "NewYork12.jpg"],
         ]);
         $LosAngeles = City::create([
             'name' => "LosAngeles",
@@ -140,6 +223,28 @@ class CitySeeder extends Seeder
             Over the course of the year, the temperature typically varies from 48°F to 85°F and is rarely below 42°F or above 93°F.
             Based on the tourism score, the best time of year to visit Los Angeles for warm-weather activities is from late May to mid October.",
             'country_id' => 3,
+        ]);
+        $LosAngeles->images()->createMany([
+            ['file_name' => "Los Angeles.jpg"],
+            ['file_name' => "Los Angeles2.jpg"],
+            ['file_name' => "Los Angeles3.jpg"],
+            ['file_name' => "Los Angeles4.jpg"],
+            ['file_name' => "Los Angeles5.jpg"],
+            ['file_name' => "Los Angeles6.jpg"],
+            ['file_name' => "Los Angeles7.jpg"],
+            ['file_name' => "Los Angeles8.jpg"],
+            ['file_name' => "Los Angeles9.jpg"],
+            ['file_name' => "Los Angeles10.jpg"],
+            ['file_name' => "Los Angeles11.jpg"],
+            ['file_name' => "Los Angeles12.jpg"],
+            ['file_name' => "Los Angeles13.jpg"],
+            ['file_name' => "Los Angeles14.jpg"],
+            ['file_name' => "Los Angeles15.jpg"],
+            ['file_name' => "Los Angeles16.jpg"],
+            ['file_name' => "Los Angeles17.jpg"],
+            ['file_name' => "Los Angeles18.jpg"],
+            ['file_name' => "Los Angeles19.jpg"],
+            ['file_name' => "Los Angeles20.jpg"],
         ]);
         // eof usa
 
@@ -171,6 +276,28 @@ class CitySeeder extends Seeder
             July is the most sunny month.",
             'country_id' => 4,
         ]);
+        $Rabat‏->images()->createMany([
+            ['file_name' => "Rabat.jpg"],
+            ['file_name' => "Rabat2.jpg"],
+            ['file_name' => "Rabat3.jpg"],
+            ['file_name' => "Rabat4.jpg"],
+            ['file_name' => "Rabat5.jpg"],
+            ['file_name' => "Rabat6.jpg"],
+            ['file_name' => "Rabat7.jpg"],
+            ['file_name' => "Rabat8.jpg"],
+            ['file_name' => "Rabat9.jpg"],
+            ['file_name' => "Rabat10.jpg"],
+            ['file_name' => "Rabat11.jpg"],
+            ['file_name' => "Rabat12.jpg"],
+            ['file_name' => "Rabat13.jpg"],
+            ['file_name' => "Rabat14.jpg"],
+            ['file_name' => "Rabat15.jpg"],
+            ['file_name' => "Rabat16.jpg"],
+            ['file_name' => "Rabat17.jpg"],
+            ['file_name' => "Rabat18.jpg"],
+            ['file_name' => "Rabat19.jpg"],
+            ['file_name' => "Rabat20.jpg"],
+        ]);
         $Fès = City::create([
             'name' => "Fès",
             'longtiude' => "-5.010713463011395",
@@ -199,6 +326,28 @@ class CitySeeder extends Seeder
             Based on the beach/pool score, the best time of year to visit Fès for hot-weather activities is from mid June to mid September.",
             'country_id' => 4,
         ]);
+        $Fès->images()->createMany([
+            ['file_name' => "fes.jpg"],
+            ['file_name' => "fes2.jpg"],
+            ['file_name' => "fes3.jpg"],
+            ['file_name' => "fes4.jpg"],
+            ['file_name' => "fes5.jpg"],
+            ['file_name' => "fes6.jpg"],
+            ['file_name' => "fes7.jpg"],
+            ['file_name' => "fes8.jpg"],
+            ['file_name' => "fes9.jpg"],
+            ['file_name' => "fes10.jpg"],
+            ['file_name' => "fes11.jpg"],
+            ['file_name' => "fes12.jpg"],
+            ['file_name' => "fes13.jpg"],
+            ['file_name' => "fes14.jpg"],
+            ['file_name' => "fes15.jpg"],
+            ['file_name' => "fes16.jpg"],
+            ['file_name' => "fes17.jpg"],
+            ['file_name' => "fes18.jpg"],
+            ['file_name' => "fes19.jpg"],
+            ['file_name' => "fes20.jpg"],
+        ]);
         $casablanca = City::create([
             'name' => "casablanca",
             'longtiude' => "-7.416526525396697",
@@ -215,6 +364,28 @@ class CitySeeder extends Seeder
             The best month to swim in the sea is in August when the average sea temperature is 23°C (73°F).",
             'country_id' => 4,
         ]);
+        $casablanca->images()->createMany([
+            ['file_name' => "casablanca.jpg"],
+            ['file_name' => "casablanca2.jpg"],
+            ['file_name' => "casablanca3.jpg"],
+            ['file_name' => "casablanca4.jpg"],
+            ['file_name' => "casablanca5.jpg"],
+            ['file_name' => "casablanca6.jpg"],
+            ['file_name' => "casablanca7.jpg"],
+            ['file_name' => "casablanca8.jpg"],
+            ['file_name' => "casablanca9.jpg"],
+            ['file_name' => "casablanca10.jpg"],
+            ['file_name' => "casablanca11.jpg"],
+            ['file_name' => "casablanca12.jpg"],
+            ['file_name' => "casablanca13.jpg"],
+            ['file_name' => "casablanca14.jpg"],
+            ['file_name' => "casablanca15.jpg"],
+            ['file_name' => "casablanca16.jpg"],
+            ['file_name' => "casablanca17.jpg"],
+            ['file_name' => "casablanca18.jpg"],
+            ['file_name' => "casablanca19.jpg"],
+            ['file_name' => "casablanca20.jpg"],
+        ]);
         // eof Morocco
 
         //Czech
@@ -227,6 +398,15 @@ class CitySeeder extends Seeder
             'details' => ' Prague is the capital and largest city in the Czech Republic, the 13th largest city in the European Union and the historical capital of Bohemia',
             'country_id' => 5,
         ]);
+        $Prague->images()->createMany([
+            ['file_name' => "Prague.jpg"],
+            ['file_name' => "Prague2.jpg"],
+            ['file_name' => "Prague3.jpg"],
+            ['file_name' => "Prague4.jpg"],
+            ['file_name' => "Prague5.jpg"],
+            ['file_name' => "Prague6.jpg"],
+
+        ]);
         $KarlovyVary = City::create([
             'name' => 'Karlovy Vary',
             'longtiude' => '12.882512809523101',
@@ -236,6 +416,13 @@ class CitySeeder extends Seeder
             'details' => 'is a spa city in the Karlovy Vary Region of the Czech Republic. It has about 48,000 inhabitants. It lies on the confluence of the rivers Ohře and Teplá, approximately 130 km (81 mi) west of Prague. It is named after Charles IV, Holy Roman Emperor and the King of Bohemia, who founded the city in 1370. It is the site of numerous hot springs (13 main springs, about 300 smaller springs, and the warm-water Teplá River), and is the most visited spa town in the Czech Republic Until 1945, when the German-speaking inhabitants were expelled, the city was overwhelmingly German-speaking.',
             'country_id' => 5,
         ]);
+        $KarlovyVary->images()->createMany([
+            ['file_name' => "karlovyVary1.jpg"],
+            ['file_name' => "karlovyVary2.jpg"],
+            ['file_name' => "karlovyVary3.jpg"],
+            ['file_name' => "karlovyVary4.jpg"],
+            ['file_name' => "karlovyVary5.jpg"],
+        ]);
         $Brno  = City::create([
             'name' => 'Brno',
             'longtiude' => '16.66997992234663',
@@ -244,6 +431,13 @@ class CitySeeder extends Seeder
             the best time of year to visit Brno for warm-weather activities is from mid June to early September.',
             'details' => 'Brno is a city in the South Moravian Region of the Czech Republic. Located at the confluence of the Svitava and Svratka rivers, Brno has about 380,000 inhabitants making it the second-largest city in the Czech Republic after the main capital Prague, and one of the 100 largest cities of the EU. The Brno metropolitan area has more than 600,000 inhabitants',
             'country_id' => 5,
+        ]);
+        $Brno->images()->createMany([
+            ['file_name' => "brno.jpg"],
+            ['file_name' => "brno2.jpg"],
+            ['file_name' => "brno3.jpg"],
+            ['file_name' => "brno4.jpg"],
+            ['file_name' => "brno5.jpg"],
         ]);
         // eof Czech
 
@@ -257,6 +451,13 @@ class CitySeeder extends Seeder
             'details' => 'Vancouver is a major city in western Canada, located in the Lower Mainland region of British Columbia. As the most populous city in the province, the 2016 census recorded 631,486 people in the city, up from 603,502 in 2011. The Greater Vancouver area had a population of 2,463,431 in 2016, making it the third-largest metropolitan area in Canada. Vancouver has the highest population density in Canada, with over 5,400 people per square kilometre,which makes it the fifth-most densely populated city with over 250,000 residents in North America, behind New York City, Guadalajara, San Francisco, and Mexico City. Vancouver is one of the most ethnically and linguistically diverse cities in Canada: 52% of its residents are not native English speakers,48.9% are native speakers of neither English nor French, and 50.6% of residents belong to visible minority groups.',
             'country_id' => 6,
         ]);
+        $Vancouver->images()->createMany([
+            ['file_name' => "Vancouver.jpg"],
+            ['file_name' => "Vancouver2.jpg"],
+            ['file_name' => "Vancouver3.jpg"],
+            ['file_name' => "Vancouver4.jpg"],
+            ['file_name' => "Vancouver5.jpg"],
+        ]);
         $Toronto   = City::create([
             'name' => 'Toronto',
             'longtiude' => '-79.20226700481173',
@@ -266,6 +467,13 @@ class CitySeeder extends Seeder
             'details' => 'Toronto is the capital city of the Canadian province of Ontario. With a recorded population of 2,731,571 in 2016,it is the most populous city in Canada and the fourth most populous city in North America. The city is the anchor of the Golden Horseshoe, an urban agglomeration of 9,245,438 people (as of 2016) surrounding the western end of Lake Ontario,while the Greater Toronto Area (GTA) proper had a 2016 population of 6,417,516. Toronto is an international centre of business, finance, arts, and culture, and is recognized as one of the most multicultural and cosmopolitan cities in the world',
             'country_id' => 6,
         ]);
+        $Toronto->images()->createMany([
+            ['file_name' => "toronto.jpg"],
+            ['file_name' => "toronto2.jpg"],
+            ['file_name' => "toronto3.jpg"],
+            ['file_name' => "toronto4.jpg"],
+            ['file_name' => "toronto5.jpg"],
+        ]);
         $Montreal   = City::create([
             'name' => 'Montreal',
             'longtiude' => '-73.57099123008675',
@@ -274,6 +482,15 @@ class CitySeeder extends Seeder
             the best time of year to visit Montréal for warm-weather activities is from late June to early September.',
             'details' => 'Montreal is the second-most populous city in Canada and most populous city in the Canadian province of Quebec. Founded in 1642 as Ville-Marie, or "City of Mary",it is named after Mount Royal, the triple-peaked hill in the heart of the city. The city is centred on the Island of Montreal, which got its name from the same origin as the city,and a few much smaller peripheral islands, the largest of which is Île Bizard. The city is situated 196 km (122 mi) east of the national capital Ottawa, and 258 km (160 mi) south-west of the provincial capital, Quebec City.',
             'country_id' => 6,
+        ]);
+        $Montreal->images()->createMany([
+            ['file_name' => "Montreal.jpg"],
+            ['file_name' => "Montreal2.jpg"],
+            ['file_name' => "Montreal3.jpg"],
+            ['file_name' => "Montreal4.jpg"],
+            ['file_name' => "Montreal5.jpg"],
+            ['file_name' => "Montreal6.jpg"],
+            ['file_name' => "Montreal7.jpg"],
         ]);
     }
 }

@@ -200,6 +200,6 @@
 
 </x-guest-layout>
 
-@foreach ($country->images as $image)
-    <img src="{{asset('storage/countries/'. $image->file_name )}}" alt="">
+@foreach ($city->images as $image)
+    <img src="{{asset('storage/cities/'. $image->file_name )}}" alt="">
 @endforeach
