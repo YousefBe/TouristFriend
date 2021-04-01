@@ -1,7 +1,11 @@
 <?php
 
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\AdminController;
+use App\Models\Country;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +18,13 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', function () {
-    return view('landing.welcome');
+    // $files = Storage::files('public/countries/');
+    // dd($files);
+
+    // dd(scandir('../storage/app/public/countries/'));
+    return view('landing.welcome', [
+        'country' => Country::find(6)
+    ]);
 })->name('home');
 
 Route::view('/contact', 'landing.contactUs')->name('contact-us');
