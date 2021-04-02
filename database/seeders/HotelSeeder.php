@@ -29,6 +29,17 @@ class HotelSeeder extends Seeder
             'price' => "$280 per night",
             'country_id' => 1,
         ]);
+        $AlbergoHotel->images()->createMany([
+            ['file_name' => "Albergo Hotel.jpg"],
+            ['file_name' => "Albergo Hotel2.jpg"],
+            ['file_name' => "Albergo Hotel3.jpg"],
+            ['file_name' => "Albergo Hotel4.jpg"],
+            ['file_name' => "Albergo Hotel5.jpg"],
+            ['file_name' => "Albergo Hotel6.jpg"],
+            ['file_name' => "Albergo Hotel7.jpg"],
+            ['file_name' => "Albergo Hotel8.jpg"],
+        ]);
+
         $InterContinentalPhoeniciaBeirut = Hotel::create([
             'name' => 'InterContinental Phoenicia Beirut',
             'latitude' => "33.9006104",
@@ -42,6 +53,16 @@ class HotelSeeder extends Seeder
             'price' => "$361 per day",
             'country_id' => 1,
         ]);
+        $InterContinentalPhoeniciaBeirut->images()->createMany([
+            ['file_name' => "InterContinental Phoenicia Beirut.jpg"],
+            ['file_name' => "InterContinental Phoenicia Beirut2.jpg"],
+            ['file_name' => "InterContinental Phoenicia Beirut3.jpg"],
+            ['file_name' => "InterContinental Phoenicia Beirut4.jpg"],
+            ['file_name' => "InterContinental Phoenicia Beirut5.jpg"],
+            ['file_name' => "InterContinental Phoenicia Beirut6.jpg"],
+            ['file_name' => "InterContinental Phoenicia Beirut7.jpg"],
+        ]);
+
         $KempinskiSummerlandHotel = Hotel::create([
             'name' => 'Kempinski Summerland Hotel & Resort',
             'latitude' => "33.8668192",
@@ -52,6 +73,21 @@ class HotelSeeder extends Seeder
             'price' => " $417 per day",
             'country_id' => 1,
         ]);
+        $KempinskiSummerlandHotel->images()->createMany([
+            ['file_name' => "Kempinski Summerland Hotel.jpg"],
+            ['file_name' => "Kempinski Summerland Hotel2.jpg"],
+            ['file_name' => "Kempinski Summerland Hotel3.jpg"],
+            ['file_name' => "Kempinski Summerland Hotel4.jpg"],
+            ['file_name' => "Kempinski Summerland Hotel5.jpg"],
+            ['file_name' => "Kempinski Summerland Hotel6.jpg"],
+            ['file_name' => "Kempinski Summerland Hotel7.jpg"],
+            ['file_name' => "Kempinski Summerland Hotel8.jpg"],
+            ['file_name' => "Kempinski Summerland Hotel9.jpg"],
+            ['file_name' => "Kempinski Summerland Hotel10.jpg"],
+            ['file_name' => "Kempinski Summerland Hotel11.jpg"],
+            ['file_name' => "Kempinski Summerland Hotel12.jpg"],
+        ]);
+
         $LeGray = Hotel::create([
             'name' => 'Le Gray',
             'latitude' => "33.8973453",
@@ -62,6 +98,22 @@ class HotelSeeder extends Seeder
             'price' => " $$469  per day",
             'country_id' => 1,
         ]);
+        $LeGray->images()->createMany([
+            ['file_name' => "Le Gray.jpg"],
+            ['file_name' => "Le Gray2.jpg"],
+            ['file_name' => "Le Gray3.jpg"],
+            ['file_name' => "Le Gray4.jpg"],
+            ['file_name' => "Le Gray5.jpg"],
+            ['file_name' => "Le Gray6.jpg"],
+            ['file_name' => "Le Gray7.jpg"],
+            ['file_name' => "Le Gray8.jpg"],
+            ['file_name' => "Le Gray9.jpg"],
+            ['file_name' => "Le Gray10.jpg"],
+            ['file_name' => "Le Gray11.jpg"],
+            ['file_name' => "Le Gray12.jpg"],
+            ['file_name' => "Le Gray13.jpg"],
+            ['file_name' => "Le Gray14.jpg"],
+        ]);
         $TheSmallville = Hotel::create([
             'name' => 'The Smallville Hotel',
             'latitude' => "33.8773273",
@@ -70,6 +122,15 @@ class HotelSeeder extends Seeder
             'rate' => "5 stars",
             'price' => " $266  per day",
             'country_id' => 1,
+        ]);
+        $TheSmallville->images()->createMany([
+            ['file_name' => "The Smallville Hotel.jpg"],
+            ['file_name' => "The Smallville Hotel2.jpg"],
+            ['file_name' => "The Smallville Hotel3.jpg"],
+            ['file_name' => "The Smallville Hotel4.jpg"],
+            ['file_name' => "The Smallville Hotel5.jpg"],
+            ['file_name' => "The Smallville Hotel6.jpg"],
+            ['file_name' => "The Smallville Hotel7.jpg"],
         ]);
         // eof lebanon
         // italy
@@ -83,6 +144,15 @@ class HotelSeeder extends Seeder
             'price' => " 68 euro per day",
             'country_id' => 2,
         ]);
+        $AtlanteStarHotel->images()->createMany([
+            ['file_name' => "Atlante Star Hotel1.jpg"],
+            ['file_name' => "Atlante Star Hotel2.jpg"],
+            ['file_name' => "Atlante Star Hotel3.jpg"],
+            ['file_name' => "Atlante Star Hotel4.jpg"],
+            ['file_name' => "Atlante Star Hotel5.jpg"],
+            ['file_name' => "Atlante Star Hotel6.jpg"],
+            ['file_name' => "Atlante Star Hotel7.jpg"],
+        ]);
         $BauerPalazzo  = Hotel::create([
             'name' => 'Bauer Palazzo',
             'latitude' => " 45.4329234",
@@ -92,6 +162,14 @@ class HotelSeeder extends Seeder
             'rate' => "5 stars",
             'price' => "200 euro  per day",
             'country_id' => 2,
+        ]);
+        $BauerPalazzo->images()->createMany([
+            ['file_name' => "Bauer Palazzo1.jpg"],
+            ['file_name' => "Bauer Palazzo2.jpg"],
+            ['file_name' => "Bauer Palazzo3.jpg"],
+            ['file_name' => "Bauer Palazzo4.jpg"],
+            ['file_name' => "Bauer Palazzo5.jpg"],
+            ['file_name' => "Bauer Palazzo6.jpg"],
         ]);
         $HotelCroceDiMalta  = Hotel::create([
             'name' => 'Hotel Croce Di Malta',
@@ -103,6 +181,13 @@ class HotelSeeder extends Seeder
             'price' => "$119  euro  per day",
             'country_id' => 2,
         ]);
+        $HotelCroceDiMalta->images()->createMany([
+            ['file_name' => "Croce Di Malta1.jpg"],
+            ['file_name' => "Croce Di Malta2.jpg"],
+            ['file_name' => "Croce Di Malta3.jpg"],
+            ['file_name' => "Croce Di Malta4.jpg"],
+            ['file_name' => "Croce Di Malta5.jpg"],
+        ]);
         $HiltonMolinoStuckyVenice   = Hotel::create([
             'name' => 'Hilton Molino Stucky Venice ',
             'latitude' => "45.4282112121582",
@@ -113,6 +198,14 @@ class HotelSeeder extends Seeder
             'price' => "130 euro  per day",
             'country_id' => 2,
         ]);
+        $HiltonMolinoStuckyVenice->images()->createMany([
+            ['file_name' => "Hilton Molino Stucky.jpg"],
+            ['file_name' => "Hilton Molino Stucky2.jpg"],
+            ['file_name' => "Hilton Molino Stucky3.jpg"],
+            ['file_name' => "Hilton Molino Stucky4.jpg"],
+            ['file_name' => "Hilton Molino Stucky5.jpg"],
+            ['file_name' => "Hilton Molino Stucky6.jpg"],
+        ]);
         $HotelGiolliNazionale   = Hotel::create([
             'name' => 'Hotel Giolli Nazionale',
             'latitude' => "41.8992805480957",
@@ -121,6 +214,13 @@ class HotelSeeder extends Seeder
             'rate' => " 4 stars",
             'price' => " 81 euro  per day",
             'country_id' => 2,
+        ]);
+        $HotelGiolliNazionale->images()->createMany([
+            ['file_name' => "Hotel Giolli Nazionale1.jpg"],
+            ['file_name' => "Hotel Giolli Nazionale2.jpg"],
+            ['file_name' => "Hotel Giolli Nazionale3.jpg"],
+            ['file_name' => "Hotel Giolli Nazionale4.jpg"],
+            ['file_name' => "Hotel Giolli Nazionale5.jpg"],
         ]);
         // eof italy
         // USA
@@ -137,6 +237,18 @@ class HotelSeeder extends Seeder
             'price' => " 501.69 dollar for the night",
             'country_id' => 3,
         ]);
+        $fourseasonshotelatlanta->images()->createMany([
+            ['file_name' => "four seasons hotel atlanta1.jpg"],
+            ['file_name' => "four seasons hotel atlanta2.jpg"],
+            ['file_name' => "four seasons hotel atlanta3.jpg"],
+            ['file_name' => "four seasons hotel atlanta4.jpg"],
+            ['file_name' => "four seasons hotel atlanta5.jpg"],
+            ['file_name' => "four seasons hotel atlanta6.jpg"],
+            ['file_name' => "four seasons hotel atlanta7.jpg"],
+            ['file_name' => "four seasons hotel atlanta8.jpg"],
+            ['file_name' => "four seasons hotel atlanta9.jpg"],
+            ['file_name' => "four seasons hotel atlanta10.jpg"],
+        ]);
         $GaylordOprylandResortConventionCenter = Hotel::create([
             'name' => 'Gaylord Opryland Resort & Convention Center',
             'latitude' => "36.21226320120085",
@@ -151,6 +263,18 @@ class HotelSeeder extends Seeder
             'rate' => " 4 stars",
             'price' => " 276.82 dollar for the night",
             'country_id' => 3,
+        ]);
+        $GaylordOprylandResortConventionCenter->images()->createMany([
+            ['file_name' => "Gaylord Opryland Resort.jpg"],
+            ['file_name' => "Gaylord Opryland Resort2.jpg"],
+            ['file_name' => "Gaylord Opryland Resort3.jpg"],
+            ['file_name' => "Gaylord Opryland Resort4.jpg"],
+            ['file_name' => "Gaylord Opryland Resort5.jpg"],
+            ['file_name' => "Gaylord Opryland Resort6.jpg"],
+            ['file_name' => "Gaylord Opryland Resort7.jpg"],
+            ['file_name' => "Gaylord Opryland Resort8.jpg"],
+            ['file_name' => "Gaylord Opryland Resort9.jpg"],
+            ['file_name' => "Gaylord Opryland Resort10.jpg"],
         ]);
         $LotteNewYorkPalace = Hotel::create([
             'name' => 'Lotte New York Palace',
@@ -168,6 +292,19 @@ class HotelSeeder extends Seeder
             'price' => "762.36 dollar for the night",
             'country_id' => 3,
         ]);
+        $LotteNewYorkPalace->images()->createMany([
+            ['file_name' => "Lotte New York Palace.jpg"],
+            ['file_name' => "Lotte New York Palace2.jpg"],
+            ['file_name' => "Lotte New York Palace3.jpg"],
+            ['file_name' => "Lotte New York Palace4.jpg"],
+            ['file_name' => "Lotte New York Palace5.jpg"],
+            ['file_name' => "Lotte New York Palace6.jpg"],
+            ['file_name' => "Lotte New York Palace7.jpg"],
+            ['file_name' => "Lotte New York Palace8.jpg"],
+            ['file_name' => "Lotte New York Palace9.jpg"],
+            ['file_name' => "Lotte New York Palace10.jpg"],
+            ['file_name' => "Lotte New York Palace11.jpg"],
+        ]);
         $moheganSunHotel = Hotel::create([
             'name' => 'mohegan sun hotel',
             'latitude' => "41.492239914051936",
@@ -184,6 +321,20 @@ class HotelSeeder extends Seeder
             'price' => "204.38 dollar for the night",
             'country_id' => 3,
         ]);
+        $moheganSunHotel->images()->createMany([
+            ['file_name' => "mohegan sun hotel1.jpg"],
+            ['file_name' => "mohegan sun hotel2.jpg"],
+            ['file_name' => "mohegan sun hotel3.jpg"],
+            ['file_name' => "mohegan sun hotel4.jpg"],
+            ['file_name' => "mohegan sun hotel5.jpg"],
+            ['file_name' => "mohegan sun hotel6.jpg"],
+            ['file_name' => "mohegan sun hotel7.jpg"],
+            ['file_name' => "mohegan sun hotel8.jpg"],
+            ['file_name' => "mohegan sun hotel9.jpg"],
+            ['file_name' => "mohegan sun hotel10.jpg"],
+            ['file_name' => "mohegan sun hotel11.jpg"],
+            ['file_name' => "mohegan sun hotel12.jpg"],
+        ]);
         $TheBreakersPalmBeach = Hotel::create([
             'name' => 'The Breakers Palm Beach',
             'latitude' => "26.715555751829438",
@@ -197,6 +348,18 @@ class HotelSeeder extends Seeder
             'rate' => "4.5 out of 5",
             'price' => "456 dollar for the night",
             'country_id' => 3,
+        ]);
+        $TheBreakersPalmBeach->images()->createMany([
+            ['file_name' => "The Breakers Palm Beach hotel1.jpg"],
+            ['file_name' => "The Breakers Palm Beach hotel2.jpg"],
+            ['file_name' => "The Breakers Palm Beach hotel3.jpg"],
+            ['file_name' => "The Breakers Palm Beach hotel4.jpg"],
+            ['file_name' => "The Breakers Palm Beach hotel5.jpg"],
+            ['file_name' => "The Breakers Palm Beach hotel6.jpg"],
+            ['file_name' => "The Breakers Palm Beach hotel7.jpg"],
+            ['file_name' => "The Breakers Palm Beach hotel8.jpg"],
+            ['file_name' => "The Breakers Palm Beach hotel9.jpg"],
+            ['file_name' => "The Breakers Palm Beach hotel10.jpg"],
         ]);
         //eof USA
         // Morocco
@@ -215,6 +378,18 @@ class HotelSeeder extends Seeder
             'price' => "1380.06 MAD for the night",
             'country_id' => 4,
         ]);
+        $iberostarClubPalmeraieMarrakech->images()->createMany([
+            ['file_name' => "Iberostar Club Palmeraie Marrakech1.jpg"],
+            ['file_name' => "Iberostar Club Palmeraie Marrakech2.jpg"],
+            ['file_name' => "Iberostar Club Palmeraie Marrakech3.jpg"],
+            ['file_name' => "Iberostar Club Palmeraie Marrakech4.jpg"],
+            ['file_name' => "Iberostar Club Palmeraie Marrakech5.jpg"],
+            ['file_name' => "Iberostar Club Palmeraie Marrakech6.jpg"],
+            ['file_name' => "Iberostar Club Palmeraie Marrakech7.jpg"],
+            ['file_name' => "Iberostar Club Palmeraie Marrakech8.jpg"],
+            ['file_name' => "Iberostar Club Palmeraie Marrakech9.jpg"],
+            ['file_name' => "Iberostar Club Palmeraie Marrakech10.jpg"],
+        ]);
         $michlifenResortGolf = Hotel::create([
             'name' => 'michlifen resort golf',
             'latitude' => "33.533466",
@@ -230,6 +405,18 @@ class HotelSeeder extends Seeder
             'price' => "3080.33 MAD for the night",
             'country_id' => 4,
         ]);
+        $michlifenResortGolf->images()->createMany([
+            ['file_name' => "michlifen resort golf in morocco1.jpg"],
+            ['file_name' => "michlifen resort golf in morocco2.jpg"],
+            ['file_name' => "michlifen resort golf in morocco3.jpg"],
+            ['file_name' => "michlifen resort golf in morocco4.jpg"],
+            ['file_name' => "michlifen resort golf in morocco5.jpg"],
+            ['file_name' => "michlifen resort golf in morocco6.jpg"],
+            ['file_name' => "michlifen resort golf in morocco7.jpg"],
+            ['file_name' => "michlifen resort golf in morocco8.jpg"],
+            ['file_name' => "michlifen resort golf in morocco9.jpg"],
+            ['file_name' => "michlifen resort golf in morocco10.jpg"],
+        ]);
         $mosaicHostel = Hotel::create([
             'name' => 'mosaic hostel',
             'latitude' => "31.634740775617118",
@@ -242,6 +429,18 @@ class HotelSeeder extends Seeder
             'rate' => "4.7 out of 5",
             'price' => "137.44 MAD for the night",
             'country_id' => 4,
+        ]);
+        $mosaicHostel->images()->createMany([
+            ['file_name' => "mosaic hostel1.jpg"],
+            ['file_name' => "mosaic hostel2.jpg"],
+            ['file_name' => "mosaic hostel3.jpg"],
+            ['file_name' => "mosaic hostel4.jpg"],
+            ['file_name' => "mosaic hostel5.jpg"],
+            ['file_name' => "mosaic hostel6.jpg"],
+            ['file_name' => "mosaic hostel7.jpg"],
+            ['file_name' => "mosaic hostel8.jpg"],
+            ['file_name' => "mosaic hostel9.jpg"],
+            ['file_name' => "mosaic hostel10.jpg"],
         ]);
         $royalMansourMarrakech = Hotel::create([
             'name' => 'royal mansour marrakech',
@@ -258,6 +457,16 @@ class HotelSeeder extends Seeder
             'price' => "10953.63 MAD for the night",
             'country_id' => 4,
         ]);
+        $royalMansourMarrakech->images()->createMany([
+            ['file_name' => "Royal Mansour Marrakech1.jpg"],
+            ['file_name' => "Royal Mansour Marrakech2.jpg"],
+            ['file_name' => "Royal Mansour Marrakech3.jpg"],
+            ['file_name' => "Royal Mansour Marrakech4.jpg"],
+            ['file_name' => "Royal Mansour Marrakech5.jpg"],
+            ['file_name' => "Royal Mansour Marrakech6.jpg"],
+            ['file_name' => "Royal Mansour Marrakech7.jpg"],
+            ['file_name' => "Royal Mansour Marrakech8.jpg"],
+        ]);
         $SelmanMarrakech = Hotel::create([
             'name' => 'Selman Marrakech',
             'latitude' => "31.5735740661621",
@@ -273,6 +482,19 @@ class HotelSeeder extends Seeder
             'price' => " 3896.89 MAD for the night",
             'country_id' => 4,
         ]);
+        $SelmanMarrakech->images()->createMany([
+            ['file_name' => "Selman Marrakech1.jpg"],
+            ['file_name' => "Selman Marrakech2.jpg"],
+            ['file_name' => "Selman Marrakech3.jpg"],
+            ['file_name' => "Selman Marrakech4.jpg"],
+            ['file_name' => "Selman Marrakech5.jpg"],
+            ['file_name' => "Selman Marrakech6.jpg"],
+            ['file_name' => "Selman Marrakech7.jpg"],
+            ['file_name' => "Selman Marrakech8.jpg"],
+            ['file_name' => "Selman Marrakech9.jpg"],
+            ['file_name' => "Selman Marrakech10.jpg"],
+            ['file_name' => "Selman Marrakech11.jpg"],
+        ]);
         // eof Morocco
         // Czech
         $CosmopolitanBobycentrum = Hotel::create([
@@ -284,6 +506,14 @@ class HotelSeeder extends Seeder
             'price' => " start with 45 Euro per night",
             'country_id' => 5,
         ]);
+        $CosmopolitanBobycentrum->images()->createMany([
+            ['file_name' => "Hotel Cosmopolitan Bobycentrum1.jpg"],
+            ['file_name' => "Hotel Cosmopolitan Bobycentrum2.jpg"],
+            ['file_name' => "Hotel Cosmopolitan Bobycentrum3.jpg"],
+            ['file_name' => "Hotel Cosmopolitan Bobycentrum4.jpg"],
+            ['file_name' => "Hotel Cosmopolitan Bobycentrum5.jpg"],
+            ['file_name' => "Hotel Cosmopolitan Bobycentrum6.jpg"],
+        ]);
         $HotelPassage = Hotel::create([
             'name' => 'Hotel Passage',
             'latitude' => "49.212418422810636",
@@ -292,6 +522,13 @@ class HotelSeeder extends Seeder
             'rate' => "3.5 out of 5",
             'price' => " start with 65E Euro per night",
             'country_id' => 5,
+        ]);
+        $HotelPassage->images()->createMany([
+            ['file_name' => "Hotel Passage1.jpg"],
+            ['file_name' => "Hotel Passage2.jpg"],
+            ['file_name' => "Hotel Passage3.jpg"],
+            ['file_name' => "Hotel Passage4.jpg"],
+            ['file_name' => "Hotel Passage5.jpg"],
         ]);
         $HotelPegasBrno = Hotel::create([
             'name' => 'Hotel Pegas Brno ',
@@ -302,6 +539,13 @@ class HotelSeeder extends Seeder
             'price' => " start with 92E Euro per night",
             'country_id' => 5,
         ]);
+        $HotelPegasBrno->images()->createMany([
+            ['file_name' => "Hotel Pegas Brno1.jpg"],
+            ['file_name' => "Hotel Pegas Brno2.jpg"],
+            ['file_name' => "Hotel Pegas Brno3.jpg"],
+            ['file_name' => "Hotel Pegas Brno4.jpg"],
+            ['file_name' => "Hotel Pegas Brno5.jpg"],
+        ]);
         $EAHotelMozart = Hotel::create([
             'name' => 'EA Hotel Mozart',
             'latitude' => "50.22230687701128",
@@ -311,6 +555,13 @@ class HotelSeeder extends Seeder
             'price' => " start with 96E Euro per night",
             'country_id' => 5,
         ]);
+        $EAHotelMozart->images()->createMany([
+            ['file_name' => "EA Hotel Mozart1.jpg"],
+            ['file_name' => "EA Hotel Mozart2.jpg"],
+            ['file_name' => "EA Hotel Mozart3.jpg"],
+            ['file_name' => "EA Hotel Mozart4.jpg"],
+            ['file_name' => "EA Hotel Mozart5.jpg"],
+        ]);
         $GarniHotelPensionFan  = Hotel::create([
             'name' => 'Garni Hotel/Pension Fan',
             'latitude' => "49.19637114378888",
@@ -319,6 +570,13 @@ class HotelSeeder extends Seeder
             'rate' => "4.5 out of 5",
             'price' => " start with 45 Euro per night",
             'country_id' => 5,
+        ]);
+        $GarniHotelPensionFan->images()->createMany([
+            ['file_name' => "Garni HotelPension Fan1.jpg"],
+            ['file_name' => "Garni HotelPension Fan2.jpg"],
+            ['file_name' => "Garni HotelPension Fan3.jpg"],
+            ['file_name' => "Garni HotelPension Fan4.jpg"],
+            ['file_name' => "Garni HotelPension Fan5.jpg"],
         ]);
         // eof Czech
         // canda
@@ -336,6 +594,13 @@ class HotelSeeder extends Seeder
             'price' => " start with 172 Euro per night",
             'country_id' => 6,
         ]);
+        $HiltonToronto->images()->createMany([
+            ['file_name' => "hilton-toronto.jpg"],
+            ['file_name' => "hilton-toronto1.jpg"],
+            ['file_name' => "hilton-toronto2.jpg"],
+            ['file_name' => "hilton-toronto3.jpg"],
+            ['file_name' => "hilton-toronto5.jpg"],
+        ]);
         $SpringHillSuites  = Hotel::create([
             'name' => 'SpringHill Suites',
             'latitude' => "45.50636319934037",
@@ -345,8 +610,17 @@ class HotelSeeder extends Seeder
             'price' => " start with 91 Euro per night",
             'country_id' => 6,
         ]);
+        $SpringHillSuites->images()->createMany([
+            ['file_name' => "SpringHill Suites by Marriott Old Montreal.jpg"],
+            ['file_name' => "SpringHill Suites by Marriott Old Montreal2.jpg"],
+            ['file_name' => "SpringHill Suites by Marriott Old Montreal3.jpg"],
+            ['file_name' => "SpringHill Suites by Marriott Old Montreal4.jpg"],
+            ['file_name' => "SpringHill Suites by Marriott Old Montreal5.jpg"],
+            ['file_name' => "SpringHill Suites by Marriott Old Montreal6.jpg"],
+            ['file_name' => "SpringHill Suites by Marriott Old Montreal7.jpg"],
+        ]);
         $BestWesternVilleMarieMontrealHotelSuites  = Hotel::create([
-            'name' => 'Best Western Ville-Marie Montreal Hotel & Suites',
+            'name' => 'DoubleTree by Hilton Toronto Airport & Suites',
             'latitude' => "45.502353930770205",
             'longtiude' => "-73.57681309939989",
             'details' => "See why so many travelers make Best Western Ville-Marie Montreal Hotel & Suites their hotel of choice when visiting Montreal. Providing an ideal mix of value, comfort and convenience, it offers a family-friendly setting with an array of amenities designed for travelers like you.
@@ -360,6 +634,15 @@ class HotelSeeder extends Seeder
             'price' => " start with  133 Euro per night",
             'country_id' => 6,
         ]);
+        $BestWesternVilleMarieMontrealHotelSuites->images()->createMany([
+            ['file_name' => "Best Western Ville-Marie Montreal Hotel.jpg"],
+            ['file_name' => "Best Western Ville-Marie Montreal Hotel2.jpg"],
+            ['file_name' => "Best Western Ville-Marie Montreal Hotel3.jpg"],
+            ['file_name' => "Best Western Ville-Marie Montreal Hotel4.jpg"],
+            ['file_name' => "Best Western Ville-Marie Montreal Hotel5.jpg"],
+            ['file_name' => "Best Western Ville-Marie Montreal Hotel6.jpg"],
+            ['file_name' => "Best Western Ville-Marie Montreal Hotel7.jpg"],
+        ]);
         $DoubleTreebyHiltonTorontoAirport  = Hotel::create([
             'name' => 'DoubleTree by Hilton Toronto Airport',
             'latitude' => "43.68633739690533",
@@ -369,6 +652,13 @@ class HotelSeeder extends Seeder
             'price' => " start with  93 Euro per night",
             'country_id' => 6,
         ]);
+        $DoubleTreebyHiltonTorontoAirport->images()->createMany([
+            ['file_name' => "DoubleTree by Hilton Toronto Airport.jpg"],
+            ['file_name' => "DoubleTree by Hilton Toronto Airport2.jpg"],
+            ['file_name' => "DoubleTree by Hilton Toronto Airport3.jpg"],
+            ['file_name' => "DoubleTree by Hilton Toronto Airport4.jpg"],
+            ['file_name' => "DoubleTree by Hilton Toronto Airport5.jpg"],
+        ]);
         $HamptonInn  = Hotel::create([
             'name' => 'Hampton Inn',
             'latitude' => "43.65199019823386",
@@ -377,6 +667,13 @@ class HotelSeeder extends Seeder
             'rate' => "4.5 out of 5",
             'price' => "start with 77 Euro per night",
             'country_id' => 6,
+        ]);
+        $HamptonInn->images()->createMany([
+            ['file_name' => "Hampton Inn by Hilton Toronto Airport Corporate Centre.jpg"],
+            ['file_name' => "Hampton Inn by Hilton Toronto Airport Corporate Centre2.jpg"],
+            ['file_name' => "Hampton Inn by Hilton Toronto Airport Corporate Centre3.jpg"],
+            ['file_name' => "Hampton Inn by Hilton Toronto Airport Corporate Centre4.jpg"],
+            ['file_name' => "Hampton Inn by Hilton Toronto Airport Corporate Centre5.jpg"],
         ]);
         // eof canda
     }

@@ -199,7 +199,3 @@
   </x-slot>
 
 </x-guest-layout>
-
-@foreach ($city->images as $image)
-    <img src="{{asset('storage/cities/'. $image->file_name )}}" alt="">
-@endforeach

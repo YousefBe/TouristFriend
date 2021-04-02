@@ -1,11 +1,12 @@
 <?php
 
+use App\Models\City;
+use App\Models\Hotel;
+use App\Models\Country;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\AdminController;
-use App\Models\City;
-use App\Models\Country;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +20,8 @@ use App\Models\Country;
 */
 
 Route::get('/', function () {
-    // dd(scandir('../storage/app/public/cities/'));
-    return view('landing.welcome', [
-        'city' => City::find(18)
-    ]);
+    dd(scandir('../storage/app/public/resturants/images/'));
+    return view('landing.welcome');
 })->name('home');
 
 Route::view('/contact', 'landing.contactUs')->name('contact-us');

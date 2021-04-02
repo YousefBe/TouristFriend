@@ -23,6 +23,12 @@ class RestaurantSeeder extends Seeder
             'rate' => '4',
             'country_id' => 1,
         ]);
+        $Jai->images()->createMany([
+            ['file_name' => "Jaï1.jpg"],
+            ['file_name' => "Jaï2.png"],
+            ['file_name' => "Jaï3.png"],
+            ['file_name' => "Jaï4.png"],
+        ]);
         $EmShrief = Restaurant::create([
             'name' => 'Em Shrief',
             'longtiude' => '35.50076273098912',
@@ -30,6 +36,18 @@ class RestaurantSeeder extends Seeder
             'details' =>  'In the Achrafieh district, Em Sherif restaurant is fine dining of the old world. The decor recalls that of a lavish, antique mansion in the Oriental style. A seasonal menu encompasses local delicacies from manakish zaatar to lahme mechwiye',
             'rate' => '5',
             'country_id' => 1,
+        ]);
+        $EmShrief->images()->createMany([
+            ['file_name' => "Em Sherif.jpg"],
+            ['file_name' => "Em Sherif2.jpg"],
+            ['file_name' => "Em Sherif3.jpg"],
+            ['file_name' => "Em Sherif4.jpg"],
+            ['file_name' => "Em Sherif5.jpg"],
+            ['file_name' => "Em Sherif7.jpg"],
+            ['file_name' => "Em Sherif8.jpg"],
+            ['file_name' => "Em Sherif10.jpg"],
+            ['file_name' => "Em Sherif11.jpg"],
+            ['file_name' => "Em Sherif12.jpg"],
         ]);
         $AppetitoTrattoria = Restaurant::create([
             'name' => 'Appetito Trattoria',
@@ -39,6 +57,15 @@ class RestaurantSeeder extends Seeder
             'rate' => '4',
             'country_id' => 1,
         ]);
+        $AppetitoTrattoria->images()->createMany([
+            ['file_name' => "Appetito Trattoria.png"],
+            ['file_name' => "Appetito Trattoria2.png"],
+            ['file_name' => "Appetito Trattoria3.png"],
+            ['file_name' => "Appetito Trattoria4.png"],
+            ['file_name' => "Appetito Trattoria6.png"],
+            ['file_name' => "Appetito Trattoria7.png"],
+            ['file_name' => "Appetito Trattoria8.png"],
+        ]);
         $Tawlet = Restaurant::create([
             'name' => 'Tawlet',
             'longtiude' => '35.5260571',
@@ -47,6 +74,14 @@ class RestaurantSeeder extends Seeder
             'rate' => '4',
             'country_id' => 1,
         ]);
+        $Tawlet->images()->createMany([
+            ['file_name' => "Tawlet.jpg"],
+            ['file_name' => "Tawlet2.jpg"],
+            ['file_name' => "Tawlet3.jpg"],
+            ['file_name' => "Tawlet4.jpg"],
+            ['file_name' => "Tawlet5.jpg"],
+            ['file_name' => "Tawlet6.jpg"],
+        ]);
         $TMarbouta = Restaurant::create([
             'name' => 'T Marbouta',
             'longtiude' => '35.4830318',
@@ -54,6 +89,15 @@ class RestaurantSeeder extends Seeder
             'details' =>  'Tucked away in the corner of a shopping plaza, this socially focused cafe and restaurant is quite a surprise to discover, with its buzzy garden atrium. Good-quality food is served in generous portions at a decent price; the meat platters come with pita, chips and hummus and are a substantial feed by themselves. Service is very scatty.',
             'rate' => '4',
             'country_id' => 1,
+        ]);
+        $TMarbouta->images()->createMany([
+            ['file_name' => "T Marbouta.jpg"],
+            ['file_name' => "T Marbouta2.png"],
+            ['file_name' => "T Marbouta3.png"],
+            ['file_name' => "T Marbouta4.png"],
+            ['file_name' => "T Marbouta5.png"],
+            ['file_name' => "T Marbouta6.jpg"],
+            ['file_name' => "T Marbouta7.jpg"],
         ]);
         // eof lebanon
         // italy 
@@ -65,6 +109,15 @@ class RestaurantSeeder extends Seeder
             'rate' => 'three Michelin stars',
             'country_id' => 2,
         ]);
+        $ClubdelDoge->images()->createMany([
+            ['file_name' => "Club del Doge1.jpg"],
+            ['file_name' => "Club del Doge2.jpg"],
+            ['file_name' => "Club del Doge3.jpg"],
+            ['file_name' => "Club del Doge4.jpg"],
+            ['file_name' => "Club del Doge5.jpg"],
+            ['file_name' => "Club del Doge6.jpg"],
+
+        ]);
         $DaVittorio = Restaurant::create([
             'name' => 'Da Vittorio (Brusaporto)',
             'longtiude' => '9.7720184',
@@ -72,6 +125,11 @@ class RestaurantSeeder extends Seeder
             'details' =>  "Da Vittorio restaurant, located in the Da Vittorio Relais & Chateaux resort, has earned three Michelin stars for its cuisine. Some of the ingredients you'll find on the menu include meat from Piedmont and langoustines from Mazara del Vallo.",
             'rate' => 'three Michelin stars',
             'country_id' => 2,
+        ]);
+        $DaVittorio->images()->createMany([
+            ['file_name' => "Da Vittorio1.jpg"],
+            ['file_name' => "Da Vittorio2.jpg"],
+            ['file_name' => "Da Vittorio3.jpg"],
         ]);
         $EnotecaPinchiorri = Restaurant::create([
             'name' => 'Enoteca Pinchiorri (Florence)',
@@ -81,6 +139,11 @@ class RestaurantSeeder extends Seeder
             'rate' => 'three Michelin stars',
             'country_id' => 2,
         ]);
+        $EnotecaPinchiorri->images()->createMany([
+            ['file_name' => "Enoteca Pinchiorri1.jpg"],
+            ['file_name' => "Enoteca Pinchiorri2.jpg"],
+            ['file_name' => "Enoteca Pinchiorri3.jpg"],
+        ]);
         $ilDesco = Restaurant::create([
             'name' => 'il desco (verona)',
             'longtiude' => '10.9999599',
@@ -89,6 +152,13 @@ class RestaurantSeeder extends Seeder
             'rate' => 'Michelin Star',
             'country_id' => 2,
         ]);
+        $ilDesco->images()->createMany([
+            ['file_name' => "il desco1.jpg"],
+            ['file_name' => "il desco2.jpg"],
+            ['file_name' => "il desco3.jpg"],
+            ['file_name' => "il desco4.jpg"],
+            ['file_name' => "il desco5.jpg"],
+        ]);
         $LaPergola = Restaurant::create([
             'name' => 'La Pergola (Rome)',
             'longtiude' => '12.4466625',
@@ -96,6 +166,12 @@ class RestaurantSeeder extends Seeder
             'details' =>  "Located in the Waldorf Astoria's esteemed Rome Cavalieri hotel, La Pergola is the only restaurant in Rome with a three Michelin star rating. In addition to seven- and nine-course tasting menus, and a water menu with 29 selections, there's also a cheese cart. ",
             'rate' => 'three Michelin stars',
             'country_id' => 2,
+        ]);
+        $LaPergola->images()->createMany([
+            ['file_name' => "La Pergola1.jpg"],
+            ['file_name' => "La Pergola2.jpg"],
+            ['file_name' => "La Pergola3.jpg"],
+            ['file_name' => "La Pergola4.jpg"],
         ]);
         // eof italy
         // USA
@@ -119,6 +195,18 @@ class RestaurantSeeder extends Seeder
             'rate' => '4.5 out of 5',
             'country_id' => 3,
         ]);
+        $CarminesItalian->images()->createMany([
+            ['file_name' => "Carmine_s Italian.jpg"],
+            ['file_name' => "Carmine_s Italian2.jpg"],
+            ['file_name' => "Carmine_s Italian3.jpg"],
+            ['file_name' => "Carmine_s Italian4.jpg"],
+            ['file_name' => "Carmine_s Italian5.jpg"],
+            ['file_name' => "Carmine_s Italian6.jpg"],
+            ['file_name' => "Carmine_s Italian7.jpg"],
+            ['file_name' => "Carmine_s Italian8.jpg"],
+            ['file_name' => "Carmine_s Italian9.jpg"],
+            ['file_name' => "Carmine_s Italian10.jpg"],
+        ]);
         $Daniel  = Restaurant::create([
             'name' => "Daniel",
             'longtiude' => '-73.96757690218017',
@@ -136,6 +224,18 @@ class RestaurantSeeder extends Seeder
              In October 2019, Forbes magazine rated Daniel 'top-ranked restaurant in America'.",
             'rate' => '4.6  out of 5',
             'country_id' => 3,
+        ]);
+        $Daniel->images()->createMany([
+            ['file_name' => "Daniel.jpg"],
+            ['file_name' => "Daniel2.jpg"],
+            ['file_name' => "Daniel3.jpg"],
+            ['file_name' => "Daniel4.jpg"],
+            ['file_name' => "Daniel5.jpg"],
+            ['file_name' => "Daniel6.jpg"],
+            ['file_name' => "Daniel7.jpg"],
+            ['file_name' => "Daniel8.jpg"],
+            ['file_name' => "Daniel9.jpg"],
+            ['file_name' => "Daniel10.jpg"],
         ]);
         $GWFins  = Restaurant::create([
             'name' => "GW Fins",
@@ -158,6 +258,18 @@ class RestaurantSeeder extends Seeder
             'rate' => '4.8  out of 5',
             'country_id' => 3,
         ]);
+        $GWFins->images()->createMany([
+            ['file_name' => "GW Fins.jpg"],
+            ['file_name' => "GW Fins2.jpg"],
+            ['file_name' => "GW Fins3.jpg"],
+            ['file_name' => "GW Fins4.jpg"],
+            ['file_name' => "GW Fins5.jpg"],
+            ['file_name' => "GW Fins6.jpg"],
+            ['file_name' => "GW Fins7.jpg"],
+            ['file_name' => "GW Fins8.jpg"],
+            ['file_name' => "GW Fins9.jpg"],
+            ['file_name' => "GW Fins10.jpg"],
+        ]);
         $HallsChophouse  = Restaurant::create([
             'name' => "Halls Chophouse",
             'longtiude' => '-79.9379585460243',
@@ -168,6 +280,18 @@ class RestaurantSeeder extends Seeder
             We offer 2 private dining rooms for groups of up to 32 guests each with audio visual capabilities.",
             'rate' => '4.8 out of 5',
             'country_id' => 3,
+        ]);
+        $HallsChophouse->images()->createMany([
+            ['file_name' => "Halls Chophouse, Charleston.jpg"],
+            ['file_name' => "Halls Chophouse, Charleston2.jpg"],
+            ['file_name' => "Halls Chophouse, Charleston3.jpg"],
+            ['file_name' => "Halls Chophouse, Charleston4.jpg"],
+            ['file_name' => "Halls Chophouse, Charleston5.jpg"],
+            ['file_name' => "Halls Chophouse, Charleston6.jpg"],
+            ['file_name' => "Halls Chophouse, Charleston7.jpg"],
+            ['file_name' => "Halls Chophouse, Charleston8.jpg"],
+            ['file_name' => "Halls Chophouse, Charleston9.jpg"],
+            ['file_name' => "Halls Chophouse, Charleston10.jpg"],
         ]);
         //eof USA 
         // Morocco
@@ -188,6 +312,19 @@ class RestaurantSeeder extends Seeder
             'rate' => '4.3 out of 5',
             'country_id' => 4,
         ]);
+        $AlFassia->images()->createMany([
+            ['file_name' => "Al Fassia1.jpg"],
+            ['file_name' => "Al Fassia2.jpg"],
+            ['file_name' => "Al Fassia3.jpg"],
+            ['file_name' => "Al Fassia4.jpg"],
+            ['file_name' => "Al Fassia5.jpg"],
+            ['file_name' => "Al Fassia6.jpg"],
+            ['file_name' => "Al Fassia7.jpg"],
+            ['file_name' => "Al Fassia8.jpg"],
+            ['file_name' => "Al Fassia9.jpg"],
+            ['file_name' => "Al Fassia10.jpg"],
+            ['file_name' => "Al Fassia11.jpg"],
+        ]);
         $DarZellij  = Restaurant::create([
             'name' => "Dar Zellij",
             'longtiude' => '-7.992675553414348',
@@ -202,6 +339,18 @@ class RestaurantSeeder extends Seeder
             Musicians play lively Arabo-Andalucian music nightly.",
             'rate' => '4.5 out of 5',
             'country_id' => 4,
+        ]);
+        $DarZellij->images()->createMany([
+            ['file_name' => "Dar Zellij1.jpg"],
+            ['file_name' => "Dar Zellij2.jpg"],
+            ['file_name' => "Dar Zellij3.jpg"],
+            ['file_name' => "Dar Zellij4.jpg"],
+            ['file_name' => "Dar Zellij5.jpg"],
+            ['file_name' => "Dar Zellij6.jpg"],
+            ['file_name' => "Dar Zellij7.jpg"],
+            ['file_name' => "Dar Zellij8.jpg"],
+            ['file_name' => "Dar Zellij9.jpg"],
+            ['file_name' => "Dar Zellij10.jpg"],
         ]);
         $LaGrandeTableFrançaise  = Restaurant::create([
             'name' => "La Grande Table Française",
@@ -218,6 +367,18 @@ class RestaurantSeeder extends Seeder
              La Grande Table Marocaine is a place synonymous with sublime Moroccan flavours that are served in a traditional ambiance, combined with refinedness and flavourful servings.",
             'rate' => '4.5 out of 5',
             'country_id' => 4,
+        ]);
+        $LaGrandeTableFrançaise->images()->createMany([
+            ['file_name' => "la grande table francaise1.jpg"],
+            ['file_name' => "la grande table francaise2.jpg"],
+            ['file_name' => "la grande table francaise3.jpg"],
+            ['file_name' => "la grande table francaise4.jpg"],
+            ['file_name' => "la grande table francaise5.jpg"],
+            ['file_name' => "la grande table francaise6.jpg"],
+            ['file_name' => "la grande table francaise7.jpg"],
+            ['file_name' => "la grande table francaise8.jpg"],
+            ['file_name' => "la grande table francaise9.jpg"],
+            ['file_name' => "la grande table francaise10.jpg"],
         ]);
         $LaTablebyMadada  = Restaurant::create([
             'name' => "La Table by Madada",
@@ -239,6 +400,18 @@ class RestaurantSeeder extends Seeder
             'rate' => '4.6 out of 5',
             'country_id' => 4,
         ]);
+        $LaTablebyMadada->images()->createMany([
+            ['file_name' => "La Table by Madada, Essaouira1.jpg"],
+            ['file_name' => "La Table by Madada, Essaouira2.jpg"],
+            ['file_name' => "La Table by Madada, Essaouira3.jpg"],
+            ['file_name' => "La Table by Madada, Essaouira4.jpg"],
+            ['file_name' => "La Table by Madada, Essaouira5.jpg"],
+            ['file_name' => "La Table by Madada, Essaouira6.jpg"],
+            ['file_name' => "La Table by Madada, Essaouira7.jpg"],
+            ['file_name' => "La Table by Madada, Essaouira8.jpg"],
+            ['file_name' => "La Table by Madada, Essaouira9.jpg"],
+            ['file_name' => "La Table by Madada, Essaouira10.jpg"],
+        ]);
         //eof Morocco
         // Czech
         $AmiciPizzaBurgers = Restaurant::create([
@@ -258,6 +431,14 @@ class RestaurantSeeder extends Seeder
             'rate' => '4.5 out of 5',
             'country_id' => 5,
         ]);
+        $AmiciPizzaBurgers->images()->createMany([
+            ['file_name' => "Amici Pizza _ Burgers (Brno-Kr. Pole)1.jpg"],
+            ['file_name' => "Amici Pizza _ Burgers (Brno-Kr. Pole)2.jpg"],
+            ['file_name' => "Amici Pizza _ Burgers (Brno-Kr. Pole)3.jpg"],
+            ['file_name' => "Amici Pizza _ Burgers (Brno-Kr. Pole)4.jpg"],
+            ['file_name' => "Amici Pizza _ Burgers (Brno-Kr. Pole)5.jpg"],
+            ['file_name' => "Amici Pizza _ Burgers (Brno-Kr. Pole)6.jpg"],
+        ]);
         $borgoAgnese = Restaurant::create([
             'name' => "borgo agnese",
             'longtiude' => '16.601611117651405',
@@ -274,6 +455,13 @@ class RestaurantSeeder extends Seeder
             Reservations, Outdoor Seating, Private Dining, Seating, Parking Available, Validated Parking, Highchairs Available, Wheelchair Accessible, Serves Alcohol, Full Bar, Free Wifi, Accepts Credit Cards, Table Service",
             'rate' => '4.5 out of 5',
             'country_id' => 5,
+        ]);
+        $borgoAgnese->images()->createMany([
+            ['file_name' => "Borgo Agnese1.jpg"],
+            ['file_name' => "Borgo Agnese2.jpg"],
+            ['file_name' => "Borgo Agnese3.jpg"],
+            ['file_name' => "Borgo Agnese4.jpg"],
+            ['file_name' => "Borgo Agnese5.jpg"],
         ]);
         $bageLounge = Restaurant::create([
             'name' => "bage Lounge",
@@ -292,6 +480,13 @@ class RestaurantSeeder extends Seeder
             'rate' => '5 out of 5',
             'country_id' => 5,
         ]);
+        $bageLounge->images()->createMany([
+            ['file_name' => "Bagel Lounge1.jpg"],
+            ['file_name' => "Bagel Lounge2.jpg"],
+            ['file_name' => "Bagel Lounge3.jpg"],
+            ['file_name' => "Bagel Lounge4.jpg"],
+            ['file_name' => "Bagel Lounge5.jpg"],
+        ]);
         $LeMarche = Restaurant::create([
             'name' => "Le Marche",
             'longtiude' => '12.883581715762185',
@@ -309,6 +504,14 @@ class RestaurantSeeder extends Seeder
             'rate' => '4.5 out of 5',
             'country_id' => 5,
         ]);
+        $LeMarche->images()->createMany([
+            ['file_name' => "Le Marché1.jpg"],
+            ['file_name' => "Le Marché2.jpg"],
+            ['file_name' => "Le Marché3.jpg"],
+            ['file_name' => "Le Marché4.jpg"],
+            ['file_name' => "Le Marché5.jpg"],
+            ['file_name' => "Le Marché6.jpg"],
+        ]);
         $charlesbridgerestaurant = Restaurant::create([
             'name' => "charles bridge restaurant",
             'longtiude' => '14.4138490041228',
@@ -317,6 +520,13 @@ class RestaurantSeeder extends Seeder
             ",
             'rate' => '4.2 out of 5',
             'country_id' => 5,
+        ]);
+        $charlesbridgerestaurant->images()->createMany([
+            ['file_name' => "Charles Bridge Restaurant1.jpg"],
+            ['file_name' => "Charles Bridge Restaurant2.jpg"],
+            ['file_name' => "Charles Bridge Restaurant3.jpg"],
+            ['file_name' => "Charles Bridge Restaurant4.jpg"],
+            ['file_name' => "Charles Bridge Restaurant5.jpg"],
         ]);
         //eof Czech
         // Canada
@@ -338,6 +548,14 @@ class RestaurantSeeder extends Seeder
             'rate' => '4.5 out of 5',
             'country_id' => 6,
         ]);
+        $‪AbsintheBistro‬‏->images()->createMany([
+            ['file_name' => "Absinthe Bistro.jpg"],
+            ['file_name' => "Absinthe Bistro2.jpg"],
+            ['file_name' => "Absinthe Bistro3.jpg"],
+            ['file_name' => "Absinthe Bistro4.jpg"],
+            ['file_name' => "Absinthe Bistro5.jpg"],
+            ['file_name' => "Absinthe Bistro6.jpg"],
+        ]);
         $Damas = Restaurant::create([
             'name' => "‪Damas‬‏",
             'longtiude' => '-73.61328388405849',
@@ -347,6 +565,14 @@ class RestaurantSeeder extends Seeder
             'rate' => '4.5 out of 5',
             'country_id' => 6,
         ]);
+        $Damas->images()->createMany([
+            ['file_name' => "Damas Restaurant.jpg"],
+            ['file_name' => "Damas Restaurant2.jpg"],
+            ['file_name' => "Damas Restaurant3.jpg"],
+            ['file_name' => "Damas Restaurant4.jpg"],
+            ['file_name' => "Damas Restaurant5.jpg"],
+            ['file_name' => "Damas Restaurant6.jpg"],
+        ]);
         $goodfellasWoodOvenPizza = Restaurant::create([
             'name' => "goodfellas wood oven pizza‬‏",
             'longtiude' => '-79.87719586864458',
@@ -354,6 +580,13 @@ class RestaurantSeeder extends Seeder
             'details' =>  "Goodfellas is a fully licensed restaurant concept that specializes in the preparation of authentic Neapolitan-style wood oven pizza, salad, and Italian inspired dishes. Our traditional home made recipes are created with a rustic Italian 'backyard' flavour only found south of Rome. More than just a pizza, Goodfellas it's an exceptional food experience to be shared with family or friends. Whether it's a quick lunch or an evening out, Goodfellas will romance you with our exclusive Italian wines and dishes that made southern Italy infamous",
             'rate' => '4.5 out of 5',
             'country_id' => 6,
+        ]);
+        $goodfellasWoodOvenPizza->images()->createMany([
+            ['file_name' => "Goodfellas Wood Oven Pizza.jpg"],
+            ['file_name' => "Goodfellas Wood Oven Pizza2.jpg"],
+            ['file_name' => "Goodfellas Wood Oven Pizza3.jpg"],
+            ['file_name' => "Goodfellas Wood Oven Pizza4.jpg"],
+            ['file_name' => "Goodfellas Wood Oven Pizza5.jpg"],
         ]);
         $saintHoublonqQartierLatin = Restaurant::create([
             'name' => "saint houblon quartier latin‬‏",
@@ -372,6 +605,14 @@ class RestaurantSeeder extends Seeder
             'rate' => '4.5 out of 5',
             'country_id' => 6,
         ]);
+        $saintHoublonqQartierLatin->images()->createMany([
+            ['file_name' => "Saint-Houblon Quartier Latin.jpg"],
+            ['file_name' => "Saint-Houblon Quartier Latin2.jpg"],
+            ['file_name' => "Saint-Houblon Quartier Latin3.jpg"],
+            ['file_name' => "Saint-Houblon Quartier Latin4.jpg"],
+            ['file_name' => "Saint-Houblon Quartier Latin5.jpg"],
+            ['file_name' => "Saint-Houblon Quartier Latin6.jpg"],
+        ]);
         $theTiltedDogPubKitchen = Restaurant::create([
             'name' => "the tilted dog pub & kitchen‬‏",
             'longtiude' => '-79.36754292262324',
@@ -380,8 +621,13 @@ class RestaurantSeeder extends Seeder
             'rate' => '4.5 out of 5',
             'country_id' => 6,
         ]);
-        //    $a->images()->saveMany([ new App\Models\image(['file_name'=>'www']) ,new App\Models\image(['file_name'=>'eee'])  ])
-        // will be used to save images
+        $theTiltedDogPubKitchen->images()->createMany([
+            ['file_name' => "The Tilted Dog Pub _ Kitchen.jpg"],
+            ['file_name' => "The Tilted Dog Pub _ Kitchen2.jpg"],
+            ['file_name' => "The Tilted Dog Pub _ Kitchen3.jpg"],
+            ['file_name' => "The Tilted Dog Pub _ Kitchen4.jpg"],
+            ['file_name' => "The Tilted Dog Pub _ Kitchen5.jpg"],
+        ]);
         // eof Canada
 
     }
