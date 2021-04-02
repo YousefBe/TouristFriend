@@ -27,6 +27,14 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "daily ,but the best time to visit is in the morning",
             'country_id' => 1,
         ]);
+        $BattaraGorgeWaterfall->images()->createMany([
+            ['file_name' => "Battara Gorge Waterfall.jpg"],
+            ['file_name' => "Battara Gorge Waterfall2.jpg"],
+            ['file_name' => "Battara Gorge Waterfall3.jpg"],
+            ['file_name' => "Battara Gorge Waterfall4.jpg"],
+            ['file_name' => "Battara Gorge Waterfall5.png"],
+            ['file_name' => "Battara Gorge Waterfall6.png"],
+        ]);
         $TheMohammadAlAminMosque = PointOfInterest::create([
             'name' => "The Mohammad Al-Amin Mosque",
             'longtiude' => "35.5063702",
@@ -38,6 +46,16 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "whole day till 9 pm",
             'country_id' => 1,
         ]);
+        $TheMohammadAlAminMosque->images()->createMany([
+            ['file_name' => "The Mohammad Al-Amin Mosque.jpg"],
+            ['file_name' => "The Mohammad Al-Amin Mosque2.jpg"],
+            ['file_name' => "The Mohammad Al-Amin Mosque3.jpg"],
+            ['file_name' => "The Mohammad Al-Amin Mosque4.jpeg"],
+            ['file_name' => "The Mohammad Al-Amin Mosque5.png"],
+            ['file_name' => "The Mohammad Al-Amin Mosque6.jpg"],
+            ['file_name' => "The Mohammad Al-Amin Mosque7.jpg"],
+            ['file_name' => "The Mohammad Al-Amin Mosque8.jpg"],
+        ]);
         $TheBaalbektemple = PointOfInterest::create([
             'name' => "The Baalbek temple",
             'longtiude' => "36.2039519",
@@ -48,6 +66,15 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "daily from 8 am to 6 pm",
             'country_id' => 1,
         ]);
+        $TheBaalbektemple->images()->createMany([
+            ['file_name' => "The Baalbek temple.jpg"],
+            ['file_name' => "The Baalbek temple2.jpg"],
+            ['file_name' => "The Baalbek temple3.png"],
+            ['file_name' => "The Baalbek temple4.png"],
+            ['file_name' => "The Baalbek temple5.png"],
+            ['file_name' => "The Baalbek temple6.jpg"],
+            ['file_name' => "The Baalbek temple7.jpg"],
+        ]);
         $TheJeitaGrotto = PointOfInterest::create([
             'name' => "The Jeita Grotto",
             'longtiude' => "35.6411",
@@ -56,6 +83,13 @@ class PointOfInterestSeeder extends Seeder
             'cost' => " 12$ ",
             'working_hours' => "Daily except mondays , from  9 am to 5 pm",
             'country_id' => 1,
+        ]);
+        $TheJeitaGrotto->images()->createMany([
+            ['file_name' => "The Jeita Grotto.jpg"],
+            ['file_name' => "The Jeita Grotto2.jpg"],
+            ['file_name' => "The Jeita Grotto3.jpg"],
+            ['file_name' => "The Jeita Grotto4.jpg"],
+            ['file_name' => "Jeita_Grotto.jpg"],
         ]);
         $ZoukMikaelOldSouk = PointOfInterest::create([
             'name' => "Zouk Mikael Old Souk",
@@ -66,8 +100,16 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "9 am to 7 pm",
             'country_id' => 1,
         ]);
+        $ZoukMikaelOldSouk->images()->createMany([
+            ['file_name' => "Zouk Mikael Old Souk.jpg"],
+            ['file_name' => "Zouk Mikael Old Souk2.jpg"],
+            ['file_name' => "Zouk Mikael Old Souk3.png"],
+            ['file_name' => "Zouk Mikael Old Souk4.png"],
+            ['file_name' => "Zouk Mikael Old Souk5.jpg"],
+            ['file_name' => "Zouk Mikael Old Souk6.jpg"],
+        ]);
         //eof lebanon
-        // italy
+        // italy colosseum1
         $colosseumrome = PointOfInterest::create([
             'name' => "colosseum rome",
             'longtiude' => "12.492373",
@@ -79,6 +121,14 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "8 am to 5 pm",
             'country_id' => 2,
         ]);
+        $colosseumrome->images()->createMany([
+            ['file_name' => "colosseum1.jpg"],
+            ['file_name' => "colosseum2.jpg"],
+            ['file_name' => "colosseum3.jpg"],
+            ['file_name' => "colosseum4.jpg"],
+            ['file_name' => "colosseum5.jpg"],
+            ['file_name' => "colosseum6.jpg"],
+        ]);
         $LakeComo = PointOfInterest::create([
             'name' => "Lake Como",
             'longtiude' => "9.2666656",
@@ -88,6 +138,17 @@ class PointOfInterestSeeder extends Seeder
             'cost' => "transportations only",
             'working_hours' => "none",
             'country_id' => 2,
+        ]);
+        $LakeComo->images()->createMany([
+            ['file_name' => "Lake Como Lombardia1.jpg"],
+            ['file_name' => "Lake Como Lombardia2.jpg"],
+            ['file_name' => "Lake Como Lombardia3.jpg"],
+            ['file_name' => "Lake Como Lombardia4.jpg"],
+            ['file_name' => "Lake Como Lombardia5.jpg"],
+            ['file_name' => "Lake Como Lombardia6.jpg"],
+            ['file_name' => "Lake Como Lombardia7.jpg"],
+            ['file_name' => "Lake Como Lombardia8.jpg"],
+            ['file_name' => "Lake Como Lombardia9.jpg"],
         ]);
         $TheLeaningTowerofPisa = PointOfInterest::create([
             'name' => "The Leaning Tower of Pisa",
@@ -99,6 +160,12 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "from 8 am to 8 pm",
             'country_id' => 2,
         ]);
+        $TheLeaningTowerofPisa->images()->createMany([
+            ['file_name' => "The Leaning Tower of Pisa pisa.jpg"],
+            ['file_name' => "The Leaning Tower of Pisa pisa1.jpg"],
+            ['file_name' => "The Leaning Tower of Pisa pisa2.jpg"],
+            ['file_name' => "The Leaning Tower of Pisa pisa3.jpg"],
+        ]);
         $TheVatican = PointOfInterest::create([
             'name' => "The Vatican",
             'longtiude' => "12.454628",
@@ -107,6 +174,13 @@ class PointOfInterestSeeder extends Seeder
             'cost' => "21 euro",
             'working_hours' => "from 9 am to 6 pm",
             'country_id' => 2,
+        ]);
+        $TheVatican->images()->createMany([
+            ['file_name' => "vatican museums1.jpg"],
+            ['file_name' => "vatican museums2.jpg"],
+            ['file_name' => "vatican museums3.jpg"],
+            ['file_name' => "vatican museums4.jpg"],
+            ['file_name' => "vatican museums5.jpg"],
         ]);
         $VeniceGrandCanal = PointOfInterest::create([
             'name' => "Venice Grand Canal",
@@ -118,8 +192,15 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "none",
             'country_id' => 2,
         ]);
+        $VeniceGrandCanal->images()->createMany([
+            ['file_name' => "Venice Grand Canal.jpg"],
+            ['file_name' => "Venice Grand Canal2.jpg"],
+            ['file_name' => "Venice Grand Canal3.jpg"],
+            ['file_name' => "Venice Grand Canal4.jpg"],
+            ['file_name' => "Venice Grand Canal5.jpg"],
+        ]);
         // eof italy
-        // usa
+        // usa Central Park Zoo
         $TheCentralParkZoo = PointOfInterest::create([
             'name' => "The Central Park Zoo",
             'longtiude' => "-73.97187641534144",
@@ -139,6 +220,18 @@ class PointOfInterestSeeder extends Seeder
             2) $18 with the full '4D package",
             'working_hours' => "from 10 am to 4:30 pm",
             'country_id' => 3,
+        ]);
+        $TheCentralParkZoo->images()->createMany([
+            ['file_name' => "Central Park Zoo.jpg"],
+            ['file_name' => "Central Park Zoo2.jpg"],
+            ['file_name' => "Central Park Zoo3.jpg"],
+            ['file_name' => "Central Park Zoo4.jpg"],
+            ['file_name' => "Central Park Zoo5.jpg"],
+            ['file_name' => "Central Park Zoo6.jpg"],
+            ['file_name' => "Central Park Zoo7.jpg"],
+            ['file_name' => "Central Park Zoo8.jpg"],
+            ['file_name' => "Central Park Zoo9.jpg"],
+            ['file_name' => "Central Park Zoo10.jpg"],
         ]);
         $DisneylandPark = PointOfInterest::create([
             'name' => "Disneyland Park",
@@ -162,6 +255,18 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "from 10 am to 8 pm",
             'country_id' => 3,
         ]);
+        $DisneylandPark->images()->createMany([
+            ['file_name' => "Disneyland Park.jpg"],
+            ['file_name' => "Disneyland Park2.jpg"],
+            ['file_name' => "Disneyland Park3.jpg"],
+            ['file_name' => "Disneyland Park4.jpg"],
+            ['file_name' => "Disneyland Park5.jpg"],
+            ['file_name' => "Disneyland Park6.jpg"],
+            ['file_name' => "Disneyland Park7.jpg"],
+            ['file_name' => "Disneyland Park8.jpg"],
+            ['file_name' => "Disneyland Park9.jpg"],
+            ['file_name' => "Disneyland Park10.jpg"],
+        ]);
         $MountRushmoreNationalMemorial = PointOfInterest::create([
             'name' => "Mount Rushmore National Memorial",
             'longtiude' => "-103.45408852039358",
@@ -181,6 +286,18 @@ class PointOfInterestSeeder extends Seeder
             'cost' => "free",
             'working_hours' => "from 5 am to 11 pm",
             'country_id' => 3,
+        ]);
+        $MountRushmoreNationalMemorial->images()->createMany([
+            ['file_name' => "Mount Rushmore National Memorial.jpg"],
+            ['file_name' => "Mount Rushmore National Memorial2.jpg"],
+            ['file_name' => "Mount Rushmore National Memorial3.jpg"],
+            ['file_name' => "Mount Rushmore National Memorial4.jpg"],
+            ['file_name' => "Mount Rushmore National Memorial5.jpg"],
+            ['file_name' => "Mount Rushmore National Memorial6.jpg"],
+            ['file_name' => "Mount Rushmore National Memorial7.jpg"],
+            ['file_name' => "Mount Rushmore National Memorial8.jpg"],
+            ['file_name' => "Mount Rushmore National Memorial9.jpg"],
+            ['file_name' => "Mount Rushmore National Memorial10.jpg"],
         ]);
         $SeaWorldSanDiego = PointOfInterest::create([
             'name' => "SeaWorld San Diego",
@@ -202,6 +319,18 @@ class PointOfInterestSeeder extends Seeder
             'cost' => "$93.99 entrance ticket",
             'working_hours' => "only in weekends",
             'country_id' => 3,
+        ]);
+        $SeaWorldSanDiego->images()->createMany([
+            ['file_name' => "SeaWorld San Diego.jpg"],
+            ['file_name' => "SeaWorld San Diego2.jpg"],
+            ['file_name' => "SeaWorld San Diego3.jpg"],
+            ['file_name' => "SeaWorld San Diego4.jpg"],
+            ['file_name' => "SeaWorld San Diego5.jpg"],
+            ['file_name' => "SeaWorld San Diego6.jpg"],
+            ['file_name' => "SeaWorld San Diego7.jpg"],
+            ['file_name' => "SeaWorld San Diego8.jpg"],
+            ['file_name' => "SeaWorld San Diego9.jpg"],
+            ['file_name' => "SeaWorld San Diego10.jpg"],
         ]);
         $TheMuseumofModernArt = PointOfInterest::create([
             'name' => "The Museum of Modern Art",
@@ -232,8 +361,21 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => " daily from 10 am  to 5 pm",
             'country_id' => 3,
         ]);
-        // eof USA
-        // Morocco
+        $TheMuseumofModernArt->images()->createMany([
+            ['file_name' => "the museum of modern art new york.jpg"],
+            ['file_name' => "the museum of modern art new york2.jpg"],
+            ['file_name' => "the museum of modern art new york3.jpg"],
+            ['file_name' => "the museum of modern art new york4.jpg"],
+            ['file_name' => "the museum of modern art new york5.jpg"],
+            ['file_name' => "the museum of modern art new york6.jpg"],
+            ['file_name' => "the museum of modern art new york7.jpg"],
+            ['file_name' => "the museum of modern art new york8.jpg"],
+            ['file_name' => "the museum of modern art new york9.jpg"],
+            ['file_name' => "the museum of modern art new york10.jpg"],
+            ['file_name' => "the museum of modern art new york11.jpg"],
+        ]);
+        // eof USA 
+        // Morocco 
         $ErgChebbi = PointOfInterest::create([
             'name' => "Erg Chebbi",
             'longtiude' => "-3.983329",
@@ -255,6 +397,19 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "none",
             'country_id' => 4,
         ]);
+        $ErgChebbi->images()->createMany([
+            ['file_name' => "Erg Chebbi1.jpg"],
+            ['file_name' => "Erg Chebbi2.jpg"],
+            ['file_name' => "Erg Chebbi3.jpg"],
+            ['file_name' => "Erg Chebbi4.jpg"],
+            ['file_name' => "Erg Chebbi5.jpg"],
+            ['file_name' => "Erg Chebbi6.jpg"],
+            ['file_name' => "Erg Chebbi7.jpg"],
+            ['file_name' => "Erg Chebbi8.jpg"],
+            ['file_name' => "Erg Chebbi9.jpg"],
+            ['file_name' => "Erg Chebbi10.jpg"],
+            ['file_name' => "Erg Chebbi11.jpeg"],
+        ]);
         $DaraValley = PointOfInterest::create([
             'name' => "Dara Valley",
             'longtiude' => "-11.120306",
@@ -275,6 +430,18 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "none",
             'country_id' => 4,
         ]);
+        $DaraValley->images()->createMany([
+            ['file_name' => "Draa Valley1.jpg"],
+            ['file_name' => "Draa Valley2.jpg"],
+            ['file_name' => "Draa Valley3.jpg"],
+            ['file_name' => "Draa Valley4.jpg"],
+            ['file_name' => "Draa Valley5.jpg"],
+            ['file_name' => "Draa Valley6.jpg"],
+            ['file_name' => "Draa Valley7.jpg"],
+            ['file_name' => "Draa Valley8.jpg"],
+            ['file_name' => "Draa Valley9.jpg"],
+            ['file_name' => "Draa Valley10.jpg"],
+        ]);
         $Chefchaouen = PointOfInterest::create([
             'name' => "Chefchaouen",
             'longtiude' => "-5.268500",
@@ -294,6 +461,18 @@ class PointOfInterestSeeder extends Seeder
             'cost' => "free",
             'working_hours' => "none",
             'country_id' => 4,
+        ]);
+        $Chefchaouen->images()->createMany([
+            ['file_name' => "chefchaouen1.jpg"],
+            ['file_name' => "chefchaouen2.jpg"],
+            ['file_name' => "chefchaouen3.jpg"],
+            ['file_name' => "chefchaouen4.jpg"],
+            ['file_name' => "chefchaouen5.jpg"],
+            ['file_name' => "chefchaouen6.jpg"],
+            ['file_name' => "chefchaouen7.jpg"],
+            ['file_name' => "chefchaouen8.jpg"],
+            ['file_name' => "chefchaouen9.jpg"],
+            ['file_name' => "chefchaouen10.jpg"],
         ]);
         $RiifMountains  = PointOfInterest::create([
             'name' => "Riif Mountains",
@@ -320,6 +499,18 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "none",
             'country_id' => 4,
         ]);
+        $RiifMountains->images()->createMany([
+            ['file_name' => "Rif Mountains.jpg"],
+            ['file_name' => "Rif Mountains1.jpg"],
+            ['file_name' => "Rif Mountains2.jpg"],
+            ['file_name' => "Rif Mountains3.jpg"],
+            ['file_name' => "Rif Mountains5.jpg"],
+            ['file_name' => "Rif Mountains6.jpg"],
+            ['file_name' => "Rif Mountains7.jpg"],
+            ['file_name' => "Rif Mountains8.jpg"],
+            ['file_name' => "Rif Mountains9.jpg"],
+            ['file_name' => "Rif Mountains10.jpg"],
+        ]);
         $HassanIIMosque = PointOfInterest::create([
             'name' => "Hassan II Mosque",
             'longtiude' => "-7.632555",
@@ -339,8 +530,20 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "Saturday – Thursday: at 9AM, 10 AM, 11 AM and 2 PM in the afternoon. Friday: 9AM and 10 AM in the morning and 2 PM.",
             'country_id' => 4,
         ]);
+        $HassanIIMosque->images()->createMany([
+            ['file_name' => "Hassan II Mosque1.jpg"],
+            ['file_name' => "Hassan II Mosque2.jpg"],
+            ['file_name' => "Hassan II Mosque3.jpg"],
+            ['file_name' => "Hassan II Mosque4.jpg"],
+            ['file_name' => "Hassan II Mosque5.jpg"],
+            ['file_name' => "Hassan II Mosque6.jpg"],
+            ['file_name' => "Hassan II Mosque7.jpg"],
+            ['file_name' => "Hassan II Mosque8.jpg"],
+            ['file_name' => "Hassan II Mosque9.jpg"],
+            ['file_name' => "Hassan II Mosque10.jpg"],
+        ]);
         // eof Morocco
-        // czech
+        // czech 
         $moraviankarst = PointOfInterest::create([
             'name' => "moravian karst",
             'longtiude' => "16.699747846482413",
@@ -350,14 +553,12 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "from 8 am to 4 pm",
             'country_id' => 5,
         ]);
-        $spielbergcastle = PointOfInterest::create([
-            'name' => "spielberg castle",
-            'longtiude' => "16.599177002309165",
-            'latitude' => "49.19471012676143",
-            'details' => "is a castle on the hilltop in Brno, Southern Moravia. Its construction began as early as the first half of the 13th century by the Přemyslid kings and complete by King Ottokar II of Bohemia.[1] From a major royal castle established around the mid-13th century, and the seat of the Moravian margraves in the mid-14th century, it was gradually turned into a huge baroque citadel considered the harshest prison in the Austrian Empire, and then into barracks. This prison had always been part of the Špilberk fortress and is frequently referenced by the main character, Fabrizio, in Stendahl's novel, 'The Charterhouse of Parma' ",
-            'cost' => "11 Euro per person",
-            'working_hours' => "9 am to 5 pm",
-            'country_id' => 5,
+        $moraviankarst->images()->createMany([
+            ['file_name' => "Moravian karst1.jpg"],
+            ['file_name' => "Moravian karst2.jpg"],
+            ['file_name' => "Moravian karst3.jpg"],
+            ['file_name' => "Moravian karst4.jpg"],
+            ['file_name' => "Moravian karst5.jpg"],
         ]);
         $VillaTugendhat = PointOfInterest::create([
             'name' => "Villa Tugendhat",
@@ -368,6 +569,13 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "10 am to 6 pm",
             'country_id' => 5,
         ]);
+        $VillaTugendhat->images()->createMany([
+            ['file_name' => "Villa Tugendhat1.jpg"],
+            ['file_name' => "Villa Tugendhat2.jpg"],
+            ['file_name' => "Villa Tugendhat3.jpg"],
+            ['file_name' => "Villa Tugendhat4.jpg"],
+            ['file_name' => "Villa Tugendhat5.jpg"],
+        ]);
         $DianaTower = PointOfInterest::create([
             'name' => "Diana Tower",
             'longtiude' => "12.872344475281993",
@@ -376,6 +584,12 @@ class PointOfInterestSeeder extends Seeder
             'cost' => "from 2E to 9E",
             'working_hours' => "9 am – 5 pm",
             'country_id' => 5,
+        ]);
+        $DianaTower->images()->createMany([
+            ['file_name' => "Diana Tower1.jpg"],
+            ['file_name' => "Diana Tower2.jpg"],
+            ['file_name' => "Diana Tower3.jpg"],
+            ['file_name' => "Diana Tower4.jpg"],
         ]);
         $locketCastle = PointOfInterest::create([
             'name' => "Diana Tower",
@@ -388,6 +602,13 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "9 am – 4 pm",
             'country_id' => 5,
         ]);
+        $locketCastle->images()->createMany([
+            ['file_name' => "Locket castle1.jpg"],
+            ['file_name' => "Locket castle2.jpg"],
+            ['file_name' => "Locket castle3.jpg"],
+            ['file_name' => "Locket castle4.jpg"],
+            ['file_name' => "Locket castle5.jpg"],
+        ]);
         $CharlesBridge = PointOfInterest::create([
             'name' => "Charles Bridge",
             'longtiude' => "14.411447331087324",
@@ -396,6 +617,13 @@ class PointOfInterestSeeder extends Seeder
             'cost' => "Free",
             'working_hours' => "all day",
             'country_id' => 5,
+        ]);
+        $CharlesBridge->images()->createMany([
+            ['file_name' => "Charles Bridge1.jpg"],
+            ['file_name' => "Charles Bridge2.jpg"],
+            ['file_name' => "Charles Bridge3.jpg"],
+            ['file_name' => "Charles Bridge4.jpg"],
+            ['file_name' => "Charles Bridge5.jpg"],
         ]);
         // eof czech
         // Canada
@@ -408,6 +636,13 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "10am to 8 pm",
             'country_id' => 6,
         ]);
+        $CNTower->images()->createMany([
+            ['file_name' => "CN Tower1.jpg"],
+            ['file_name' => "CN Tower2.jpg"],
+            ['file_name' => "CN Tower3.jpg"],
+            ['file_name' => "CN Tower4.jpg"],
+            ['file_name' => "CN Tower5.jpg"],
+        ]);
         $NotreDameBasilica = PointOfInterest::create([
             'name' => "Notre-Dame Basilica",
             'longtiude' => "-73.55619549940005",
@@ -417,6 +652,13 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "From Monday to Friday from 8AM to 6:45PM (no midday closure) On Saturday and Sunday from 8AM to 7:45PM (no midday closure)",
             'country_id' => 6,
         ]);
+        $NotreDameBasilica->images()->createMany([
+            ['file_name' => "Notre-Dame Basilica1.jpg"],
+            ['file_name' => "Notre-Dame Basilica2.jpg"],
+            ['file_name' => "Notre-Dame Basilica3.jpg"],
+            ['file_name' => "Notre-Dame Basilica4.jpg"],
+            ['file_name' => "Notre-Dame Basilica5.jpg"],
+        ]);
         $OldPortofMontreal = PointOfInterest::create([
             'name' => "The Old Port of Montreal",
             'longtiude' => "-73.54842497116806",
@@ -425,6 +667,13 @@ class PointOfInterestSeeder extends Seeder
             'cost' => "free",
             'working_hours' => "Monday to Friday from 9:00 AM to 5:00 PM",
             'country_id' => 6,
+        ]);
+        $OldPortofMontreal->images()->createMany([
+            ['file_name' => "Old Port of Montreal1.jpg"],
+            ['file_name' => "Old Port of Montreal2.jpg"],
+            ['file_name' => "Old Port of Montreal3.jpg"],
+            ['file_name' => "Old Port of Montreal4.jpg"],
+            ['file_name' => "Old Port of Montreal5.jpg"],
         ]);
         $StanleyPark = PointOfInterest::create([
             'name' => "Stanley Park",
@@ -436,7 +685,14 @@ class PointOfInterestSeeder extends Seeder
             'working_hours' => "9am to 5 pm",
             'country_id' => 6,
         ]);
-
+        $StanleyPark->images()->createMany([
+            ['file_name' => "Stanley Park1.jpg"],
+            ['file_name' => "Stanley Park2.jpg"],
+            ['file_name' => "Stanley Park3.jpg"],
+            ['file_name' => "Stanley Park4.jpg"],
+            ['file_name' => "Stanley Park5.jpg"],
+            ['file_name' => "Stanley Park6.jpg"],
+        ]);
         // eof Canada
     }
 }

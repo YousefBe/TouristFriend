@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\AdminController;
+use App\Models\Restaurant;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,14 +21,9 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', function () {
-    dd(scandir('../storage/app/public/resturants/images/'));
+    // dd(scandir('../storage/app/public/POI/images/'));
     return view('landing.welcome');
 })->name('home');
-
-Route::view('/contact', 'landing.contactUs')->name('contact-us');
-
-// testing modal
-// Route::view('/test/{id}', 'test')->name('test');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -99,9 +99,6 @@
                  <a href="{{ route('home') }}" >Home</a>
             </li>
              <li class="mx-8 py-6   hover:bg-gray-100  transition-all  duration-500 uppercase  text-xl font-bold  ">
-                 <a href="{{ route('contact-us') }}" >Contact Us</a>
-            </li>
-             <li class="mx-8 py-6   hover:bg-gray-100  transition-all  duration-500 uppercase  text-xl font-bold  ">
                  <a href="{{ route('home') }}" >about us</a>
             </li>
              <li class="mx-8 py-6   hover:bg-gray-100  transition-all  duration-500 uppercase  text-xl font-bold  ">
