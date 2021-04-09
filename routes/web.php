@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PostsController;
+use BinshopsBlog\Laravel\Fulltext\Commands\Index;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +19,8 @@ use App\Http\Controllers\AdminController;
 Route::get('/', function () {
     return view('landing.welcome');
 })->name('home');
+
+Route::resource('/blog',PostsController::class);
 
 Route::view('/contact', 'landing.contactUs')->name('contact-us');
 

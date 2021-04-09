@@ -14,7 +14,7 @@
             <a href="{{route('home')}}"  class=" mr-6  p-3 text-base font-bold uppercase ">
                 {{ __('Home') }}
             </a>
-            <a href="{{route('home')}}"  class=" mr-6  p-3  text-base font-bold uppercase  " >
+            <a href="/blog"  class=" mr-6  p-3  text-base font-bold uppercase  " >
                 {{ __('Blog') }}
             </a>
             
