@@ -81,6 +81,17 @@
                                             class="teext-gray-700 italic hover:text-gray-900 pb-1 border-b-2">
                                             Edit
                                         </a>
+                                        <form
+                                            action="/blog/{{ $post->id }}"
+                                            method="POST">
+                                            @csrf
+                                            @method('delete')
+                                            <button
+                                                class="text-red-500 pl-3"
+                                                type="submit">
+                                                Delete
+                                            </button>
+
                                     </span>
                                     
                                 @endif
