@@ -25,10 +25,39 @@
                 <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">{{ $post->channel->name }}</a>
                 <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">{{ $post->title }}</a>
                 <p href="#" class="text-sm pb-8">
-                    By <a href="#" class="font-semibold hover:text-gray-800">{{ $post->user->name }}</a>, Published on April 25th, 2020
+                    By <a href="#" class="font-semibold hover:text-gray-800">{{ $post->user->name }}</a>, Published on {{ date('jS M Y h: i A', strtotime($post->updated_at)) }}
                 </p>
                 <p class="pb-3">{{ $post->body }}</p>
             </div>
+            <div class="card-body">
+                <h5>Display Comments</h5>
+                <div class="max-w-7xl mx-auto bg-white flex flex-col justify-start p-20">
+                    <p class="pb-6">
+                        @foreach ($post->comments as $comment)
+                        <hr>
+                            {{ $comment->body }} By {{ $comment->user->name }} at {{ date('jS M Y h: i A', strtotime($comment->updated_at)) }}
+                            <br>
+                        @endforeach
+                    </p>
+                </div>
+
+                <hr />
+               </div>
+
+            <div class="card-body">
+                <h5>Leave a comment</h5>
+                <form method="post" action="{{ route('comment.add') }}">
+                    @csrf
+                    <div class="form-group">
+                        <input type="text" name="comment" class="form-control" />
+                        <input type="hidden" name="post_id" value="{{ $post->id }}" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-sm btn-outline-danger py-0" style="font-size: 0.8em;" value="Add Comment" />
+                    </div>
+                </form>
+               </div>
+
         </article>
 
         <div class="w-full flex pt-6">

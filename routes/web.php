@@ -31,6 +31,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+//Comment Route
+Route::post('/comment/store', 'App\Http\Controllers\CommentController@store')->name('comment.add');
+
+
 
 route::get('/admin', [AdminController::class, 'show'])->middleware(['auth', 'admin']);
 
