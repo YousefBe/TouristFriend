@@ -72,23 +72,9 @@ class PostsController extends Controller
     public function show($id)
     {
         $post =Post::find($id);
-        if($post == Post::orderBy('id','desc')->first())
-        {
-             $postN= Post::find(1);
-        }else{
-             $postN=Post::find($id+1);
-        }
-        if($id==1)
-        {
-             $postV= Post::orderBy('id','desc')->first();
-        }else{
-             $postV=Post::find($id-1);
-        }
 
         return view('/blog/post')
-        ->with('post',$post)
-        ->with('postN',$postN)
-        ->with('postV',$postV);
+        ->with('post',$post);
     }
 
     /**

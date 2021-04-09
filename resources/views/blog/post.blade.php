@@ -60,16 +60,6 @@
 
         </article>
 
-        <div class="w-full flex pt-6">
-            <a href="{{ URL::to('blog/'. $postV->id ) }}" class="w-1/2 bg-white shadow hover:shadow-md text-left p-6">
-                <p class="text-lg text-blue-800 font-bold flex items-center"><!-- <i class="fas fa-arrow-left pr-1"></i> --> Previous</p>
-                <p class="pt-2">{{ $postV->title }}</p>
-            </a>
-            <a href="{{ URL::to('blog/'. $postN->id ) }}" class="w-1/2 bg-white shadow hover:shadow-md text-right p-6">
-                <p class="text-lg text-blue-800 font-bold flex items-center justify-end">Next <!-- <i class="fas fa-arrow-right pl-1"></i> --></p>
-                <p class="pt-2">{{ $postN->title }}</p>
-            </a>
-        </div>
 
         <div class="w-full flex flex-col text-center md:text-left md:flex-row shadow bg-white mt-10 mb-10 p-6">
             <div class="w-full md:w-1/5 flex justify-center md:justify-start pb-4">
