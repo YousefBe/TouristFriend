@@ -15,6 +15,9 @@ main {
 .modal {
     height: 25rem;
 }
+[x-cloak] {
+    display: none !important;
+}
 .res-nav {
     transition: all 0.5s ease-in-out;
     transform: translateX(-2500px);

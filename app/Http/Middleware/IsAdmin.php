@@ -17,12 +17,11 @@ class IsAdmin
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::user()->id) {
-            if (Auth::user()) {
+        if (Auth::user()) {
+            if (Auth::user()->hasRole('user') && request()->is('dashboard')) {
                 return $next($request);
             }
-
-            return redirect('/');
+            return redirect('/admin/dashboard');
         }
     }
 }
