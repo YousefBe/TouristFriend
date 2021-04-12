@@ -1,19 +1,20 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Admins;
 
 use Illuminate\View\Component;
 
-class Modal extends Component
+class CountryForm extends Component
 {
-
+    public  $updating;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($updating)
     {
+        $this->updating = $updating;
     }
 
     /**
@@ -23,6 +24,6 @@ class Modal extends Component
      */
     public function render()
     {
-        return view('components.modal');
+        return view('components.admins.country-form');
     }
 }

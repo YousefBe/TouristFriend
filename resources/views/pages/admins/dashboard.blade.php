@@ -10,4 +10,10 @@
         </x-slot>   
     @endif
    
+    @if (request()->is('admin/countries'))
+        <x-slot name="content" >
+             @livewire('admins.countries')
+        </x-slot>   
+    @endif
+   
 </x-admins.admin-dashboard>

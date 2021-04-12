@@ -37,6 +37,10 @@ Route::middleware(['auth', 'role:administrator'])->group(function () {
         return view('pages.admins.dashboard');
     })->name('admin.users');
 
+    route::get('/admin/countries', function () {
+        return view('pages.admins.dashboard');
+    })->name('admin.countries');
+
     // route::get('/admin/users', Users::class)->name('admin.users');
     // route::get('/admin/countries', Countries::class)->name('admin.countries');
 });
