@@ -35,7 +35,6 @@ class CountrySeeder extends Seeder
             ['file_name' => 'lebanon4.png'],
             ['file_name' => 'lebanon5.png'],
             ['file_name' => 'lebanon6.jpg'],
-            ['file_name' => 'lebanon7.jpg'],
             ['file_name' => 'lebanon8.png'],
         ]);
 

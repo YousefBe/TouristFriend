@@ -16,13 +16,13 @@ class CreateRestaurantsTable extends Migration
         Schema::create('restaurants', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->float('longtiude');
-            $table->float('latitude');
+            $table->string('longtiude');
+            $table->string('latitude');
             $table->text('details');
             $table->string('rate');
 
             $table->unsignedBigInteger('country_id');
-            $table->foreign('country_id')->references('id')->on('countries');
+            $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
             $table->timestamps();
         });
     }

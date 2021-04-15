@@ -1,35 +1,47 @@
-<div x-data="{open  : false}">
-  {{-- button to fire the modal --}}
-  <div @click="open = true" class="mt-4">
-    {{$trigger}}
-  </div>
-
-  {{-- backdrop --}}
-  <div class="inset-0	 w-full h-full fixed  bg-gray-400  opacity-40 z-20 "  x-show="open" @click="open = false"></div>
-
-  <div class="flex items-center justify-center">
-    
-    
-    <div class="fixed z-50  rounded-2xl  bg-white  top-40 pt-0   w-4/5   lg:w-2/5   modal  shadow-2xl"  x-show="open">
-      
-      {{-- title --}}
-        <div  class=" px-12  py-8  border-b-2  bg-gray-100 shadow rounded  w-full flex">
-          <h1 class="text-2xl  font-extrabold capitalize">{{$title}}</h1>
-        </div>
-      {{-- content --}}
-        <div class="px-12 py-8 text-xl font-semibold leading-3 ">
-          
-          {{$content}}
-        </div>
-      {{-- acions --}}
-        <div class="flex justify-end items-center absolute w-full bottom-0 px-14 py-10 h-28  bg-gray-100 rounded-md ">
-          @if ($href)
-          <a href="{{route($href, $actionId)}}" @click="open = false"  class=" px-3 py-4   w-auto text-center bg-green-500 mr-6  rounded-xl text-white  transition ease-out duration-500 hover:bg-white hover:text-green-500 text-xl capitalize active:bg-gray-900 shadow-md">Confirm</a>
-          @endif
-          <a href="" @click.prevent="open = false" class=" px-3 py-4   w-auto text-center bg-red-500  rounded-xl text-white transition ease-out duration-500 hover:bg-white hover:text-red-500 text-xl capitalize active:bg-gray-900 shadow-md">Close</a>
-        </div>
+<div x-data="{open :false}" x-cloak @close-modal.window="open = false" {{ $attributes }}>
+    <div class="" @click="open = true">
+        {{ $trigger }}
     </div>
 
-  </div>
+    <!-- overlay -->
+    <div class="inset-0 bg-black bg-opacity-30 fixed h-screen w-full flex justify-center items-center pt-10 md:pt-0 z-40"
+        x-show.transition.duration.200="open" @click.self="open = false">
+
+        <!-- modal -->
+        <div id="modal" class="pacity-0 transform relative w-10/12 md:w-1/2 h-3/4 bg-white rounded 
+      shadow-lg">
+
+            <!-- button close -->
+            <button @click="open = false"
+                class="absolute -top-3 -right-3 bg-red-500 hover:bg-red-600 text-2xl w-10 h-10 rounded-full focus:outline-none text-white">
+                &cross;
+            </button>
+
+            <!-- header -->
+            <div class="px-4 py-3 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-600">{{ $title }}</h2>
+            </div>
+
+            <!-- body -->
+            <div class="w-full p-3 overflow-y-auto max-h-96  overflow-x-hidden ">
+                @isset($content)
+                    {{ $content }}
+                @endisset
+            </div>
+
+            <!-- footer -->
+            <div
+                class="absolute bottom-0 left-0 px-4 py-3 border-t border-gray-200 w-full flex justify-end items-center gap-3">
+                @isset($Action)
+                    {{ $Action }}
+                @endisset
+                <button @click="open = false"
+                    class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded text-white focus:outline-none">Close
+                </button>
+            </div>
+        </div>
+
+    </div>
+
 
 </div>

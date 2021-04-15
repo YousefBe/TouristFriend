@@ -22,7 +22,7 @@ class CreatePointOfInterestsTable extends Migration
             $table->string('cost');
             $table->string('working_hours');
             $table->unsignedBigInteger('country_id');
-            $table->foreign('country_id')->references('id')->on('countries');
+            $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -277,7 +277,7 @@ class CitySeeder extends Seeder
             'country_id' => 4,
         ]);
         $Rabat‏->images()->createMany([
-            ['file_name' => "Rabat.jpg"],
+            ['file_name' => "Rabat1.jpg"],
             ['file_name' => "Rabat2.jpg"],
             ['file_name' => "Rabat3.jpg"],
             ['file_name' => "Rabat4.jpg"],
@@ -327,7 +327,7 @@ class CitySeeder extends Seeder
             'country_id' => 4,
         ]);
         $Fès->images()->createMany([
-            ['file_name' => "fes.jpg"],
+            ['file_name' => "fes1.jpg"],
             ['file_name' => "fes2.jpg"],
             ['file_name' => "fes3.jpg"],
             ['file_name' => "fes4.jpg"],
@@ -365,7 +365,7 @@ class CitySeeder extends Seeder
             'country_id' => 4,
         ]);
         $casablanca->images()->createMany([
-            ['file_name' => "casablanca.jpg"],
+            ['file_name' => "casablanca1.jpg"],
             ['file_name' => "casablanca2.jpg"],
             ['file_name' => "casablanca3.jpg"],
             ['file_name' => "casablanca4.jpg"],
