@@ -22,7 +22,7 @@ class CreateHotelsTable extends Migration
             $table->string('rate');
             $table->string('price');
             $table->unsignedBigInteger('country_id');
-            $table->foreign('country_id')->references('id')->on('countries');
+            $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
             $table->timestamps();
         });
     }

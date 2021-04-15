@@ -98,8 +98,9 @@ class Users extends Component
         ]);
         $user->detachRole($user->role);
         $user->attachRole($this->userRole);
-        $user->detachPermissions($user->permissions);
-        $user->attachPermissions($this->userPermissions);
+        // $user->detachPermissions($user->permissions);  
+        // this imporved response time
+        $user->syncPermissions($this->userPermissions);
         $this->dispatchBrowserEvent('close-modal');
     }
     public function delete($id)

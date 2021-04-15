@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Admins;
 
+use App\Models\Image;
 use App\Models\Country;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -25,6 +26,8 @@ class Countries extends Component
     public $weather_flag;
     public $newphotos = [];
     public $currentphotos = [];
+    public $currentCountry;
+    public $CountryImages;
 
     protected $rules = [
         'name' => 'required|unique:countries',
@@ -46,26 +49,27 @@ class Countries extends Component
         $this->resetValidation();
     }
 
+    public function DeleteImage($id)
+    {
+        $image = Image::find($id);
+        $image->delete();
+    }
+
     public function store()
     {
         $data = $this->validate();
         $country = Country::create($data);
 
-        if (!empty($this->newphotos)) {
-            $this->validate([
-                'newphotos.*' => 'image',
-            ]);
-            foreach ($this->newphotos as $photo) {
-                $country->images()->create(['file_name' => $photo->hashName()]);
-                $photo->store('public/countries');
-            }
-        }
+        $this->handleImages($country);
+
         $this->dispatchBrowserEvent('close-modal');
         $this->reset();
     }
+
     public function updateModal($id)
     {
         $country = Country::find($id);
+        $this->currentCountry = $country;
         $this->name = $country->name;
         $this->contnent = $country->contnent;
         $this->longtiude = $country->longtiude;
@@ -77,7 +81,55 @@ class Countries extends Component
         $this->population = $country->population;
         $this->budget_flag = $country->budget_flag;
         $this->weather_flag = $country->weather_flag;
-        $this->currentphotos = $country->images()->pluck('file_name');
+    }
+    public function update()
+    {
+        $data = $this->validate([
+            'name' => 'sometimes',
+            'contnent' => 'sometimes',
+            'longtiude' => 'sometimes',
+            'latitude' => 'sometimes',
+            'details' => 'sometimes',
+            'weather' => 'sometimes',
+            'currency' => 'sometimes',
+            'budget' => 'sometimes',
+            'population' => 'sometimes',
+            'budget_flag' => 'sometimes',
+            'weather_flag' => 'sometimes',
+        ]);
+        $this->currentCountry->update($data);
+
+        $this->handleImages($this->currentCountry);
+
+        $this->dispatchBrowserEvent('close-modal');
+    }
+
+
+    public function Delete($id)
+    {
+        $country = Country::find($id);
+        $country->delete();
+        $this->dispatchBrowserEvent('close-modal');
+    }
+
+    public function CountryImages($id)
+    {
+        $Country = Country::find($id);
+        $this->CountryImages = $Country->images;
+    }
+
+
+    private function handleImages($country)
+    {
+        if (!empty($this->newphotos)) {
+            $this->validate([
+                'newphotos.*' => 'image',
+            ]);
+            foreach ($this->newphotos as $photo) {
+                $country->images()->create(['file_name' => $photo->hashName()]);
+                $photo->store('public/countries');
+            }
+        }
     }
 
     public function render()

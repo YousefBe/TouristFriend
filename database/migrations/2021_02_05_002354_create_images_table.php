@@ -23,11 +23,11 @@ class CreateImagesTable extends Migration
             $table->unsignedBigInteger('point_id')->nullable();
             // $table->unsignedBigInteger('post_id')->nullable();
 
-            $table->foreign('city_id')->references('id')->on('cities');
-            $table->foreign('hotel_id')->references('id')->on('hotels');
-            $table->foreign('country_id')->references('id')->on('countries');
-            $table->foreign('restaurant_id')->references('id')->on('restaurants');
-            $table->foreign('point_id')->references('id')->on('point_of_interests');
+            $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
+            $table->foreign('hotel_id')->references('id')->on('hotels')->onDelete('cascade');
+            $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
+            $table->foreign('restaurant_id')->references('id')->on('restaurants')->onDelete('cascade');
+            $table->foreign('point_id')->references('id')->on('point_of_interests')->onDelete('cascade');
             // $table->foreign('post_id')->references('id')->on('posts');
 
             $table->timestamps();

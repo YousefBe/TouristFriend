@@ -4,7 +4,7 @@
             <x-slot name="trigger">
                 <button class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded text-white focus:outline-none"
                     wire:click="storeModal">
-                    Create a User class="mb-2"
+                    <i class="fas fa-plus mt-1 mr-1"></i>Create a User
                 </button>
             </x-slot>
             <x-slot name="title">Create a new User</x-slot>
@@ -31,7 +31,7 @@
                         <th class=""></th>
                     </tr>
                     @foreach ($users as $user)
-                        <tr class="border-b hover:bg-orange-100" :class="{ ' bg-gray-200' : {{ $loop->index }}}">
+                        <tr class="border-b hover:bg-orange-100">
                             <td class="p-3 px-5 w-64">
                                 <p class=" text-sm sm:text-base tracking-wider font-semibold">{{ $user->name }}
                                     @if (Auth::user()->id == $user->id)
@@ -58,7 +58,8 @@
                                 <x-modal class="mb-2">
                                     <x-slot name="trigger">
                                         <button type="button" wire:click="updateModal({{ $user->id }})"
-                                            class="mr-3 text-sm w-16 bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Update</button>
+                                            class="mr-3 text-sm w-24 bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><i
+                                                class="fas fa-edit mt-1 mr-1"></i>Update</button>
                                     </x-slot>
                                     <x-slot name="title">update a User</x-slot>
                                     <x-slot name="content">
@@ -73,20 +74,12 @@
                                         </button>
                                     </x-slot>
                                 </x-modal>
-                                {{-- view user modal --}}
-                                <x-modal class="mb-2">
-                                    <x-slot name="trigger">
-                                        <button type="button"
-                                            class="mr-3 text-sm bg-yellow-500 hover:bg-yellow-700 text-white py-1 px-2 rounded w-16 focus:outline-none focus:shadow-outline">view</button>
-                                    </x-slot>
-                                    <x-slot name="title">View a User</x-slot>
-                                    <x-slot name="content">{{ $user }}</x-slot>
-                                </x-modal>
                                 {{-- delete user modal --}}
                                 <x-modal class="mb-2">
                                     <x-slot name="trigger">
                                         <button type="button"
-                                            class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded w-16 focus:outline-none focus:shadow-outline">Delete</button>
+                                            class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded w-24 focus:outline-none focus:shadow-outline"><i
+                                                class="fas fa-trash mt-1 mr-1"></i>Delete</button>
                                     </x-slot>
                                     <x-slot name="title">Delete User</x-slot>
                                     <x-slot name="content">delete</x-slot>

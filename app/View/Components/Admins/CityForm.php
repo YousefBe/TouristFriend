@@ -1,19 +1,20 @@
 <?php
 
-namespace App\View\Components\Admins;
+namespace App\View\Components\admins;
 
 use Illuminate\View\Component;
 
-class adminDashboard extends Component
+class CityForm extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public $updating;
+    public function __construct($updating)
     {
-        //
+        $this->updating = $updating;
     }
 
     /**
@@ -23,6 +24,6 @@ class adminDashboard extends Component
      */
     public function render()
     {
-        return view('components.admins.admin-dashboard');
+        return view('components.admins.city-form');
     }
 }

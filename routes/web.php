@@ -41,8 +41,29 @@ Route::middleware(['auth', 'role:administrator'])->group(function () {
         return view('pages.admins.dashboard');
     })->name('admin.countries');
 
-    // route::get('/admin/users', Users::class)->name('admin.users');
-    // route::get('/admin/countries', Countries::class)->name('admin.countries');
+    route::get('/admin/country/{id}/manage/cities', function ($id) {
+        $country = Country::findOrFail($id);
+        return view('pages.admins.country', ['id' => $id, 'country' => $country]);
+    })->name('admin.country.manage.cities');
+
+    route::get('/admin/country/{id}/manage/hotels', function ($id) {
+        $country = Country::findOrFail($id);
+        return view('pages.admins.country', ['id' => $id, 'country' => $country]);
+    })->name('admin.country.manage.hotels');
+
+    route::get('/admin/country/{id}/manage/pois', function ($id) {
+        $country = Country::findOrFail($id);
+        return view('pages.admins.country', ['id' => $id, 'country' => $country]);
+    })->name('admin.country.manage.pointsOfInterest');
+
+    route::get('/admin/country/{id}/manage/restaurants', function ($id) {
+        $country = Country::findOrFail($id);
+        return view('pages.admins.country', ['id' => $id, 'country' => $country]);
+    })->name('admin.country.manage.restaurants');
+
+    route::get('/admin/blog', function () {
+        return view('pages.admins.dashboard');
+    })->name('admin.blog');
 });
 
 

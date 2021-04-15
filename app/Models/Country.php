@@ -29,7 +29,7 @@ class Country extends Model
     }
     public function restaurants()
     {
-        return $this->hasMany(Hotel::class);
+        return $this->hasMany(Restaurant::class);
     }
 
     public function images()

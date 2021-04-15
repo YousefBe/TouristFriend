@@ -4,16 +4,18 @@ namespace App\View\Components\Admins;
 
 use Illuminate\View\Component;
 
-class adminDashboard extends Component
+class CountriesNav extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public $CountryId;
+
+    public function __construct($id)
     {
-        //
+        $this->CountryId = $id;
     }
 
     /**
@@ -23,6 +25,6 @@ class adminDashboard extends Component
      */
     public function render()
     {
-        return view('components.admins.admin-dashboard');
+        return view('components.admins.countries-nav');
     }
 }
