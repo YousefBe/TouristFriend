@@ -17,4 +17,10 @@ class City extends Model
     {
         return $this->hasMany(Image::class, 'city_id');
     }
+
+    public function homePageImage()
+    {
+        $image = $this->images()->limit(1)->pluck('file_name')->implode('');
+        return  $image;
+    }
 }

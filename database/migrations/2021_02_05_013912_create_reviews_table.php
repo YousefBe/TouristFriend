@@ -19,6 +19,9 @@ class CreateReviewsTable extends Migration
             $table->string('body');
             $table->string('rate');
 
+            $table->integer('likes');
+            $table->integer('dislikes');
+
             $table->unsignedBigInteger('hotel_id')->nullable();
             $table->unsignedBigInteger('country_id')->nullable();
             $table->unsignedBigInteger('restaurant_id')->nullable();
