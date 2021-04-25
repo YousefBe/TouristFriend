@@ -69,7 +69,7 @@ class CitySeeder extends Seeder
 
         //italy
         $Florence = City::create([
-            'name' => "Tripoli",
+            'name' => "Florence",
             'longtiude' => "11.24626",
             'latitude' => "43.77925",
             'details' => "Florence (Firenze) is one of Italy's most important Renaissance architectural and art centers. Its Duomo and Baptistery are magnificent but crowded with tourists, as is their large piazza. Florence has several excellent museums with many famous paintings and sculptures, including Michelangelo's 'David' and Botticelli's 'Birth of Venus.' There are also Medici palaces and gardens. Florence is in the region of Tuscany and is the gateway for exploring Tuscany's smaller cities and countryside.",

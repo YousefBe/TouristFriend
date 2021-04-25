@@ -22,10 +22,14 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', function () {
-    // dd(scandir('../storage/app/public/POI/images/'));
-    return view('landing.welcome');
+    $countries = Country::all()->random(4);
+    $cities = City::all()->random(4);
+    return view('landing.welcome', compact('countries', 'cities'));
 })->name('home');
 
+route::get('/test', function () {
+    return view('landing.tetst');
+});
 // admin routes
 Route::middleware(['auth', 'role:administrator'])->group(function () {
 

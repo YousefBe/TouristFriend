@@ -40,4 +40,10 @@ class Country extends Model
     {
         return $this->hasMany(Review::class, 'country_id');
     }
+
+    public function homePageImage()
+    {
+        $image = $this->images()->limit(1)->pluck('file_name')->implode('');
+        return  $image;
+    }
 }
