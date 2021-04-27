@@ -17,7 +17,7 @@ class PointOfInterest extends Model
     }
     public function images()
     {
-        return $this->hasMany(Image::class, 'point_id');
+        return $this->morphMany(Image::class, 'imageable');
     }
     public function reviews()
     {

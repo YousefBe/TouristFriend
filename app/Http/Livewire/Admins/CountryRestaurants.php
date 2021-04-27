@@ -79,6 +79,7 @@ class CountryRestaurants extends Component
     {
         $image = Image::find($id);
         $image->delete();
+        $this->dispatchBrowserEvent('close-modal');
     }
 
     private function handleImages($res)

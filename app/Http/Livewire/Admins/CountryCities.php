@@ -67,6 +67,7 @@ class CountryCities extends Component
     {
         $image = Image::find($id);
         $image->delete();
+        $this->dispatchBrowserEvent('close-modal');
     }
 
     public function Delete($id)

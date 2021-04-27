@@ -16,7 +16,7 @@ class Hotel extends Model
     }
     public function images()
     {
-        return $this->hasMany(Image::class, 'hotel_id');
+        return $this->morphMany(Image::class, 'imageable');
     }
     public function reviews()
     {

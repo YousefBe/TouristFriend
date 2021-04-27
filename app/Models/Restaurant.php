@@ -16,7 +16,7 @@ class Restaurant extends Model
     }
     public function images()
     {
-        return $this->hasMany(Image::class, 'restaurant_id');
+        return $this->morphMany(Image::class, 'imageable');
     }
     public function reviews()
     {

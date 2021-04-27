@@ -34,7 +34,7 @@ class Country extends Model
 
     public function images()
     {
-        return $this->hasMany(Image::class, 'country_id');
+        return $this->morphMany(Image::class, 'imageable');
     }
     public function reviews()
     {

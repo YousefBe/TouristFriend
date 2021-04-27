@@ -15,7 +15,7 @@ class City extends Model
     }
     public function images()
     {
-        return $this->hasMany(Image::class, 'city_id');
+        return $this->morphMany(Image::class, 'imageable');
     }
 
     public function homePageImage()
