@@ -33,10 +33,6 @@ route::get('/test', function () {
 // admin routes
 Route::middleware(['auth', 'role:administrator'])->group(function () {
 
-    route::get('/admin/dashboard', function () {
-        return view('pages.admins.dashboard');
-    })->name('admin.dashboard');
-
     route::get('/admin/users', function () {
         return view('pages.admins.dashboard');
     })->name('admin.users');
@@ -74,7 +70,7 @@ Route::middleware(['auth', 'role:administrator'])->group(function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'admin'])->name('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 
 route::get('/admin', [AdminController::class, 'show'])->middleware(['auth', 'admin']);

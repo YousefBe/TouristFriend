@@ -89,6 +89,18 @@
                                             delete
                                         </button></x-slot>
                                 </x-modal>
+                                {{-- View user --}}
+                                <x-modal class="mb-2">
+                                    <x-slot name="trigger">
+                                        <button type="button"
+                                            class="text-sm bg-yellow-500 hover:bg-yellow-700 text-white py-1 px-2 rounded w-24 focus:outline-none focus:shadow-outline ml-2"><i
+                                                class="fas fa-eye mt-1 mr-1"></i>View</button>
+                                    </x-slot>
+                                    <x-slot name="title">View User</x-slot>
+                                    <x-slot name="content">
+                                        <x-user.user-profile :user="$user" />
+                                    </x-slot>
+                                </x-modal>
                             </td>
                             {{-- eof actions --}}
                         </tr>

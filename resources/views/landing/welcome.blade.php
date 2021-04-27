@@ -40,7 +40,7 @@
     <x-slot name="plansSection">
         {{-- start your plans --}}
         <section class=" w-full h-screen flex items-center justify-center">
-            <div class="bg-white w-10/12 h-3/4 rounded-lg shadow-lg p-12 ">
+            <div class="bg-white w-10/12 h-3/4 rounded-lg shadow-lg ">
                 <div class="h-full flex flex-col md:flex-row justify-between ">
                     {{-- intro div --}}
                     <div class="h-2/3  md:h-full md:w-2/3 p-6 md:p-12 flex flex-col justify-between">

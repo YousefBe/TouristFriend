@@ -42,10 +42,13 @@
 
                         <x-slot name="content">
                             @if (Auth::user()->hasRole('administrator'))
-                                <x-dropdown-link :href="route('admin.dashboard')">
-                                    {{ __('Dashboard') }}
+                                <x-dropdown-link :href="route('admin.users')">
+                                    {{ __('Manage') }}
                                 </x-dropdown-link>
                             @endif
+                            <x-dropdown-link :href="route('dashboard')">
+                                {{ __('Profile') }}
+                            </x-dropdown-link>
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf

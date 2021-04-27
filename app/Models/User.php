@@ -2,11 +2,12 @@
 
 namespace App\Models;
 
+use App\Models\UserDetails;
+use Illuminate\Notifications\Notifiable;
+use Laratrust\Traits\LaratrustUserTrait;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laratrust\Traits\LaratrustUserTrait;
 
 class User extends Authenticatable
 {
@@ -22,7 +23,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'image'
     ];
 
     /**
@@ -52,8 +52,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(Comment::class);
     }
-    public function review()
+    public function reviews()
     {
         return $this->hasMany(Review::class);
+    }
+    public function details()
+    {
+        return $this->hasOne(UserDetails::class);
     }
 }
