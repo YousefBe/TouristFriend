@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
 
             $table->string('title');
             $table->string('body');
-            $table->integer('vote');
+            $table->integer('vote')->default('0');
 
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('channel_id');

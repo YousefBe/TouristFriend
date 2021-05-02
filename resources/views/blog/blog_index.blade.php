@@ -91,6 +91,7 @@
                                                 type="submit">
                                                 Delete
                                             </button>
+                                        </form>
 
                                     </span>
                                     

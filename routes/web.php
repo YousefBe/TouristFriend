@@ -19,8 +19,10 @@ use BinshopsBlog\Laravel\Fulltext\Commands\Index;
 Route::get('/', function () {
     return view('landing.welcome');
 })->name('home');
-
-Route::resource('/blog',PostsController::class);
+//Blog posts Routes
+Route::post('/vote/upvote/{id}', 'App\Http\Controllers\PostsController@upVote')->name('upvote');
+Route::post('/vote/downvote/{id}', 'App\Http\Controllers\PostsController@downVote')->name('downvote');
+Route::resource('/blog', PostsController::class);
 
 Route::view('/contact', 'landing.contactUs')->name('contact-us');
 
@@ -33,6 +35,8 @@ Route::get('/dashboard', function () {
 
 //Comment Route
 Route::post('/comment/store', 'App\Http\Controllers\CommentController@store')->name('comment.add');
+Route::delete('/comment/delete', 'App\Http\Controllers\CommentController@destroy')->name('comment.delete');
+//Vote Routes
 
 
 

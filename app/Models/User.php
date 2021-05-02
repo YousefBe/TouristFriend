@@ -7,9 +7,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laratrust\Traits\LaratrustUserTrait;
+use Jcc\LaravelVote\Traits\Voter;
+
 
 class User extends Authenticatable
 {
+    use Voter;
     use LaratrustUserTrait;
     use HasFactory, Notifiable;
 

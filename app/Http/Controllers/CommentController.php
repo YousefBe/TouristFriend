@@ -28,6 +28,15 @@ class CommentController extends Controller
 
         return back();
     }
+    public function destroy($id)
+    {
+        $comment =Comment::find($id);
+        $comment->delete();
+
+        return back();
+
+
+    }
 
 
 }

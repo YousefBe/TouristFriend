@@ -4,10 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Jcc\LaravelVote\Traits\Votable;
+
 
 class Post extends Model
 {
     use HasFactory;
+    use Votable;
+
 
     protected $fillable = ['title','body','user_id','channel_id','vote'];
 
@@ -26,4 +30,5 @@ class Post extends Model
     {
         return $this->hasMany(Comment::class);
     }
+    
 }
