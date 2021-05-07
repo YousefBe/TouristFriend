@@ -5,11 +5,14 @@ use App\Models\Hotel;
 use App\Models\Country;
 use App\Models\Restaurant;
 use App\Http\Livewire\Admins\Users;
+use App\Http\Livewire\User\Country as CountryController;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admins\Dashboard;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\AdminController;
+use App\Http\Livewire\User\Country as UserCountry;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +33,12 @@ Route::get('/', function () {
 route::get('/test', function () {
     return view('landing.tetst');
 });
+
+Route::middleware(['auth' ])->group(function(){
+    route::get('/country/{id}',CountryController::class );
+});
+
+
 // admin routes
 Route::middleware(['auth', 'role:administrator'])->group(function () {
 

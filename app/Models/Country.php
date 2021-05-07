@@ -38,7 +38,7 @@ class Country extends Model
     }
     public function reviews()
     {
-        return $this->hasMany(Review::class, 'country_id');
+        return $this->morphMany(Review::class, 'reviewable');
     }
 
     public function homePageImage()

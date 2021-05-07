@@ -76,6 +76,7 @@ class CountryPoi extends Component
     public function Delete($id)
     {
         $POI = PointOfInterest::find($id);
+        $POI->images()->delete();
         $POI->delete();
         $this->dispatchBrowserEvent('close-modal');
     }

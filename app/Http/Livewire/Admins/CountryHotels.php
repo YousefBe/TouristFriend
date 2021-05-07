@@ -75,6 +75,7 @@ class CountryHotels extends Component
     public function Delete($id)
     {
         $hotel = Hotel::find($id);
+        $hotel->images()->delete();
         $hotel->delete();
         $this->dispatchBrowserEvent('close-modal');
     }

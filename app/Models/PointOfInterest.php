@@ -21,6 +21,6 @@ class PointOfInterest extends Model
     }
     public function reviews()
     {
-        return $this->hasMany(PointOfInterest::class, 'point_id');
+        return $this->morphMany(Review::class, 'reviewable');
     }
 }

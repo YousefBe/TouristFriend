@@ -190,11 +190,44 @@ main {
         padding: 1.7rem 1.6rem;
     }
 }
-
 /* ================================================================================ */
 /* eof Contact Us page  */
 /* ================================================================================ */
 
+/* ================================================================================ */
+/* slider component */
+/* ================================================================================ */
+
+.slider-section{
+    height: 500px;
+}
+
+@media screen  and (max-width: 768px) {
+    .slider-section{
+        height: 350px;
+    }
+}
+
+/* ================================================================================ */
+/*eof slider component */
+/* ================================================================================ */
+.map-div{
+    width: 454px;
+    height: 400px;
+    border-radius: 2%;
+}
+@media (max-width: 768px) {
+    .map-div{
+        width: 602px;
+        height: 400px;
+    }
+   
+}
+#poi-marker{
+    background-image: url("../images/poi.png");  background-size: cover;
+    width: 20px;
+    height: 20px;
+}
 /* animations */
 
 @keyframes fade-in-right {

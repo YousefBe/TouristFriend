@@ -1,5 +1,5 @@
 <div class="min-h-screen h-auto flex justify-center items-center">
-    <div class=" h-auto min-h-full md:w-1/2 w-full bg-gray-200 rounded-md p-8 overflow-y-auto">
+    <div class=" h-auto min-h-full  w-full bg-gray-200 rounded-md p-8 overflow-y-auto">
         <div class=" h-5/6 mb-8">
             {{-- form --}}
             <div class="flex items-start">

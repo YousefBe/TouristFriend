@@ -28,6 +28,7 @@
     @livewireStyles
     <!-- Scripts -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.12.0/maps/maps.css'>
 
 </head>
 
@@ -49,6 +50,9 @@
         integrity="sha512-2RLMQRNr+D47nbLnsbEqtEmgKy67OSCpWJjJM394czt99xj3jJJJBQ43K7lJpfYAYtvekeyzqfZTx2mqoDh7vg=="
         crossorigin="anonymous"></script>
     @livewireScripts
+    @stack('swiper-scipts')
+    <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.12.0/maps/maps-web.min.js'></script>
+    @stack('map-scripts')
 </body>
 
 </html>

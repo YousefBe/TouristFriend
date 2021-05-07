@@ -1,4 +1,9 @@
-<x-guest-layout>
+{{-- <x-guest-layout> --}}
+    {{-- @livewire('user.reviews') --}}
     {{-- <x-slider></x-slider> --}}
-    @livewire('user.reviews')
-</x-guest-layout>
+{{-- </x-guest-layout> --}}
+ 
+<x-app-layout>
+    <x-map-component :longitude="-95.665" :latitude="37.6" />
+
+</x-app-layout>

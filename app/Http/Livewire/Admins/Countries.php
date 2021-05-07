@@ -109,6 +109,7 @@ class Countries extends Component
     public function Delete($id)
     {
         $country = Country::find($id);
+        $country->images()->delete();
         $country->delete();
         $this->dispatchBrowserEvent('close-modal');
     }

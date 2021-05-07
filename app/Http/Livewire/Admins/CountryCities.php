@@ -73,6 +73,7 @@ class CountryCities extends Component
     public function Delete($id)
     {
         $city = City::find($id);
+        $city->images()->delete();
         $city->delete();
         $this->dispatchBrowserEvent('close-modal');
     }

@@ -1,12 +1,12 @@
 <div>
-    <section class=" w-full h-96 ">
+    <section class="w-full slider-section ">
         <div class="swiper-container w-full h-full ">
             <div class="swiper-wrapper ">
-                <div class="swiper-slide  w-full h-full  image object-cover image1">aaaa
+                @foreach ( $images as $image)
+                <div class="swiper-slide w-full h-full  image object-cover">
+                    <img src="{{asset('storage/' .$folder .'/' .$image->file_name )}}" alt="" class="object-fill min-h-full object-center w-full">    
                 </div>
-                <div class="swiper-slide w-full h-full  image object-cover  image1"> </div>
-                <div class="swiper-slide w-full h-full image object-cover  image1">Slide 3</div>
-
+                @endforeach
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -22,7 +22,7 @@
                 spaceBetween: 0,
                 centeredSlides: true,
                 autoplay: {
-                    delay: 3000,
+                    delay: 5000,
                     disableOnInteraction: false,
                 },
                 pagination: {
