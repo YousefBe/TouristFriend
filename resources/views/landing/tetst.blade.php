@@ -4,6 +4,5 @@
 {{-- </x-guest-layout> --}}
  
 <x-app-layout>
-    <x-map-component :longitude="-95.665" :latitude="37.6" />
-
+    @livewire('country-feature' , ['object'=> $cities])
 </x-app-layout>

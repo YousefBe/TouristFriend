@@ -12,7 +12,6 @@ class Country extends Component
     public function mount($id)
     {
         $this->country = CountryModel::findOrFail($id);
-        $this->countryImages = $this->country->images;
     }
 
     public function render()

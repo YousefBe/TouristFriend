@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admins\Dashboard;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\AdminController;
+use App\Http\Livewire\User\City as UserCity;
 use App\Http\Livewire\User\Country as UserCountry;
 
 /*
@@ -31,11 +32,12 @@ Route::get('/', function () {
 })->name('home');
 
 route::get('/test', function () {
-    return view('landing.tetst');
+    return view('landing.tetst' , ['cities'=> Country::find(1)]);
 });
 
 Route::middleware(['auth' ])->group(function(){
     route::get('/country/{id}',CountryController::class );
+    route::get('/city/{id}',UserCity::class );
 });
 
 

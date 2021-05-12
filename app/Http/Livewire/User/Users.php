@@ -76,6 +76,7 @@ class Users extends Component
         // to stop function from working every time i press savec
         // bad approach i guess 
         if (
+            $this->user->details &&
             !$this->image &&
             $this->first_name === $this->user->details->first_name &&
             $this->last_name === $this->user->details->last_name &&

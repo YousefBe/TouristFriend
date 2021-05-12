@@ -19,8 +19,8 @@ class CreateReviewsTable extends Migration
             $table->string('body');
             $table->integer('rate');
 
-            $table->integer('likes')->default(0);
-            $table->integer('dislikes')->default(0);
+            $table->integer('likes')->default('0');
+            $table->integer('dislikes')->default('0');
 
             $table->unsignedBigInteger('reviewable_id')->nullable();
             $table->string('reviewable_type');

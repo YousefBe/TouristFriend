@@ -7,10 +7,47 @@
         {{-- First Column --}}
         <div class="lg:col-span-2">
 
-            <div class="bg-white p-4 lg:p-12 shadow-lg rounded-xl w-auto flex justify-between items-center mb-4 ">
-                <p
-                    class=" text-xl sm:text-3xl lg:text-4xl font-bold capitalize md:border-b-4 border-black border-solid">
-                    {{ $name }}, {{ $contnent }}</p>
+            <div class="bg-white p-4 lg:p-8 shadow-lg rounded-xl w-auto  mb-4 ">
+                <p class=" text-xl sm:text-3xl lg:text-4xl font-bold capitalize mb-4">
+                    {{ $name }}, {{ $placeLocation }}</p>
+                    {{-- i know this is bad --}}
+                @if ($type === 'country')
+                    <p class=" text-lg font-semibold tracking-wide mb-2">
+                        <i class="fas fa-users mr-4"></i>
+                        {{ $population }}
+                    </p>
+                    <p class=" text-lg font-semibold tracking-wide mb-2">
+                        <i class="fas fa-money-bill-wave mr-4"></i>
+                        {{ $currency }}
+                    </p>
+                    <p class=" text-lg font-semibold tracking-wide mb-2">
+                        <i class="fas fa-dollar-sign mr-4"></i>
+                        {{ $budget }}
+                    </p>
+                @elseif ($type === 'hotel')
+                    <p class=" text-lg font-semibold tracking-wide mb-2">
+                        <i class="fas fa-users mr-4"></i>
+                        {{ $rate }}
+                    </p>
+                    <p class=" text-lg font-semibold tracking-wide mb-2">
+                        <i class="fas fa-money-bill-wave mr-4"></i>
+                        {{ $price }}
+                    </p>
+                @elseif ($type === 'restaurant')
+                    <p class=" text-lg font-semibold tracking-wide mb-2">
+                        <i class="fas fa-users mr-4"></i>
+                        {{ $rate }}
+                    </p>
+                @elseif ($type ==='POI')
+                    <p class=" text-lg font-semibold tracking-wide mb-2">
+                        <i class="fas fa-users mr-4"></i>
+                        {{ $cost }}
+                    </p>
+                    <p class=" text-lg font-semibold tracking-wide mb-2">
+                        <i class="fas fa-users mr-4"></i>
+                        {{ $workinHours }}
+                    </p>
+                @endif
                 {{-- add favorite component here --}}
             </div>
             <div class=" bg-white p-4 lg:p-12 shadow-lg rounded-xl w-auto  mb-8">
@@ -20,29 +57,38 @@
                 </h3>
                 <p class=" italic  text-justify text-xl font-semibold tracking-wide">{!! $details !!}</p>
             </div>
-            
+            @if ($type === 'country')
+                @livewire('country-feature', ['collection' => $cities ,'imageFolder'=>'cities' , 'type'=>'cities'])
+                @livewire('country-feature', ['collection' => $hotels ,'imageFolder'=>'hotels' , 'type'=>'hotels'])
+                @livewire('country-feature', ['collection' => $restaurants ,'imageFolder'=>'resturants' ,
+                'type'=>'restaurants'])
+                @livewire('country-feature', ['collection' => $POI ,'imageFolder'=>'POI' ,
+                'type'=>'points of interest'])
+
+            @endif
         </div>
 
         {{-- Seconed Column --}}
         <div class=" lg:col-span-1 mb-12">
             <div class="bg-white h-96 shadow-lg rounded-xl">
-                @livewire('map' , ['longtiude' => $longtiude , 'latitude'=> $latitude ,'CountryMap'=>true , 'zoomLevel' => 7 , 'POIS'=>$POI , 'hotels'=>$hotels , 'restaurants'=>$restaurants])
+                @livewire('map' , ['longtiude' => $longtiude , 'latitude'=> $latitude ,'mapType'=>$type , 'zoomLevel'
+                => $zoomLevel , 'POIS'=>$POI , 'hotels'=>$hotels , 'restaurants'=>$restaurants])
             </div>
-            @if ($type === 'country')
-                <div class="bg-white h-auto mt-12 p-8">
-                    <p class=" text-xl font-bold">
+            @if ($weather)
+                <div class="bg-white h-auto mt-12 p-8 rounded-xl">
+                    <p class="text-xl font-bold">
                         <i class="fas fa-cloud mr-4 text-2xl"></i>
                         Country Weather
                     </p>
-                    <p class=" italic  text-justify text-base  tracking-wide weather-text"> {{ $weather }}</p>
+                    <p class=" italic  text-justify text-xl  tracking-wide weather-text"> {{ $weather }}</p>
                 </div>
             @endif
 
         </div>
     </section>
     <section class="bg-gray-100 w-full h-full p-4 lg:p-12 mb-4">
-        <div class=" w-full md:w-11/12 m-right">
-            @livewire('user.reviews')
+        <div class=" w-full md:w-8/12 m-right">
+            @livewire('user.reviews' , ['objectToBeReviewd'=> $object])
         </div>
     </section>
 </div>

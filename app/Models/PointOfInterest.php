@@ -23,4 +23,9 @@ class PointOfInterest extends Model
     {
         return $this->morphMany(Review::class, 'reviewable');
     }
+    public function homePageImage()
+    {
+        $image = $this->images()->limit(1)->pluck('file_name')->implode('');
+        return  $image;
+    }
 }

@@ -13,7 +13,7 @@ class Map extends Component
 
 
     // for country Popups
-    public $CountryMap;
+    public $mapType;
     public $POIS;
     public $restaurants;
     public $hotels;
