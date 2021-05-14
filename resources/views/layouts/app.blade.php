@@ -52,6 +52,7 @@
     @stack('swiper-scipts')
     <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.12.0/maps/maps-web.min.js'></script>
     @stack('map-scripts')
+    @stack('reviews')
 </body>
 
 </html>

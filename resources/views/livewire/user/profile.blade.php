@@ -9,8 +9,8 @@
 
             <div class="mt-16 flex items-center justify-center">
                 <div class="mr-4  text-center">
-                    <p class=" text-gray-600 text-2xl font-bold">{{ $commentsCount }}</p>
-                    <p class="text-gray-400 text-2xl"> comments </p>
+                    <p class=" text-gray-600 text-2xl font-bold">{{ $reviewCount }}</p>
+                    <p class="text-gray-400 text-2xl"> Reviews </p>
                 </div>
                 <div class=" text-center">
                     <p class=" text-gray-600 text-2xl font-bold">{{ $postsCount }}</p>
@@ -34,7 +34,7 @@
                 </p>
             </div>
             <div class=" mt-4 p-6">
-                <p class=" text-lg text-gray-500 tracking-wide text-justify font-semibold">
+                <p class=" text-4xl text-gray-500 tracking-wide text-justify italic font-semibold">
                     {!! $about !!}
                 </p>
             </div>

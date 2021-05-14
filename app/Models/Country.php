@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\City;
+use App\Models\Favourite;
 use App\Models\PointOfInterest;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -40,10 +41,14 @@ class Country extends Model
     {
         return $this->morphMany(Review::class, 'reviewable');
     }
+    public function favourites()
+    {
+        return $this->morphMany(Favourite::class, 'favouritable');
+    }
 
     public function homePageImage()
     {
         $image = $this->images()->limit(1)->pluck('file_name')->implode('');
-        return  $image;
+        return 'storage/countries/' . $image;
     }
 }

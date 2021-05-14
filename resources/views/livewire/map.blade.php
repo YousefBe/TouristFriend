@@ -21,7 +21,7 @@
                 })
             );
             // if its a country map , we want to add some popups to the map adding our own data
-            if ({{ $mapType === 'country' }}) {
+            if ({{ $mapType === 'country' ? 1 : 0 }}) {
                 const POIS = {!! json_encode($POIS) !!};
                 const hotels = {!! json_encode($hotels) !!};
                 const restaurants = {!! json_encode($restaurants) !!};

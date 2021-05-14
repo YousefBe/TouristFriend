@@ -56,7 +56,7 @@
     </section>
     {{-- Addtional infos --}}
     <section class=" bg-white p-6">
-        <p class=" text-gray-700 capitalize text-4xl text-center underline">Addtional infos </p>
+        <p class=" text-gray-700 capitalize text-4xl text-center underline">Profile </p>
         <p class=" text-gray-400  mb-8 text-lg text-center ">‟this data is what will be seen on your profile”</p>
         {{-- firstname & lastname --}}
         <div class="flex flex-col md:flex-row justify-between">

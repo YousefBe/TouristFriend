@@ -36,8 +36,8 @@ route::get('/test', function () {
 });
 
 Route::middleware(['auth' ])->group(function(){
-    route::get('/country/{id}',CountryController::class );
-    route::get('/city/{id}',UserCity::class );
+    route::get('/country/{id}',CountryController::class )->name('user.country');
+    route::get('/city/{id}',UserCity::class )->name('user.city');
 });
 
 

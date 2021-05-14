@@ -31,7 +31,7 @@
                         <th class=""></th>
                     </tr>
                     @foreach ($users as $user)
-                        <tr class="border-b hover:bg-orange-100">
+                        <tr class="border-b hover:bg-orange-100" >
                             <td class="p-3 px-5 w-64">
                                 <p class=" text-sm sm:text-base tracking-wider font-semibold">{{ $user->name }}
                                     @if (Auth::user()->id == $user->id)
@@ -97,8 +97,9 @@
                                                 class="fas fa-eye mt-1 mr-1"></i>View</button>
                                     </x-slot>
                                     <x-slot name="title">View User</x-slot>
-                                    <x-slot name="content">
-                                        <x-user.user-profile :user="$user" />
+                                    <x-slot name="content" >
+                                        @livewire('user.profile', ['user' => $user], key($user->id))
+
                                     </x-slot>
                                 </x-modal>
                             </td>

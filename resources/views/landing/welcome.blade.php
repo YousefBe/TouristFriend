@@ -146,7 +146,7 @@
                 <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-2">
                     @foreach ($countries as $country)
                         <div class=" h-auto lg:w-full lg:h-auto flex flex-col  items-center">
-                            <img src="{{ asset('storage/countries/' . $country->homePageImage()) }}" alt=""
+                            <img src="{{ asset( $country->homePageImage()) }}" alt=""
                                 class=" h-64 w-full md:w-64 object-center object-cover mb-8 rounded-md ">
                             <a href=""
                                 class=" font-bold text-xl uppercase break-normal tracking-wide ">{{ Str::substr($country->name, 0, 13) }}
@@ -177,7 +177,7 @@
                 <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-2">
                     @foreach ($cities as $city)
                         <div class=" h-auto lg:w-full lg:h-auto flex flex-col  items-center">
-                            <img src="{{ asset('storage/cities/' . $city->homePageImage()) }}" alt=""
+                            <img src="{{ asset( $city->homePageImage()) }}" alt=""
                                 class=" h-64 w-full md:w-64 object-center object-cover mb-8 rounded-md ">
                             <a href=""
                                 class=" font-bold text-xl uppercase break-normal tracking-wide ">{{ Str::substr($city->name, 0, 13) }}

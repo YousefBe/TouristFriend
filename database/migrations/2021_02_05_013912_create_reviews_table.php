@@ -18,13 +18,8 @@ class CreateReviewsTable extends Migration
             $table->string('title');
             $table->string('body');
             $table->integer('rate');
-
-            $table->integer('likes')->default('0');
-            $table->integer('dislikes')->default('0');
-
             $table->unsignedBigInteger('reviewable_id')->nullable();
-            $table->string('reviewable_type');
-            
+            $table->string('reviewable_type');            
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             

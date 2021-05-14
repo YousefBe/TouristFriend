@@ -19,7 +19,7 @@ class CreateFavouritesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('favouritable_id')->nullable();
             $table->string('favouritable_type');
-
+            $table->string('route_name');
             $table->timestamps();
         });
     }

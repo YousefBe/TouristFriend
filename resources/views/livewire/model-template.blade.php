@@ -3,14 +3,17 @@
     <section class=" bg-gray-100 w-full h-full  mb-4 relative">
         <x-slider :images="$objectImages" :folder="$imagesFolder" />
     </section>
-    <section class=" w-full grid grid-cols-1 gap-8 lg:grid-cols-3 p-4 md:p-12 ">
+    <section class=" w-full grid grid-cols-1 gap-8 lg:grid-cols-3 p-4 md:p-12 md:pb-0 ">
         {{-- First Column --}}
         <div class="lg:col-span-2">
 
             <div class="bg-white p-4 lg:p-8 shadow-lg rounded-xl w-auto  mb-4 ">
-                <p class=" text-xl sm:text-3xl lg:text-4xl font-bold capitalize mb-4">
-                    {{ $name }}, {{ $placeLocation }}</p>
-                    {{-- i know this is bad --}}
+                <div class="flex justify-between">
+                    <p class=" text-xl sm:text-3xl lg:text-4xl font-bold capitalize mb-4">
+                        {{ $name }}, {{ $placeLocation }}</p>
+                    @livewire('favourites' , ['object'=> $object , 'routeWithModelId'=>'/'. Request::path()])
+                </div>
+                {{-- i know this is bad --}}
                 @if ($type === 'country')
                     <p class=" text-lg font-semibold tracking-wide mb-2">
                         <i class="fas fa-users mr-4"></i>
@@ -50,7 +53,7 @@
                 @endif
                 {{-- add favorite component here --}}
             </div>
-            <div class=" bg-white p-4 lg:p-12 shadow-lg rounded-xl w-auto  mb-8">
+            <div class=" bg-white p-4 lg:p-12 shadow-lg rounded-xl w-auto  mb-8" style="min-height: 580px">
                 <h3 class=" text-xl font-bold  mb-4">
                     <i class="fas fa-info-circle mr-1 sm:mr-4"></i>
                     some details about the {{ $type }}
@@ -58,12 +61,12 @@
                 <p class=" italic  text-justify text-xl font-semibold tracking-wide">{!! $details !!}</p>
             </div>
             @if ($type === 'country')
-                @livewire('country-feature', ['collection' => $cities ,'imageFolder'=>'cities' , 'type'=>'cities'])
-                @livewire('country-feature', ['collection' => $hotels ,'imageFolder'=>'hotels' , 'type'=>'hotels'])
-                @livewire('country-feature', ['collection' => $restaurants ,'imageFolder'=>'resturants' ,
-                'type'=>'restaurants'])
-                @livewire('country-feature', ['collection' => $POI ,'imageFolder'=>'POI' ,
-                'type'=>'points of interest'])
+                @livewire('country-feature', ['CountryId' => $object->id , 'type'=>'cities' ])
+                @livewire('country-feature', ['CountryId' => $object->id , 'type'=>'hotels' ])
+                @livewire('country-feature', ['CountryId' => $object->id ,
+                'type'=>'restaurants' ])
+                @livewire('country-feature', ['CountryId' => $object->id ,
+                'type'=>'points of interest' ])
 
             @endif
         </div>
@@ -86,7 +89,7 @@
 
         </div>
     </section>
-    <section class="bg-gray-100 w-full h-full p-4 lg:p-12 mb-4">
+    <section class="bg-gray-100 w-full h-full p-4 lg:pt-0 lg:p-12 mb-4">
         <div class=" w-full md:w-8/12 m-right">
             @livewire('user.reviews' , ['objectToBeReviewd'=> $object])
         </div>

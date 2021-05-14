@@ -11,44 +11,97 @@ class Reviews extends Component
     // send object "model" to be reviewd , like we did with the country cities
     // send masln $coubtry->reviews , so that we can create the review directly 
     public $objectToBeReviewd;
-    public $objectReviews;
- 
- 
-    public $rate;
+    public $userId ;
+
+    public $rate = 0;
     public $title;
     public $body;
 
     public $objectReviewrsIds;
-    public $selectedStars = 0;
+    public $reviewToBeUpdated;
+    public $userReviewdThisObject;
     public $totalStars = 6;
+    public $selectedStars = 0;
+    public $updating = false;
 
-    public function mount($objectToBeReviewd)
+
+    protected $rules = [
+        'title' => 'required',
+        'body' => 'required',
+        'rate' => 'required',
+    ];
+    public function mount()
+    {
+        $this->userId = Auth::user()->id;
+        $this->checkIfUserReviewd();
+    }
+
+    public function checkIfUserReviewd()
     {
         // id of users whom already reviewd the obj
-        $this->objectReviewrsIds =$objectToBeReviewd->reviews()->pluck('user_id')->toArray();
-        // dd($this->objectReviews->first()->user->details);
+        $this->objectReviewrsIds = $this->objectToBeReviewd->reviews()->pluck('user_id')->toArray();
+        if (in_array($this->userId, $this->objectReviewrsIds)) {
+            $this->userReviewdThisObject = true;
+        }else{
+            $this->userReviewdThisObject = false;
+        };
     }
+
+
     public function setStars($number)
     {
-        $this->selectedStars = $number;
         $this->rate = $number;
     }
 
     public function store()
     {
-        $this->objectToBeReviewd->reviews()->create(['title'=> $this->title , 'body'=> $this->body , 'rate'=> $this->rate , 'likes'=> 1 , 'dislikes'=>2 ,'user_id'=>Auth::user()->id]);
-        $this->emit('reviewAdded');
-
+        $data= $this->validate();
+        $data['user_id']= $this->userId;
+        $this->objectToBeReviewd->reviews()->create($data);
+        $this->userReviewdThisObject = true;
     }
-    
-    // public function checkIfUserReviewd()
-    // {
-        // in_array(Auth::user()->id , $this->objectReviewrsIds)
-    // }
+       
+    public function editReview($review)
+    {
+        $this->emit('updatingAreview');
+        $this->updating = true;
+        $this->reviewToBeUpdated= Review::find($review);
+        $this->body = $this->reviewToBeUpdated->body;
+        $this->title = $this->reviewToBeUpdated->title;
+        $this->selectedStars = $this->reviewToBeUpdated->rate;
 
+        $this->userReviewdThisObject = false;
+    }
 
+    public function update()
+    {
+        $data = $this->validate([
+            'title' => 'sometimes',
+            'body' => 'sometimes',
+            'rate' => 'sometimes'
+        ]);
+        $data['user_id']= $this->userId;
+       $this->reviewToBeUpdated->update($data);
+       $this->userReviewdThisObject = true;
+    }
+
+    public function cancelUpdating()
+    {
+        $this->userReviewdThisObject = true;
+        $this->updating= false;
+        $this->rate=0;
+        $this->body='';
+        $this->title='';
+    }
+
+    public function deleteReview($review)
+    {
+        $reviewTobeDeleted= Review::find($review)->delete();
+        // \dd($reviewTobeDeleted);
+        $this->userReviewdThisObject = false;
+    }
     public function render()
     {
-        return view('livewire.user.reviews' , ['reviews' => Review::where('reviewable_id' , '=' , $this->objectToBeReviewd->id)->get()]);
+        return view('livewire.user.reviews', ['reviews' => Review::where('reviewable_id', '=', $this->objectToBeReviewd->id)->get()]);
     }
 }

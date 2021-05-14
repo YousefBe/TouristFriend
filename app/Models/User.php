@@ -64,4 +64,19 @@ class User extends Authenticatable
     {
         return $this->hasMany(Favourite::class);
     }
+
+    // public function myFavourites()
+    // {
+    //     if ($this->favourites) {
+    //         # code...
+    //     }
+    // }
+    
+    public function userImage()
+    {
+        if ($this->details) {
+            return $this->details->image;
+        }
+        return 'default.jpg';
+    }
 }
