@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\AdminController;
 use App\Http\Livewire\User\City as UserCity;
 use App\Http\Livewire\User\Country as UserCountry;
+use App\Http\Livewire\User\Hotel as UserHotel;
+use App\Http\Livewire\User\PointOfInterest;
+use App\Http\Livewire\User\Restaurant as UserRestaurant;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +41,9 @@ route::get('/test', function () {
 Route::middleware(['auth' ])->group(function(){
     route::get('/country/{id}',CountryController::class )->name('user.country');
     route::get('/city/{id}',UserCity::class )->name('user.city');
+    route::get('/point-of-interest/{id}',PointOfInterest::class )->name('user.pos');
+    route::get('/hotel/{id}',UserHotel::class )->name('user.hotel');
+    route::get('/restaurant/{id}',UserRestaurant::class )->name('user.restaurant');
 });
 
 

@@ -27,12 +27,14 @@
                         <x-slot name="trigger">
                             <button
                                 class="flex items-center my-3   text-base font-bold uppercase  hover:text-gray-700 hover:border-gray-100 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-                                <div class="">{{ Auth::user()->name }}</div>
+                                <div class=" flex items-center">
+                                    <img class=" w-6 h-6  mr-2 rounded-full bg-cover object-fit object-cover"
+                                        src="{{ asset('storage/Users/' . Auth::user()->userImage()) }}"
+                                        alt="Profile picture">
+                                    {{ Auth::user()->name }}</div>
 
                                 <div class="ml-1">
-                                    <img class="absolute top-0 left-0 w-full h-full bg-cover object-fit object-cover"
-                                    src="{{ asset('storage/Users/' . Auth::user()->userImage()) }}"
-                                    alt="Profile picture">
+                                    
                                 </div>
                             </button>
                         </x-slot>
@@ -87,8 +89,7 @@
             <div class="mt-2 hover:bg-gray-100  transition-all  duration-500 flex items-center">
                 <div class=" mr-4">
                     <img class=" w-32 h-32 rounded-full bg-cover object-fit object-cover"
-                    src="{{ asset('storage/Users/' . Auth::user()->userImage()) }}"
-                    alt="Profile picture">
+                        src="{{ asset('storage/Users/' . Auth::user()->userImage()) }}" alt="Profile picture">
                 </div>
                 <div class=" pt-8">
                     <h2 class=" uppercase  font-bold text-lg ">{{ Auth::user()->name }}</h2>
@@ -117,9 +118,8 @@
 
                 {{-- Here we Add Users Actions --}}
                 @if (Auth::user())
-
-                    <li class="mx-8 py-6   hover:bg-gray-100  transition-all  duration-500 uppercase text-xl font-bold">
-                        <a href="">Update Profile</a>
+                    <li class="mx-8 py-6 hover:bg-gray-100  transition-all  duration-500 uppercase text-xl font-bold">
+                        <a href="{{route('dashboard')}}">Profile</a>
                     </li>
 
                 @endif

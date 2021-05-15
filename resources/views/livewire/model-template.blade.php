@@ -29,8 +29,8 @@
                     </p>
                 @elseif ($type === 'hotel')
                     <p class=" text-lg font-semibold tracking-wide mb-2">
-                        <i class="fas fa-users mr-4"></i>
-                        {{ $rate }}
+                        <i class="fas fa-star"></i>
+                        Rate: {{ $rate }}
                     </p>
                     <p class=" text-lg font-semibold tracking-wide mb-2">
                         <i class="fas fa-money-bill-wave mr-4"></i>
@@ -38,17 +38,17 @@
                     </p>
                 @elseif ($type === 'restaurant')
                     <p class=" text-lg font-semibold tracking-wide mb-2">
-                        <i class="fas fa-users mr-4"></i>
-                        {{ $rate }}
+                        <i class="fas fa-star"></i>
+                        Rate:  {{ $rate }}
                     </p>
                 @elseif ($type ==='POI')
                     <p class=" text-lg font-semibold tracking-wide mb-2">
-                        <i class="fas fa-users mr-4"></i>
+                        <i class="fas fa-money-bill"></i>
                         {{ $cost }}
                     </p>
                     <p class=" text-lg font-semibold tracking-wide mb-2">
-                        <i class="fas fa-users mr-4"></i>
-                        {{ $workinHours }}
+                        <i class="far fa-clock"></i>
+                        {{ $workingHours }}
                     </p>
                 @endif
                 {{-- add favorite component here --}}
@@ -75,10 +75,11 @@
         <div class=" lg:col-span-1 mb-12">
             <div class="bg-white h-96 shadow-lg rounded-xl">
                 @livewire('map' , ['longtiude' => $longtiude , 'latitude'=> $latitude ,'mapType'=>$type , 'zoomLevel'
-                => $zoomLevel , 'POIS'=>$POI , 'hotels'=>$hotels , 'restaurants'=>$restaurants])
+                => $zoomLevel , 'POIS'=>$POI , 'hotels'=>$hotels , 'restaurants'=>$restaurants , 'destination'=> $object , 
+                ])
             </div>
             @if ($weather)
-                <div class="bg-white h-auto mt-12 p-8 rounded-xl">
+                <div class="bg-white h-auto mt-44 p-8 rounded-xl">
                     <p class="text-xl font-bold">
                         <i class="fas fa-cloud mr-4 text-2xl"></i>
                         Country Weather
@@ -89,9 +90,9 @@
 
         </div>
     </section>
-    <section class="bg-gray-100 w-full h-full p-4 lg:pt-0 lg:p-12 mb-4">
+    <section class="bg-gray-100 w-full h-full p-4 lg:pt-0 lg:p-12  my-4">
         <div class=" w-full md:w-8/12 m-right">
-            @livewire('user.reviews' , ['objectToBeReviewd'=> $object])
+            @livewire('user.reviews' , ['objectToBeReviewd'=> $object , 'type' => $modelType])
         </div>
     </section>
 </div>

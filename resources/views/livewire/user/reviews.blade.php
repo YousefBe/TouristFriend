@@ -90,7 +90,7 @@
                         <div class="inline-block relative">
                             <div class="relative w-16 h-16 rounded-full overflow-hidden">
                                 <img class="absolute top-0 left-0 w-full h-full bg-cover object-fit object-cover"
-                                    src="{{ asset('storage/Users/' . Auth::user()->userImage()) }}"
+                                    src="{{ asset('storage/Users/' . $review->user->userImage() ) }}"
                                     alt="Profile picture">
                                 <div class="absolute top-0 left-0 w-full h-full rounded-full shadow-inner"></div>
                             </div>

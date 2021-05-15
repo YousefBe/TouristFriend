@@ -211,20 +211,41 @@ main {
 /* ================================================================================ */
 /*eof slider component */
 /* ================================================================================ */
-.map-div{
-    width: 454px;
-    height: 400px;
-    border-radius: 2%;
-}
-@media (max-width: 768px) {
+
+@media (min-width: 640px) {
     .map-div{
-        width: 602px;
+        width: 902px;
         height: 400px;
+    }
+   
+}
+@media (min-width: 768px) {
+    .map-div{
+        width: 872px;
+        height: 390px;
+    }
+   
+}
+@media (min-width: 1280px) {
+    .map-div{
+        width: 454px;
+        height: 400px;
+        border-radius: 2%;
     }
    
 }
 #poi-marker{
     background-image: url("../images/poi.png");  background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+#res-marker{
+    background-image: url("../images/res.png");  background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+#hotel-marker{
+    background-image: url("../images/hotels.png");  background-size: cover;
     width: 20px;
     height: 20px;
 }

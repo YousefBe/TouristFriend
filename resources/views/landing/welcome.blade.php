@@ -36,41 +36,6 @@
             </div>
         </section>
     </x-slot>
-
-    <x-slot name="plansSection">
-        {{-- start your plans --}}
-        <section class=" w-full h-screen flex items-center justify-center">
-            <div class="bg-white w-10/12 h-3/4 rounded-lg shadow-lg ">
-                <div class="h-full flex flex-col md:flex-row justify-between ">
-                    {{-- intro div --}}
-                    <div class="h-2/3  md:h-full md:w-2/3 p-6 md:p-12 flex flex-col justify-between">
-                        <div class="">
-                            <h3 class=" text-xl md:text-3xl lg:text-4xl font-bold tracking-wider mb-4 uppercase">Start
-                                Planing your next journy</h3>
-                            <p class="font-semibold text-base md:text-lg mt-4">make your plans based on your budget and
-                                prefrences .. </p>
-                        </div>
-                        @if (auth::user())
-
-                        @else
-                            <div class="mt-12 ">
-                                <p class="font-semibold text-xl"><a href="{{ route('login') }}"
-                                        class=" text-indigo-600 cursor-pointer hover:underline hover:text-purple-800 capitalize">Login</a>
-                                    to start planing .. </p>
-                                <p class="font-semibold text-xl">or <a href="{{ route('register') }}"
-                                        class=" text-indigo-600 cursor-pointer hover:underline hover:text-purple-800 capitalize">signup</a>
-                                    now !</p>
-                            </div>
-                        @endif
-                    </div>
-                    {{-- svg div --}}
-                    <div class=" self-end -mt-8">
-                        <img src="{{ url('/images/svg/plan.svg') }}" alt="" class=" w-72 md:w-96">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </x-slot>
     <x-slot name="Navigate">
         {{-- start your plans --}}
         <section class=" w-full h-screen flex items-center justify-center">
@@ -129,7 +94,6 @@
             </div>
         </section>
     </x-slot>
-
     <x-slot name="countriesSection">
         {{-- supported countries section --}}
         <section class=" w-full min-h-screen h-auto  flex items-end justify-center ">
@@ -161,7 +125,6 @@
             </div>
         </section>
     </x-slot>
-
     <x-slot name="citiesSection">
         {{-- supported cities section --}}
         <section class=" w-full min-h-screen h-auto  flex items-end justify-center  mt-8 lg:mt-0">

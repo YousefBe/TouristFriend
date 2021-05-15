@@ -16,6 +16,7 @@ class Reviews extends Component
     public $rate = 0;
     public $title;
     public $body;
+    public $type;
 
     public $objectReviewrsIds;
     public $reviewToBeUpdated;
@@ -102,6 +103,6 @@ class Reviews extends Component
     }
     public function render()
     {
-        return view('livewire.user.reviews', ['reviews' => Review::where('reviewable_id', '=', $this->objectToBeReviewd->id)->get()]);
+        return view('livewire.user.reviews', ['reviews' => Review::where('reviewable_id', '=', $this->objectToBeReviewd->id)->where('reviewable_type' , '=' , $this->type)->get()]);
     }
 }

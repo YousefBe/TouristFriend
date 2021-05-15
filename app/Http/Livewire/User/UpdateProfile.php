@@ -71,6 +71,7 @@ class UpdateProfile extends Component
         $data = ['name' => $this->name, 'email' =>  $this->email,  'password' =>  $this->password];
         $this->user->update($data);
         $this->emit('profile-updated');
+        return redirect()->route('dashboard');
     }
 
 
