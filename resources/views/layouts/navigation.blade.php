@@ -12,9 +12,10 @@
                 </path>
             </svg>
         </div>
-
         <div>
-            <ul class="hidden lg:flex ">
+            <ul class="hidden lg:flex  items-center">
+           @livewire('search-component')
+
                 <a href="{{ route('home') }}" class=" mr-6  p-3 text-base font-bold uppercase ">
                     {{ __('Home') }}
                 </a>
@@ -84,7 +85,9 @@
                 <span class=" text-center mt-2 text-sm font-bold    uppercase block m-auto ">TouristFriend</span>
             </a>
         </div>
-
+        <div class=" flex justify-center items-center mb-4">
+            @livewire('search-component')
+        </div>
         @if (Auth::user())
             <div class="mt-2 hover:bg-gray-100  transition-all  duration-500 flex items-center">
                 <div class=" mr-4">

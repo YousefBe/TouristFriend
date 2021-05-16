@@ -8,7 +8,7 @@
             <div class=" h-auto lg:w-full lg:h-auto flex flex-col  items-center">
                 <img src="{{ asset($item->homePageImage()) }}" alt=""
                     class=" h-64 w-full md:w-64 object-center object-cover mb-8 rounded-md ">
-                <a href=""
+                <a href="{{route($routeName , $item->id)}}"
                     class=" font-bold text-xl uppercase break-normal tracking-wide ">{{ Str::substr($item->name, 0, 13) }}
                 </a>
             </div>

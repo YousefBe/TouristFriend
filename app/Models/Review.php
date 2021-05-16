@@ -19,5 +19,11 @@ class Review extends Model
     {
         return $this->morphTo();  
     }
+
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
     use HasFactory;
 }

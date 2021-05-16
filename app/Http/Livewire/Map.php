@@ -21,6 +21,7 @@ class Map extends Component
     public $POIS;
     public $restaurants;
     public $hotels;
+    public $cities;
     // wire modeled 
     public $hotelLocation;
     // wired in countries page , else its not

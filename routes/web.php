@@ -11,7 +11,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admins\Dashboard;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\AdminController;
+use App\Http\Livewire\User\CitiesList;
 use App\Http\Livewire\User\City as UserCity;
+use App\Http\Livewire\User\CountriesList;
 use App\Http\Livewire\User\Country as UserCountry;
 use App\Http\Livewire\User\Hotel as UserHotel;
 use App\Http\Livewire\User\PointOfInterest;
@@ -34,14 +36,12 @@ Route::get('/', function () {
     return view('landing.welcome', compact('countries', 'cities'));
 })->name('home');
 
-route::get('/test', function () {
-    return view('landing.tetst' , ['cities'=> Country::find(1)]);
-});
-
 Route::middleware(['auth' ])->group(function(){
+    route::get('/countries',CountriesList::class )->name('user.countriesList');
+    route::get('/cities',CitiesList::class )->name('user.citiesList');
     route::get('/country/{id}',CountryController::class )->name('user.country');
     route::get('/city/{id}',UserCity::class )->name('user.city');
-    route::get('/point-of-interest/{id}',PointOfInterest::class )->name('user.pos');
+    route::get('/point-of-interest/{id}',PointOfInterest::class )->name('user.poi');
     route::get('/hotel/{id}',UserHotel::class )->name('user.hotel');
     route::get('/restaurant/{id}',UserRestaurant::class )->name('user.restaurant');
 });

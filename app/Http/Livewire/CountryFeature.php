@@ -14,6 +14,7 @@ class CountryFeature extends Component
 
     public $icon;
     public $type;
+    public $routeName;
 
     public function mount($type)
     {
@@ -21,10 +22,15 @@ class CountryFeature extends Component
         $this->type = $type;
         if ($type === 'cities') {
             $this->icon = 'fas fa-building';
+            $this->routeName = 'user.city';
         }elseif ($type === 'hotels') {
             $this->icon = 'fas fa-h-square';
+            $this->routeName = 'user.hotel';
         }elseif ($type === 'restaurants') {
+            $this->routeName = 'user.restaurant';
             $this->icon = 'fas fa-utensils'; 
+        }elseif($type === 'points of interest'){
+            $this->routeName = 'user.poi';
         }
     }
 

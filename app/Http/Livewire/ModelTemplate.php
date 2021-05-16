@@ -91,6 +91,7 @@ class ModelTemplate extends Component
             $this->modelType = 'App\Models\Hotel';
             $this->POI = $object->country->pointsOfInterest;
             $this->restaurants = $object->country->restaurants;
+            $this->cities = $object->country->cities;
             $this->hotels = $object->country->hotels;
             $this->zoomLevel = 12;
             $this->placeLocation = $object->country->name;

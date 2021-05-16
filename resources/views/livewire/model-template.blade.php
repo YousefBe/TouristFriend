@@ -75,7 +75,7 @@
         <div class=" lg:col-span-1 mb-12">
             <div class="bg-white h-96 shadow-lg rounded-xl">
                 @livewire('map' , ['longtiude' => $longtiude , 'latitude'=> $latitude ,'mapType'=>$type , 'zoomLevel'
-                => $zoomLevel , 'POIS'=>$POI , 'hotels'=>$hotels , 'restaurants'=>$restaurants , 'destination'=> $object , 
+                => $zoomLevel , 'POIS'=>$POI , 'hotels'=>$hotels , 'restaurants'=>$restaurants , 'destination'=> $object , 'cities'=>$cities 
                 ])
             </div>
             @if ($weather)

@@ -112,7 +112,7 @@
                         <div class=" h-auto lg:w-full lg:h-auto flex flex-col  items-center">
                             <img src="{{ asset( $country->homePageImage()) }}" alt=""
                                 class=" h-64 w-full md:w-64 object-center object-cover mb-8 rounded-md ">
-                            <a href=""
+                            <a href="{{route('user.country' , $country->id)}}"
                                 class=" font-bold text-xl uppercase break-normal tracking-wide ">{{ Str::substr($country->name, 0, 13) }}
                             </a>
                         </div>
@@ -120,7 +120,7 @@
                 </div>
                 {{-- end of country section --}}
                 <p class=" text-base tracking-wide font-semibold mt-4 text-right">and much more , checkout the whole
-                    list of supported <a href="{{ route('home') }}"
+                    list of supported <a href="{{ route('user.countriesList') }}"
                         class=" text-indigo-600 cursor-pointer ">Coutnries</a></p>
             </div>
         </section>
@@ -142,14 +142,14 @@
                         <div class=" h-auto lg:w-full lg:h-auto flex flex-col  items-center">
                             <img src="{{ asset( $city->homePageImage()) }}" alt=""
                                 class=" h-64 w-full md:w-64 object-center object-cover mb-8 rounded-md ">
-                            <a href=""
+                            <a href="{{route('user.city',$city->id)}}"
                                 class=" font-bold text-xl uppercase break-normal tracking-wide ">{{ Str::substr($city->name, 0, 13) }}
                             </a>
                         </div>
                     @endforeach
                 </div>
                 <p class=" text-base tracking-wide font-semibold mt-4 text-right">and much more , checkout the whole
-                    list of supported cities <a href="{{ route('home') }}"
+                    list of supported cities <a href="{{ route('user.citiesList') }}"
                         class=" text-indigo-600 cursor-pointer ">Coutnries</a></p>
             </div>
         </section>

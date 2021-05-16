@@ -5,8 +5,9 @@
         <div class="flex items-center  w-1/2">
             <span class="text-sm mr-1">residence hotel</span>
             <select class="form-select mt-1 appearance-none mr-2  w-2/3" wire:model="hotelLocation">
+              <option value="">choose your hotel</option>
                 @foreach ($hotels as $hotel)
-                    <option value="{{ trim($hotel->longtiude) . ',' . trim($hotel->latitude) }}">
+                <option value="{{ trim($hotel->longtiude) . ',' . trim($hotel->latitude) }}">
                         {{ $hotel->name }}</option>
                 @endforeach
             </select>
@@ -15,6 +16,7 @@
             <div class="flex items-center w-1/2 ">
                 <span class=" mr-1 text-sm">to point</span>
                 <select class="form-select mt-1 appearance-none mr-2 w-2/3" wire:model="endPos">
+                    <option value="">to point</option>
                     @foreach ($restaurants as $restaurant)
                         <option value="{{ $restaurant->longtiude . ',' . $restaurant->latitude }}">
                             {{ $restaurant->name }}</option>
@@ -22,8 +24,13 @@
                     @foreach ($POIS as $poi)
                         <option value="{{ $poi->longtiude . ',' . $poi->latitude }}">{{ $poi->name }}</option>
                     @endforeach
+                    @foreach ($cities as $city)
+                        <option value="{{ $city->longtiude . ',' . $city->latitude }}">{{ $city->name }}</option>
+                    @endforeach
                 </select>
             </div>
+            @else
+            <p class=" mr-1 text-lg font-bold mt-2"> to {{$destination->name}}</p>
         @endif
         <button
             class="bg-green-700 hover:bg-white hover:text-green-700 px-1 transition ease-in-out duration-300 py-1 rounded text-white focus:outline-none"
@@ -85,6 +92,8 @@
 
                 const POIS = {!! json_encode($POIS) !!};
                 const restaurants = {!! json_encode($restaurants) !!};
+                const cities = {!! json_encode($cities) !!};
+                // console.log(cities);
                 // console.log(POIS);
                 // console.log(restaurants);
                 // console.log(hotels);
@@ -92,7 +101,7 @@
                     POIS.forEach(POI => {
                         const poiLonglat = [POI.longtiude, POI.latitude];
                         // console.log(poiLonglat);
-                        // console.log(POI);
+                        // console.log(POI);s
                         placeData.name = POI.name;
                         placeData.elementId = 'poi-marker';
                         setPopup(poiLonglat, placeData)
@@ -104,6 +113,14 @@
                         placeData.elementId = 'res-marker';
                         const resLongLat = [res.longtiude, res.latitude];
                         setPopup(resLongLat, placeData)
+                    })
+                }
+                if (cities) {
+                    cities.forEach((city) => {
+                        placeData.name = city.name;
+                        placeData.elementId = 'city-marker';
+                        const cityLongLat = [city.longtiude, city.latitude];
+                        setPopup(cityLongLat, placeData)
                     })
                 }
 

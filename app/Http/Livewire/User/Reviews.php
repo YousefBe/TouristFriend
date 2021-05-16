@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\User;
 
+use App\Models\Like;
 use App\Models\Review;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
@@ -100,6 +101,47 @@ class Reviews extends Component
         $reviewTobeDeleted= Review::find($review)->delete();
         // \dd($reviewTobeDeleted);
         $this->userReviewdThisObject = false;
+    }
+    public function likeReview($id)
+    {
+        $this->toggleLikeOrDislike($id , 1);
+        
+    }
+    public function DisLikeReview($id)
+    {
+        $this->toggleLikeOrDislike($id , 0);
+        
+    }
+
+    private function toggleLikeOrDislike($id , $isLike)
+    {
+        $review =  Review::find($id);
+        $userReviewLike =$review->likes()
+        ->where('user_id' , '=' , $this->userId);
+
+        $like = $userReviewLike->get();
+
+        // if i already diliked and  iwant to like , first i will have to delete the dislike , 
+        // then i will like
+
+        // this means i already reacted to this review 
+        if ($like->count() > 0) {
+            $userReviewLike->delete();
+            //when i try to like but i already disliked
+            if ($like->first()->is_like !== $isLike) {
+                $like = Like::create([
+                    'user_id' => Auth::user()->id , 
+                    'is_like' => $isLike ,
+                    'review_id' => $id
+                ]);
+            }
+        }else{
+            $like = Like::create([
+                'user_id' => Auth::user()->id , 
+                'is_like' => $isLike ,
+                'review_id' => $id
+            ]);
+        }
     }
     public function render()
     {

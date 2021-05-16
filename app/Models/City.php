@@ -5,10 +5,23 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Favourite;
-class City extends Model
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
+
+class City extends Model implements Searchable
 {
     use HasFactory;
     protected $guarded = [];
+    public function getSearchResult(): SearchResult
+     {
+        $url = route('user.city', $this->id);
+     
+         return new SearchResult(
+            $this ,
+            $this->name,
+            $url
+         );
+     }
     public function country()
     {
         return $this->belongsTo(Country::class);

@@ -214,7 +214,7 @@ main {
 
 @media (min-width: 640px) {
     .map-div{
-        width: 902px;
+        width: 802px;
         height: 400px;
     }
    
@@ -246,6 +246,11 @@ main {
 }
 #hotel-marker{
     background-image: url("../images/hotels.png");  background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+#city-marker{
+    background-image: url("../images/city.png");  background-size: cover;
     width: 20px;
     height: 20px;
 }
