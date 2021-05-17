@@ -49,6 +49,9 @@
                             <x-dropdown-link :href="route('dashboard')">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
+                            <x-dropdown-link :href="route('user.recomendation')">
+                                {{ __('country recommendation') }}
+                            </x-dropdown-link>
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
@@ -123,6 +126,9 @@
                 @if (Auth::user())
                     <li class="mx-8 py-6 hover:bg-gray-100  transition-all  duration-500 uppercase text-xl font-bold">
                         <a href="{{route('dashboard')}}">Profile</a>
+                    </li>
+                    <li class="mx-8 py-6 hover:bg-gray-100  transition-all  duration-500 uppercase text-xl font-bold">
+                        <a href="{{route('user.recomendation')}}">country recommendation</a>
                     </li>
 
                 @endif

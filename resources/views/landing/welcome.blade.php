@@ -96,63 +96,23 @@
     </x-slot>
     <x-slot name="countriesSection">
         {{-- supported countries section --}}
-        <section class=" w-full min-h-screen h-auto  flex items-end justify-center ">
-            <div
-                class="container bg-white rounded-lg shadow-lg p-8 flex flex-col justify-between w-10/12 section-height">
-                {{-- section intro --}}
-                <div class="intro mb-4">
-                    <h3 class="text-xl md:text-4xl font-bold tracking-wide">Discover Your Next Destination ..</h3>
-                    <p class=" text-base tracking-wide font-semibold">among our supported countries and cities , a
-                        sample of out supported countries .. </p>
-                </div>
-                {{-- coutries section --}}
-                {{-- should be replaced with country card component --}}
-                <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-2">
-                    @foreach ($countries as $country)
-                        <div class=" h-auto lg:w-full lg:h-auto flex flex-col  items-center">
-                            <img src="{{ asset( $country->homePageImage()) }}" alt=""
-                                class=" h-64 w-full md:w-64 object-center object-cover mb-8 rounded-md ">
-                            <a href="{{route('user.country' , $country->id)}}"
-                                class=" font-bold text-xl uppercase break-normal tracking-wide ">{{ Str::substr($country->name, 0, 13) }}
-                            </a>
-                        </div>
-                    @endforeach
-                </div>
-                {{-- end of country section --}}
-                <p class=" text-base tracking-wide font-semibold mt-4 text-right">and much more , checkout the whole
-                    list of supported <a href="{{ route('user.countriesList') }}"
-                        class=" text-indigo-600 cursor-pointer ">Coutnries</a></p>
-            </div>
-        </section>
+       @livewire('object-container' , ['collection'=>$countries , 'type'=> 'countries'])
     </x-slot>
     <x-slot name="citiesSection">
         {{-- supported cities section --}}
-        <section class=" w-full min-h-screen h-auto  flex items-end justify-center  mt-8 lg:mt-0">
-            <div
-                class="container bg-white rounded-lg shadow-lg p-8 flex flex-col justify-between w-10/12 section-height">
-                {{-- section intro --}}
-                <div class="intro mb-4">
-                    <h3 class="text-xl md:text-4xl font-bold tracking-wide capitalize">Some of our mosted viewed cities
-                        ..</h3>
-                </div>
-                {{-- section --}}
-                {{-- should be replaced with country card component --}}
-                <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-2">
-                    @foreach ($cities as $city)
-                        <div class=" h-auto lg:w-full lg:h-auto flex flex-col  items-center">
-                            <img src="{{ asset( $city->homePageImage()) }}" alt=""
-                                class=" h-64 w-full md:w-64 object-center object-cover mb-8 rounded-md ">
-                            <a href="{{route('user.city',$city->id)}}"
-                                class=" font-bold text-xl uppercase break-normal tracking-wide ">{{ Str::substr($city->name, 0, 13) }}
-                            </a>
-                        </div>
-                    @endforeach
-                </div>
-                <p class=" text-base tracking-wide font-semibold mt-4 text-right">and much more , checkout the whole
-                    list of supported cities <a href="{{ route('user.citiesList') }}"
-                        class=" text-indigo-600 cursor-pointer ">Coutnries</a></p>
-            </div>
-        </section>
+       @livewire('object-container' , ['collection'=>$cities , 'type'=> 'cities'])
+    </x-slot>
+    <x-slot name="hotelsSection">
+        {{-- supported hotels section --}}
+       @livewire('object-container' , ['collection'=>$hotels , 'type'=> 'hotels'])
+    </x-slot>
+    <x-slot name="PoisSection">
+        {{-- supported points of interest section --}}
+       @livewire('object-container' , ['collection'=>$pois , 'type'=> 'pois'])
+    </x-slot>
+    <x-slot name="restaurantsSection">
+        {{-- supported restaurants section --}}
+       @livewire('object-container' , ['collection'=>$restaurants , 'type'=> 'restaurants'])
     </x-slot>
 
     <x-slot name="conatctUsSection">

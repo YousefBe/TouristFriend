@@ -51,6 +51,15 @@
             @isset($citiesSection)
                 {{ $citiesSection }}
             @endisset
+            @isset($hotelsSection)
+                {{ $hotelsSection }}
+            @endisset
+            @isset($PoisSection)
+                {{ $PoisSection }}
+            @endisset
+            @isset($restaurantsSection)
+                {{ $restaurantsSection }}
+            @endisset
             @isset($conatctUsSection)
                 {{ $conatctUsSection }}
             @endisset

@@ -28,6 +28,7 @@ class Countries extends Component
     public $currentphotos = [];
     public $currentCountry;
     public $CountryImages;
+    public $known_for;
 
     protected $rules = [
         'name' => 'required|unique:countries',
@@ -41,6 +42,7 @@ class Countries extends Component
         'population' => 'required',
         'budget_flag' => 'required',
         'weather_flag' => 'required',
+        'known_for'=> 'required'
     ];
 
     public function storeModal()
@@ -82,6 +84,7 @@ class Countries extends Component
         $this->population = $country->population;
         $this->budget_flag = $country->budget_flag;
         $this->weather_flag = $country->weather_flag;
+        $this->known_for = $country->known_for;
     }
     public function update()
     {
@@ -97,6 +100,7 @@ class Countries extends Component
             'population' => 'sometimes',
             'budget_flag' => 'sometimes',
             'weather_flag' => 'sometimes',
+            'known_for' => 'sometimes'
         ]);
         $this->currentCountry->update($data);
 

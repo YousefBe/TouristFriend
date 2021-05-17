@@ -26,6 +26,7 @@ class CreateCountriesTable extends Migration
             $table->text('budget');
             $table->enum('budget_flag', ['low', 'medium', 'expensive']);
             $table->enum('weather_flag', ['cold', 'moderate', 'hot']);
+            $table->enum('known_for', ['shopping', 'beaches', 'Tourist Attractions']);
             $table->timestamps();
         });
     }

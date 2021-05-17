@@ -12,6 +12,8 @@ class CountryForm extends Component
      *
      * @return void
      */
+    public $knownForOptions= ['shopping', 'beaches', 'Tourist Attractions'];
+
     public function __construct($updating)
     {
         $this->updating = $updating;
