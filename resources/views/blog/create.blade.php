@@ -39,6 +39,8 @@
                 name="title"
                 placeholder="Title..."
                 class="bg-transperant block border-b-2 w-full h-20 text-6xl outline-none" >
+                <label  class="bg-transperant block border-b-2 w-full h-20 text-5xl outline-none" for="file">Upload Post Image</label>
+                <input type="file" name="file" required>
                 <label class="bg-transperant block border-b-2 w-full h-20 text-5xl outline-none" for="channel">Channel</label>
                 <select name="channel" required>
                     <option >--Select Channel--</option>

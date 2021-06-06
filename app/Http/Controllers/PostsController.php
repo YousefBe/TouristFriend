@@ -21,7 +21,7 @@ class PostsController extends Controller
     public function index()
     {
         $channels = Channel::all();
-        return view('blog\blog_index', compact('channels'))
+        return view('blog.blog_index', compact('channels'))
             ->with('posts', Post::orderBy('updated_at', 'DESC')->get());
     }
 
@@ -50,17 +50,27 @@ class PostsController extends Controller
             'channel' => 'required| not_in:0',
 
         ]);
+        if ($request->hasFile('file')) {
+
+            $request->validate([
+                'image' => 'mimes:jpeg,bmp,png' // Only allow .jpg, .bmp and .png file types.
+            ]);
+            // Save the file locally in the storage/public/ folder under a new folder named /product
+            $request->file->store('blog.post', 'public');
+
+
         Post::create([
             'title' => $request->input('title'),
             'body' => $request->input('description'),
             'channel_id' => $request->input('channel'),
+            "file_path" => $request->file->hashName(),
             'user_id' => auth()->user()->id,
             'vote' => 0
 
         ]);
         return redirect('/blog')
             ->with('message', 'Your post has been added!');
-    }
+    }}
 
     /**
      * Display the specified resource.
@@ -87,8 +97,7 @@ class PostsController extends Controller
     {
         $channels = Channel::all();
         return view('/blog.edit', compact('channels'))
-            ->with('post', Post::find($id))
-            ->with('votes', Vote::all());
+            ->with('post', Post::find($id));
     }
 
     /**

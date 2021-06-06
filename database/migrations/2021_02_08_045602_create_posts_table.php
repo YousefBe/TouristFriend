@@ -19,13 +19,11 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('body');
             $table->integer('vote')->default('0');
-
+            $table->string('file_path');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('channel_id');
-
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('channel_id')->references('id')->on('channels');
-
             $table->timestamps();
         });
     }

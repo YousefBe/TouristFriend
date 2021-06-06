@@ -19,6 +19,7 @@
 
         <article class=" shadow my-4">
             <a href="#" class="hover:opacity-75">
+                <img src="{{ asset('storage/blog/'.$post->file_path)}}">
             </a>
             <div class="max-w-7xl mx-auto bg-white flex flex-col justify-start p-20">
                 <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">{{ $post->channel->name }}</a>

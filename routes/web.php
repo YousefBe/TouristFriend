@@ -35,7 +35,7 @@ Route::get('/dashboard', function () {
 
 //Comment Route
 Route::post('/comment/store', 'App\Http\Controllers\CommentController@store')->name('comment.add');
-Route::delete('/comment/delete', 'App\Http\Controllers\CommentController@destroy')->name('comment.delete');
+Route::delete('/comment/delete/{id}', 'App\Http\Controllers\CommentController@destroy')->name('comment.delete');
 //Vote Routes
 
 

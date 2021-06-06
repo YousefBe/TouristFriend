@@ -13,7 +13,7 @@ class Post extends Model
     use Votable;
 
 
-    protected $fillable = ['title','body','user_id','channel_id','vote'];
+    protected $fillable = ['title','body',"file_path",'user_id','channel_id','vote'];
 
     public function user()
     {
