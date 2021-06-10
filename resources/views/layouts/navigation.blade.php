@@ -12,9 +12,10 @@
                 </path>
             </svg>
         </div>
-
         <div>
-            <ul class="hidden lg:flex ">
+            <ul class="hidden lg:flex  items-center">
+           @livewire('search-component')
+
                 <a href="{{ route('home') }}" class=" mr-6  p-3 text-base font-bold uppercase ">
                     {{ __('Home') }}
                 </a>
@@ -27,25 +28,30 @@
                         <x-slot name="trigger">
                             <button
                                 class="flex items-center my-3   text-base font-bold uppercase  hover:text-gray-700 hover:border-gray-100 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-                                <div class="">{{ Auth::user()->name }}</div>
+                                <div class=" flex items-center">
+                                    <img class=" w-6 h-6  mr-2 rounded-full bg-cover object-fit object-cover"
+                                        src="{{ asset('storage/Users/' . Auth::user()->userImage()) }}"
+                                        alt="Profile picture">
+                                    {{ Auth::user()->name }}</div>
 
                                 <div class="ml-1">
-                                    <svg class="fill-current h-4 w-4 " xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd"
-                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                            clip-rule="evenodd" />
-                                    </svg>
+                                    
                                 </div>
                             </button>
                         </x-slot>
 
                         <x-slot name="content">
                             @if (Auth::user()->hasRole('administrator'))
-                                <x-dropdown-link :href="route('admin.dashboard')">
-                                    {{ __('Dashboard') }}
+                                <x-dropdown-link :href="route('admin.users')">
+                                    {{ __('Manage') }}
                                 </x-dropdown-link>
                             @endif
+                            <x-dropdown-link :href="route('dashboard')">
+                                {{ __('Profile') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('user.recomendation')">
+                                {{ __('country recommendation') }}
+                            </x-dropdown-link>
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
@@ -69,7 +75,7 @@
     {{-- EOF Main NavBar --}}
 
     {{-- responsive NavBar --}}
-    <div class="z-30 res-nav w-full bg-purple-100 opacity-90 lg:hidden md:w-1/2 "
+    <div class="z-30 res-nav w-full bg-purple-100 opacity-90 lg:hidden md:w-1/2 overflow-y-scroll "
         :class="{'show-res-nav': open  , 'hide-res-nav' : !open}">
 
         <button @click="open = false"
@@ -77,22 +83,21 @@
         </button>
 
         <div class="Logo w-1/2 mx-auto">
-            <a href="/" class="block mb-3 mt-12">
+            <a href="/" class="block mb-3 mt-4">
                 <img src="{{ url('/images/icons8-tourist-backpack-64.png') }}" alt="" class=" rounded-md m-auto ">
                 <span class=" text-center mt-2 text-sm font-bold    uppercase block m-auto ">TouristFriend</span>
             </a>
         </div>
-
+        <div class=" flex justify-center items-center mb-4">
+            @livewire('search-component')
+        </div>
         @if (Auth::user())
             <div class="mt-2 hover:bg-gray-100  transition-all  duration-500 flex items-center">
-                <div class="">
-                    <svg class="h-24 w-24 fill-current text-gray-400  rounded-lg " xmlns="http://www.w3.org/2000/svg"
-                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
+                <div class=" mr-4">
+                    <img class=" w-32 h-32 rounded-full bg-cover object-fit object-cover"
+                        src="{{ asset('storage/Users/' . Auth::user()->userImage()) }}" alt="Profile picture">
                 </div>
-                <div>
+                <div class=" pt-8">
                     <h2 class=" uppercase  font-bold text-lg ">{{ Auth::user()->name }}</h2>
                     <h1 class=" uppercase text-sm font-bold ">{{ Auth::user()->email }}</h1>
                     <a href="" class=" uppercase text-base font-bold ">go to profile</a>
@@ -114,22 +119,16 @@
                     <a href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="mx-8 py-6   hover:bg-gray-100  transition-all  duration-500 uppercase  text-xl font-bold  ">
-                    <a href="{{ route('home') }}">about us</a>
-                </li>
-                <li class="mx-8 py-6   hover:bg-gray-100  transition-all  duration-500 uppercase  text-xl font-bold  ">
                     <a href="{{ route('home') }}">visit the blog</a>
                 </li>
 
                 {{-- Here we Add Users Actions --}}
                 @if (Auth::user())
-
-
-                    <li class="mx-8 py-6   hover:bg-gray-100  transition-all  duration-500 uppercase text-xl font-bold">
-                        <a href="">Plan a new Trip</a>
+                    <li class="mx-8 py-6 hover:bg-gray-100  transition-all  duration-500 uppercase text-xl font-bold">
+                        <a href="{{route('dashboard')}}">Profile</a>
                     </li>
-
-                    <li class="mx-8 py-6   hover:bg-gray-100  transition-all  duration-500 uppercase text-xl font-bold">
-                        <a href="">Update Profile</a>
+                    <li class="mx-8 py-6 hover:bg-gray-100  transition-all  duration-500 uppercase text-xl font-bold">
+                        <a href="{{route('user.recomendation')}}">country recommendation</a>
                     </li>
 
                 @endif

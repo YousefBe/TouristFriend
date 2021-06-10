@@ -4,12 +4,20 @@ use App\Models\City;
 use App\Models\Hotel;
 use App\Models\Country;
 use App\Models\Restaurant;
-use App\Http\Livewire\Admins\Users;
-use Illuminate\Support\Facades\File;
+use App\Http\Livewire\User\Country as CountryController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Admins\Dashboard;
-use Illuminate\Support\Facades\Storage;
-use App\Http\Controllers\AdminController;
+use App\Http\Livewire\User\CitiesList;
+use App\Http\Livewire\User\City as UserCity;
+use App\Http\Livewire\User\CountriesList;
+use App\Http\Livewire\User\Hotel as UserHotel;
+use App\Http\Livewire\User\HotelsList;
+use App\Http\Livewire\User\PointOfInterest;
+use App\Http\Livewire\User\PoisList;
+use App\Http\Livewire\User\Recommendation;
+use App\Http\Livewire\User\Restaurant as UserRestaurant;
+use App\Http\Livewire\User\RestaurantsList;
+use App\Models\PointOfInterest as ModelsPointOfInterest;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,18 +32,33 @@ use App\Http\Controllers\AdminController;
 Route::get('/', function () {
     $countries = Country::all()->random(4);
     $cities = City::all()->random(4);
-    return view('landing.welcome', compact('countries', 'cities'));
+    $pois = ModelsPointOfInterest::all()->random(4);
+    $hotels = Hotel::all()->random(4);
+    $restaurants = Restaurant::all()->random(4);
+    return view('landing.welcome', compact('countries', 'cities' , 'pois' , 'hotels' , 'restaurants'));
 })->name('home');
 
-route::get('/test', function () {
-    return view('landing.tetst');
+// user routes
+Route::middleware(['auth' ])->group(function(){
+    route::get('/countries',CountriesList::class )->name('user.countries');
+    route::get('/cities',CitiesList::class )->name('user.cities');
+    route::get('/restaurants',RestaurantsList::class )->name('user.restaurants');
+    route::get('/hotels',HotelsList::class )->name('user.hotels');
+    route::get('/pois',PoisList::class )->name('user.pois');
+
+    route::get('/country/{id}',CountryController::class )->name('user.country');
+    route::get('/city/{id}',UserCity::class )->name('user.city');
+    route::get('/point-of-interest/{id}',PointOfInterest::class )->name('user.poi');
+    route::get('/hotel/{id}',UserHotel::class )->name('user.hotel');
+    route::get('/restaurant/{id}',UserRestaurant::class )->name('user.restaurant');
+
+
+    route::get('/get-recomendation',Recommendation::class )->name('user.recomendation');
 });
+
+
 // admin routes
 Route::middleware(['auth', 'role:administrator'])->group(function () {
-
-    route::get('/admin/dashboard', function () {
-        return view('pages.admins.dashboard');
-    })->name('admin.dashboard');
 
     route::get('/admin/users', function () {
         return view('pages.admins.dashboard');
@@ -74,9 +97,8 @@ Route::middleware(['auth', 'role:administrator'])->group(function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'admin'])->name('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 
-route::get('/admin', [AdminController::class, 'show'])->middleware(['auth', 'admin']);
 
 require __DIR__ . '/auth.php';

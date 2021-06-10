@@ -7,11 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Review extends Model
 {
-    protected $fillable = [
-        'title',
-        'body',
-        'rate',
-    ];
+    protected $guarded = [];
 
     // review belongs for a user 
     public function user()
@@ -19,24 +15,15 @@ class Review extends Model
         return $this->belongsTo(User::class);
     }
 
-
-    // and one of those
-    public function coutry()
+    public function reviewable()
     {
-        return $this->belongsTo(Country::class);
-    }
-    public function hotel()
-    {
-        return $this->belongsTo(Hotel::class);
-    }
-    public function point()
-    {
-        return $this->belongsTo(PointOfInterest::class);
-    }
-    public function restaurant()
-    {
-        return $this->belongsTo(Restaurant::class);
+        return $this->morphTo();  
     }
 
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
     use HasFactory;
 }

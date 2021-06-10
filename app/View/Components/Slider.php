@@ -11,9 +11,13 @@ class Slider extends Component
      *
      * @return void
      */
-    public function __construct()
+
+    public $images ;
+    public $folder ;
+    public function __construct($images , $folder)
     {
-        //
+        $this->images= $images;
+        $this->folder=$folder;
     }
 
     /**

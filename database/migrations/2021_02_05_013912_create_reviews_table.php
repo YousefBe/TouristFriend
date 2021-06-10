@@ -17,22 +17,12 @@ class CreateReviewsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('body');
-            $table->string('rate');
-
-            $table->integer('likes');
-            $table->integer('dislikes');
-
-            $table->unsignedBigInteger('hotel_id')->nullable();
-            $table->unsignedBigInteger('country_id')->nullable();
-            $table->unsignedBigInteger('restaurant_id')->nullable();
-            $table->unsignedBigInteger('point_id')->nullable();
+            $table->integer('rate');
+            $table->unsignedBigInteger('reviewable_id')->nullable();
+            $table->string('reviewable_type');            
             $table->unsignedBigInteger('user_id');
-
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('hotel_id')->references('id')->on('hotels')->onDelete('cascade');
-            $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
-            $table->foreign('restaurant_id')->references('id')->on('restaurants')->onDelete('cascade');
-            $table->foreign('point_id')->references('id')->on('point_of_interests')->onDelete('cascade');
+            
 
             $table->timestamps();
         });

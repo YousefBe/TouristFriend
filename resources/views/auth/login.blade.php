@@ -1,132 +1,53 @@
-{{-- <x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
-      
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
-
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
-            </div>
-
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-button class="ml-3">
-                    {{ __('Login') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout> --}}
 <x-guest-layout>
-    @section('page-title')
-        Signup & Loign
-    @endsection
-    @section('styles')
-        <link rel="stylesheet" href="{{asset('css/auth.css')}}">
-    @endsection
-    <div class=" relative w-full min-h-screen  bg-white overflow-hidden MyCont " x-data={open:false} :class="{'signUpMode' : open}">
-        <div class=" absolute  w-full h-full  top-0 left-0">
-            <div class="signin-signup">
-                {{-- signin Form --}}
-                
-                <form method="POST" action="{{ route('login') }}" class="sign-in-form  "> 
-                    @csrf
-                    <h2 class=" text-4xl text-gray-200 mb-3 " >Sign in</h2>
+    <section class="flex justify-center items-center w-screen min-h-screen  h-full bg-white ">
+        <div class="bg-white w-full sm:w-4/6 h-4/6 grid grid-cols-1 lg:grid-cols-2 rounded-2xl shadow-xl">
+            <div class="col-span-1 hidden lg:flex items-center justify-center">
+                <img src="{{ asset('images/secure-login-animate.svg') }}" class="h-5/6" alt="">
+            </div>
+            <div class=" col-span-1 w-full px-6 py-8 md:px-8 flex flex-col  justify-around">
+                <header>
+                    <h2 class="text-2xl font-semibold text-center text-gray-700 "> Welcome</h2>
+                    <p class="mt-2 text-xl text-center text-gray-600">we are happy to see you back
+                    </p>
+                </header>
+                <div class="flex items-center justify-between mt-4">
+                    <span class="w-1/5 border-b  lg:w-1/4"></span>
+                        <a href="#" class="text-xs text-center text-gray-500 uppercase hover:underline">Login with Email</a>
+                    <span class="w-1/5 border-b  lg:w-1/4"></span>
+                </div>
+                <form method="POST" action="{{ route('login') }}"> 
                     <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                    @csrf
                     
-                    <div class="h-14 w-full my-3 bg-gray-200  field-input px-2">
-                        <i class="fas fa-envelope"></i>
-                        <input type="text" placeholder="Email" name="email" class=" bg-transparent   border-none font-semibold leading-4 outline-none placeholder-gray-400  login-input">
+                    <div class="mt-8">
+                        <label for="email" class="block mb-2 text-sm text-gray-600">Email</label>
+                        <input type="text" placeholder="Email" name="email" class="w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg  focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-40">
                     </div>
-                    <div class="h-14 w-full my-3 bg-gray-200  field-input px-2">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password"  name="password" class=" bg-transparent border-none  font-semibold leading-4  outline-none  placeholder-gray-400 login-input">
+                    <div class="mt-8">
+                        <label for="password" class="block mb-2 text-sm text-gray-600">password</label>
+                        <input  type="password" placeholder="Password"  name="password" class="w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg  focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-40">
                     </div>
-                    <div class="block ">
-                        <label for="remember_me" class="inline-flex items-center">
-                            <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                            <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                        </label>
+                    <div class="flex justify-between mt-4">
+                        <div class="col-md-6 offset-md-4">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="remember" class="border-gray-300 rounded shadow-sm  text-blue-400 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                                <label for="remember" class="ml-2 text-gray-700">Remember me</label>
+                            </div>
+                        </div>
+                        <a href="{{route('password.request')}}" class="text-sm text-gray-600 hover:underline">reset password</a>
                     </div>
-                    <input type="submit" value="login" class="btn solid hover:bg-blue-500">
-
-                    <p class=" text-base  px-3 mt-2 "> or sign in with social  platforms</p>
-                    <div class="flex  justify-center">
-                        <a href="#" class=" h-11 w-11 text-lg text-gray-400  rounded-full  duration-300   border border-solid  border-gray-400 flex justify-center items-center mx-2 hover:text-blue-600 hover:border-blue-600">
-                            <i class="fab fa-facebook-square"></i>
-                        </a>
-                        <a href="#" class=" h-11 w-11 text-lg text-gray-400  rounded-full  duration-300   border border-solid  border-gray-400 flex justify-center items-center mx-2 hover:text-blue-400 hover:border-blue-600">
-                            <i class="fab fa-twitter-square"></i>
-                        </a>
-                        <a href="#" class=" h-11 w-11 text-lg text-gray-400  rounded-full  duration-300   border border-solid  border-gray-400 flex justify-center items-center mx-2">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="#" class=" h-11 w-11 text-lg text-gray-400  rounded-full  duration-300   border border-solid  border-gray-400 flex justify-center items-center mx-2">
-                            <i class="fab fa-github-square"></i>
-                        </a>
+                    <div class="mt-8">
+                         <button type="submit" class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform rounded-md bg-blue-400 hover:bg-blue-300  focus:outline-none focus:bg-blue-300">Login</button>
                     </div>
-                
                 </form>
+                <div class="flex items-center justify-between mt-4">
+                    <span class="w-1/5 border-b  lg:w-1/4"></span>
+                        <a href="{{route('register')}}" class="text-xs text-center text-gray-500 uppercase hover:underline">Sign up</a>
+                    <span class="w-1/5 border-b  lg:w-1/4"></span>
+                </div>
+                <span class=" text-xs text-gray-400 font-semibold mt-4"> i tried to coppy this design from to tailwindcss</span>
+
             </div>
         </div>
-
-        <div class="panels-container">
-            <div class="panel left-panel ">
-                <div class="content  text-white lg:mb-2">
-                    <h3 class="font-semibold  leading-4   text-2xl">New Here ?</h3>
-                    <p class=" text-lg px-3">join us now by signing up !</p>
-                    <a href="{{route('register')}}" class=" m-0  inline-block bg-none  py-1 border-2 border-white  w-32  h-9 rounded-2xl mt-2  font-semibold mb-14 ">SignUp</a>
-                </div>
-
-            
-            <img src="{{url('/images/svg/signup.svg')}}" alt="" class="image">  
-             </div>
-            
-            
-        </div>
-
-
-    </div>
-
-
-
-
-
+    </section>
 </x-guest-layout>

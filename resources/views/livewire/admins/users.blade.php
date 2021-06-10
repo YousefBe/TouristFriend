@@ -31,7 +31,7 @@
                         <th class=""></th>
                     </tr>
                     @foreach ($users as $user)
-                        <tr class="border-b hover:bg-orange-100">
+                        <tr class="border-b hover:bg-orange-100" >
                             <td class="p-3 px-5 w-64">
                                 <p class=" text-sm sm:text-base tracking-wider font-semibold">{{ $user->name }}
                                     @if (Auth::user()->id == $user->id)
@@ -88,6 +88,19 @@
                                             wire:click="delete({{ $user->id }})">
                                             delete
                                         </button></x-slot>
+                                </x-modal>
+                                {{-- View user --}}
+                                <x-modal class="mb-2">
+                                    <x-slot name="trigger">
+                                        <button type="button"
+                                            class="text-sm bg-yellow-500 hover:bg-yellow-700 text-white py-1 px-2 rounded w-24 focus:outline-none focus:shadow-outline ml-2"><i
+                                                class="fas fa-eye mt-1 mr-1"></i>View</button>
+                                    </x-slot>
+                                    <x-slot name="title">View User</x-slot>
+                                    <x-slot name="content" >
+                                        @livewire('user.profile', ['user' => $user], key($user->id))
+
+                                    </x-slot>
                                 </x-modal>
                             </td>
                             {{-- eof actions --}}

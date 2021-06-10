@@ -1,4 +1,8 @@
-<x-guest-layout>
+{{-- <x-guest-layout> --}}
+    {{-- @livewire('user.reviews') --}}
     {{-- <x-slider></x-slider> --}}
-    @livewire('user.reviews')
-</x-guest-layout>
+{{-- </x-guest-layout> --}}
+ 
+<x-app-layout>
+    @livewire('country-feature' , ['object'=> $cities])
+</x-app-layout>

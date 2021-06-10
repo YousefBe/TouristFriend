@@ -81,7 +81,6 @@ class HotelSeeder extends Seeder
             ['file_name' => "Kempinski Summerland Hotel5.jpg"],
             ['file_name' => "Kempinski Summerland Hotel6.jpg"],
             ['file_name' => "Kempinski Summerland Hotel7.jpg"],
-            ['file_name' => "Kempinski Summerland Hotel8.jpg"],
             ['file_name' => "Kempinski Summerland Hotel9.jpg"],
             ['file_name' => "Kempinski Summerland Hotel10.jpg"],
             ['file_name' => "Kempinski Summerland Hotel11.jpg"],

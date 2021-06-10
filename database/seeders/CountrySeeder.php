@@ -26,6 +26,7 @@ class CountrySeeder extends Seeder
             'budget' => 'average L£2,318,026 ($1,400) per week',
             'budget_flag' => 'medium',
             'weather_flag' => 'moderate',
+            'known_for' => 'shopping'
         ]);
         $lebanon->images()->createMany([
             ['file_name' => 'lebanon0.jpg'],
@@ -55,6 +56,7 @@ class CountrySeeder extends Seeder
             'budget' => '1000 euro aweek',
             'budget_flag' => 'medium',
             'weather_flag' => 'moderate',
+            'known_for' => 'Tourist Attractions'
         ]);
         // images
         $italy->images()->createMany([
@@ -99,6 +101,7 @@ class CountrySeeder extends Seeder
             A trip for two weeks for two people costs $6,274 in the United States of America',
             'budget_flag' => 'medium',
             'weather_flag' => 'hot',
+            'known_for' => 'beaches'
         ]);
         $USA->images()->createMany([
             ['file_name' => "USA.jpg"],
@@ -145,12 +148,13 @@ class CountrySeeder extends Seeder
             Two chains of mountains divide eastern from Atlantic Morocco:- the Rif Mountains in the north form a buffer along the Mediterranean coastline, whereas the Atlas Mountains create a barrier across the centre.
             The two parts of the country are connected by the narrow Taza Gap in the northeast as well as by roads that follow older traditional routes.
              The Atlas and Rif ranges were formed during the Paleogene and Neogene periods (between about 65 to 2.6 million years ago) by the folding and uplifting of sediment that had accumulated in the Tethys Sea, which, at that time, bordered the northern coast of Africa.",
-            'contnent' => 'North America',
+            'contnent' => 'Africa',
             'currency' => 'The Moroccan Dirham is the currency of Morocco.',
             'population' => 'has a population of over 37 million.',
             'budget' => ' a mid range day would cost a person 120-130$ ',
             'budget_flag' => 'low',
             'weather_flag' => 'hot',
+            'known_for' => 'Tourist Attractions'
         ]);
         $Morocco->images()->createMany([
             ['file_name' => "morocco1.jpg"],
@@ -177,6 +181,7 @@ class CountrySeeder extends Seeder
             'budget' => 'A vacation to the Czech Republic for one week usually costs around Kč13,617  "almost 620 dollar" for one person.',
             'budget_flag' => 'medium',
             'weather_flag' => 'cold',
+            'known_for' => 'shopping'
         ]);
         $Czech->images()->createMany([
             ['file_name' => "Czech.jpg"],
@@ -197,6 +202,7 @@ class CountrySeeder extends Seeder
             'budget' => 'A vacation to Canada for one week usually costs around CA$1,289 for one person.',
             'budget_flag' => 'expensive',
             'weather_flag' => 'cold',
+            'known_for' => 'shopping'
         ]);
         $Canada->images()->createMany([
             ['file_name' => "Canada.jpg"],

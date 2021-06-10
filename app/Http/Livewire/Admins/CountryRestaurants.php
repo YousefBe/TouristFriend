@@ -66,6 +66,7 @@ class CountryRestaurants extends Component
     public function Delete($id)
     {
         $res = Restaurant::find($id);
+        $res->images()->delete();
         $res->delete();
         $this->dispatchBrowserEvent('close-modal');
     }
@@ -79,6 +80,7 @@ class CountryRestaurants extends Component
     {
         $image = Image::find($id);
         $image->delete();
+        $this->dispatchBrowserEvent('close-modal');
     }
 
     private function handleImages($res)

@@ -350,8 +350,8 @@ class CitySeeder extends Seeder
         ]);
         $casablanca = City::create([
             'name' => "casablanca",
-            'longtiude' => "-7.416526525396697",
-            'latitude' => "34.14940633511711",
+            'longtiude' => "-7.603869",
+            'latitude' => "33.589886",
             'details' => " is the largest city of Morocco.
             Located in the central-western part of Morocco bordering the Atlantic Ocean, it is the largest city in the Maghreb region and the eighth-largest in the Arab world. Casablanca is Morocco's chief port and one of the largest financial centers in Africa.
             According to the 2019 population estimate, the city has a population of about 3.71 million in the urban area and over 4.27 million in the Greater Casablanca.
