@@ -5,9 +5,9 @@
         <div class="flex items-center  w-1/2">
             <span class="text-sm mr-1">residence hotel</span>
             <select class="form-select mt-1 appearance-none mr-2  w-2/3" wire:model="hotelLocation">
-              <option value="">choose your hotel</option>
+                <option value="">choose your hotel</option>
                 @foreach ($hotels as $hotel)
-                <option value="{{ trim($hotel->longtiude) . ',' . trim($hotel->latitude) }}">
+                    <option value="{{ trim($hotel->longtiude) . ',' . trim($hotel->latitude) }}">
                         {{ $hotel->name }}</option>
                 @endforeach
             </select>
@@ -29,8 +29,8 @@
                     @endforeach
                 </select>
             </div>
-            @else
-            <p class=" mr-1 text-lg font-bold mt-2"> to {{$destination->name}}</p>
+        @else
+            <p class=" mr-1 text-lg font-bold mt-2"> to {{ $destination->name }}</p>
         @endif
         <button
             class="bg-green-700 hover:bg-white hover:text-green-700 px-1 transition ease-in-out duration-300 py-1 rounded text-white focus:outline-none"
@@ -83,6 +83,8 @@
                         enableHighAccuracy: true,
                     },
                     trackUserLocation: true,
+                }).on('geolocate', (res) => {
+                    console.log(res);
                 })
             );
 
@@ -163,7 +165,7 @@
                     offset: popupOffsets
                 }).setHTML(
                     `<h1>${placeData.name}</h1>
-                                    `
+                                        `
                 );
                 marker.setPopup(popup);
             }
