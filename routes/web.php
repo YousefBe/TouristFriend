@@ -43,3 +43,6 @@ Route::delete('/comment/delete/{id}', 'App\Http\Controllers\CommentController@de
 route::get('/admin', [AdminController::class, 'show'])->middleware(['auth', 'admin']);
 
 require __DIR__ . '/auth.php';
+Route::get('/blogg', function () {
+    return view('blog');
+});
