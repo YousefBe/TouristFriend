@@ -17,15 +17,14 @@ class CreatePostsTable extends Migration
             $table->id();
 
             $table->string('title');
-            $table->string('body');
-            $table->integer('vote');
-
+            $table->string('body',1000);
+            $table->integer('vote')->default('0');
+            $table->integer('comments')->default('0');
+            $table->string('file_path');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('channel_id');
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('cascade');
-
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('channel_id')->references('id')->on('channels');
             $table->timestamps();
         });
     }

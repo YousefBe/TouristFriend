@@ -17,6 +17,9 @@ use App\Http\Livewire\User\Recommendation;
 use App\Http\Livewire\User\Restaurant as UserRestaurant;
 use App\Http\Livewire\User\RestaurantsList;
 use App\Models\PointOfInterest as ModelsPointOfInterest;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PostsController;
+use BinshopsBlog\Laravel\Fulltext\Commands\Index;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +40,10 @@ Route::get('/', function () {
     $restaurants = Restaurant::all()->random(4);
     return view('landing.welcome', compact('countries', 'cities' , 'pois' , 'hotels' , 'restaurants'));
 })->name('home');
+//Blog posts Routes
+Route::post('/vote/upvote/{id}', 'App\Http\Controllers\PostsController@upVote')->name('upvote');
+Route::post('/vote/downvote/{id}', 'App\Http\Controllers\PostsController@downVote')->name('downvote');
+Route::resource('/blog', PostsController::class);
 
 // user routes
 Route::middleware(['auth' ])->group(function(){
@@ -99,6 +106,15 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+//Comment Route
+Route::post('/comment/store', 'App\Http\Controllers\CommentController@store')->name('comment.add');
+Route::delete('/comment/delete/{id}', 'App\Http\Controllers\CommentController@destroy')->name('comment.delete');
+//Vote Routes
+
+
 
 
 require __DIR__ . '/auth.php';
+Route::get('/blogg', function () {
+    return view('blog');
+});
