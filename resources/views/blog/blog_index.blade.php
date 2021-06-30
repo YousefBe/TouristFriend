@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Blog - Moderna Bootstrap Template</title>
+  <title>Blog</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -127,7 +127,12 @@
 
               <div class="entry-content">
                 <p>
-                {{ $post->body }}</p>
+                
+                <?php
+  
+echo substr_replace(" $post->body ", " .....", 90);
+  
+?></p>
                 <div class="read-more">
                   <a href="{{ URL::to('blog/'. $post->id) }}">Read More</a>
                 </div>
