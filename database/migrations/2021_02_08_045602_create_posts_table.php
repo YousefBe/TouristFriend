@@ -17,9 +17,9 @@ class CreatePostsTable extends Migration
             $table->id();
 
             $table->string('title');
-            $table->string('body',1000);
+            $table->string('body',10000);
             $table->integer('vote')->default('0');
-            $table->integer('comments')->default('0');
+            $table->integer('commentsNum')->default('0');
             $table->string('file_path');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('channel_id');

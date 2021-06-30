@@ -26,7 +26,7 @@ class HotelSeeder extends Seeder
             There is an on-site gift shop in the Albergo Hotel. Its staff can arrange reservations, as well as travel assistance and room service.
             Located 10 minutes’ drive from Rafic Hariri Airport, the Albergo offers free private parking.",
             'rate' => "5 stars",
-            'price' => "$280 per night",
+            'price' => "starts with 280 USD per night",
             'country_id' => 1,
         ]);
         $AlbergoHotel->images()->createMany([
@@ -50,7 +50,7 @@ class HotelSeeder extends Seeder
             The hotel’s all-day restaurant serves delectable dishes inspired by the Lebanese kitchen, as well as international classics. The bar has a wide range of drinks and cocktails on offer.
             Rafic Hariri International Airport is 9 km from Hotel Phoenicia. Trendy Monot Street is just a 10-minute drive away.",
             'rate' => "5 stars",
-            'price' => "$361 per day",
+            'price' => "starts with 361 USD per night",
             'country_id' => 1,
         ]);
         $InterContinentalPhoeniciaBeirut->images()->createMany([
@@ -70,7 +70,7 @@ class HotelSeeder extends Seeder
             'details' => ":Located in Beirut, the 5 star Kempinski Summerland Hotel & Resort offers a labyrinth of pools, including the legendary Summerland 'Cascade Waterfall' and an indoor pool. The resort features free WiFi throughout the property.
             All 153 rooms at the Kempinski Summerland are air conditioned and equipped with a flat-screen TV with satellite channels. Some rooms have a seating area for your convenience. Certain rooms include views of the sea or pool. Every room is fitted with a private bathroom. For your comfort, you can relax at the European Luxury Resense Spa, a renaissance of the classical European spa, a fusion of modern and traditional design, art, music, therapies, and bathing.",
             'rate' => "5 stars",
-            'price' => " $417 per day",
+            'price' => "starts with 417 USD per night",
             'country_id' => 1,
         ]);
         $KempinskiSummerlandHotel->images()->createMany([
@@ -94,7 +94,7 @@ class HotelSeeder extends Seeder
             'details' => "nestled in the heart of downtown Beirut. Perfectly located for both business and leisure, the hotel offers the ultimate in hospitality for every guest, with state of the art facilities, meeting rooms and suites. One of Beirut’s most iconic luxury hotels, Le Gray, Beirut is a Campbell Gray Hotel and member of The Leading Hotels of the World.
             Guests are greeted daily with fresh flowers and fruits, as well as breath-taking views of beautiful Beirut from the hotel fifth floor terraces. Facilities include 103 rooms and suites designed with relaxation and comfort in mind. Blending inspiring interior design with sophistication, the hotel boasts an outdoor heated rooftop infinity pool, a plethora of restaurants and bars including an opulent cigar lounge, a large atrium with a spiral staircase, and a rooftop terrace and bar offering 360 views of the city.",
             'rate' => "5 stars",
-            'price' => " $$469  per day",
+            'price' => "starts with 469 USD per night",
             'country_id' => 1,
         ]);
         $LeGray->images()->createMany([
@@ -119,7 +119,7 @@ class HotelSeeder extends Seeder
             'longtiude' => "35.5169408",
             'details' => "The Smallville Hotel is a contempory luxurious 5-star hotel strategically located in the midst of Beirut's eclectic residential neighbourhood of Badaro. This hotel is situated within close proximity to the National Museum and the Mim museum. Other local attractions also within a walking distance are The Hippodrome and the Horsh Beirut.",
             'rate' => "5 stars",
-            'price' => " $266  per day",
+            'price' => "starts with 266 USD per night",
             'country_id' => 1,
         ]);
         $TheSmallville->images()->createMany([
@@ -140,7 +140,7 @@ class HotelSeeder extends Seeder
             'details' => "One of the highlights of the luxurious Atlante Star Hotel has to be its rooftop restaurant where you can enjoy spectacular panoramic views of St. Peter’s Basilica while you dine or enjoy an evening aperitif. Free WiFi is available.
             This elegant hotel is set in the heart of Rome’s historic centre, just a 5-minute walk from the Vatican where you can visit the magnificent museums including the Sistine Chapel.",
             'rate' => "4 stars",
-            'price' => " 68 euro per day",
+            'price' => " starts with 68 euro per night",
             'country_id' => 2,
         ]);
         $AtlanteStarHotel->images()->createMany([
@@ -159,7 +159,7 @@ class HotelSeeder extends Seeder
             'details' => "Just a 2 minutes' walk from Venice's St. Mark’s Square, Bauer Hotel offers spacious, elegant rooms with a satellite flat-screen TV. It features a gourmet restaurant and a terrace overlooking the Grand Canal.
             Air-conditioned rooms at the Bauer include a minibar and a classic Venetian-style décor. Some have a balcony and city or canal views.",
             'rate' => "5 stars",
-            'price' => "200 euro  per day",
+            'price' => "starts with 200 euro per night",
             'country_id' => 2,
         ]);
         $BauerPalazzo->images()->createMany([
@@ -177,7 +177,7 @@ class HotelSeeder extends Seeder
             'details' => "Just around the corner from Santa Maria Novella Church and the train station, Florence's Hotel Croce di Malta is a former convent featuring a lovely inner garden with swimming pool. The rooftop terrace offers spectacular views over the city’s beautiful domes and bell towers.
             The rooms offer air conditioning, free Wi-Fi, and a satellite flat-screen TV. Some rooms have 2 private bathrooms or offer views of the garden. The floors are carpeted or in terracotta tiles.",
             'rate' => "4 stars",
-            'price' => "$119  euro  per day",
+            'price' => "starts with 119 euro per night",
             'country_id' => 2,
         ]);
         $HotelCroceDiMalta->images()->createMany([
@@ -194,7 +194,7 @@ class HotelSeeder extends Seeder
             'details' => "Set on the peaceful banks of Giudecca Island, the Hilton Molino Stucky is a former flour mill refurbished to become a unique hotel. This Venetian masterpiece features a rooftop swimming pool and a large spa.
             With contemporary décor and elegant furnishings, the air-conditioned rooms and suites include a flat-screen TV, a marble bathroom, and a coffee maker. Some have views of the town and the canal.",
             'rate' => "5 stars",
-            'price' => "130 euro  per day",
+            'price' => "starts with 130 euro per night",
             'country_id' => 2,
         ]);
         $HiltonMolinoStuckyVenice->images()->createMany([
@@ -211,7 +211,7 @@ class HotelSeeder extends Seeder
             'longtiude' => "12.4912528991699",
             'details' => "Hotel Giolli offers large rooms with Wi-Fi access, friendly service, and a 24-hour front desk. It is located on Via Nazionale, a short walk from Roma Termini Railway Station.",
             'rate' => " 4 stars",
-            'price' => " 81 euro  per day",
+            'price' => "starts with 81 euro per night",
             'country_id' => 2,
         ]);
         $HotelGiolliNazionale->images()->createMany([
@@ -233,7 +233,7 @@ class HotelSeeder extends Seeder
             There's an upscale restaurant and a chic lounge.
             Amenities include an indoor saltwater pool, and a gym with a sauna, as well as a spa, a 24-hour business center and 15,500 sq ft of meeting space,Free Wi-Fi,Parking ,Accessible,Indoor pool,     Air-conditioned, Laundry service",
             'rate' => " 4 stars",
-            'price' => " 501.69 dollar for the night",
+            'price' => "starts with 501.69 USD per night",
             'country_id' => 3,
         ]);
         $fourseasonshotelatlanta->images()->createMany([
@@ -260,7 +260,7 @@ class HotelSeeder extends Seeder
             There's also an 18-hole golf course and over 750,000 sq ft of event space, including 6 ballrooms.
             Paid Wi-Fi, Paid parking , Accessible, Indoor and outdoor pool ,Air-conditioned and a Business center",
             'rate' => " 4 stars",
-            'price' => " 276.82 dollar for the night",
+            'price' => " starts with 276.82 USD per night",
             'country_id' => 3,
         ]);
         $GaylordOprylandResortConventionCenter->images()->createMany([
@@ -287,8 +287,8 @@ class HotelSeeder extends Seeder
             There's a French-influenced bakery and a wood-paneled bar, plus an upscale eatery and a cocktail lounge. 
             Other amenities include a spa and a fitness center with steam rooms.
             Advantages:- Free Wi-Fi, Parking, Accessible, Air-conditioned, Laundry service and Business center",
-            'rate' => "4.5 out of 5",
-            'price' => "762.36 dollar for the night",
+            'rate' => "4 stars",
+            'price' => "starts with 762.36 USD per night",
             'country_id' => 3,
         ]);
         $LotteNewYorkPalace->images()->createMany([
@@ -316,8 +316,8 @@ class HotelSeeder extends Seeder
             The complex also features a 55-ft indoor waterfall, 46 restaurants and bars, and indoor and outdoor pools, plus a solarium, a spa and shops.
             There's also an 18-hole golf course.
             Free Wi-Fi , Breakfast  ,Free parking , Accessible , Indoor pool and Air-conditioned",
-            'rate' => "4.5 out of 5",
-            'price' => "204.38 dollar for the night",
+            'rate' => "4 stars",
+            'price' => "starts with 204.38 USD per night",
             'country_id' => 3,
         ]);
         $moheganSunHotel->images()->createMany([
@@ -344,8 +344,8 @@ class HotelSeeder extends Seeder
             Amenities include 2 golf courses (surcharge), 10 tennis courts, 4 pools, on-site shopping, a fitness center and a spa (surcharge).
             There are 9 restaurants and several lounges.
             Advantages: Free Wi-Fi , Breakfast  ,Free parking , Accessible , Indoor pool and Air-conditioned",
-            'rate' => "4.5 out of 5",
-            'price' => "456 dollar for the night",
+            'rate' => "4 stars",
+            'price' => "starts with 456 USD per night",
             'country_id' => 3,
         ]);
         $TheBreakersPalmBeach->images()->createMany([
@@ -373,8 +373,8 @@ class HotelSeeder extends Seeder
             Parking and shuttles to the city center are also included.
             The hotel offers 2 outdoor pools (1 heated) and a kids' pool, along with a gym, a spa and 10 tennis courts.
             Advantages: Free Wi-Fi , Breakfast  ,Free parking , Accessible , Indoor pool and Air-conditioned",
-            'rate' => "4.6 out of 5",
-            'price' => "1380.06 MAD for the night",
+            'rate' => "4 stars",
+            'price' => "starts with 1380.06 MAD per night",
             'country_id' => 4,
         ]);
         $iberostarClubPalmeraieMarrakech->images()->createMany([
@@ -400,8 +400,8 @@ class HotelSeeder extends Seeder
             There are 3 restaurants offering local and European fare, plus a pool bar and a rustic-chic lobby bar with a grand piano.
             Other amenities include indoor and outdoor pools, and a luxe spa, plus tennis, horseback riding and a gym.
             Advantages: Free Wi-Fi , Breakfast  ,Free parking , Accessible , Indoor pool and Air-conditioned",
-            'rate' => "4.7 out of 5",
-            'price' => "3080.33 MAD for the night",
+            'rate' => "4 stars",
+            'price' => "starts with 3080.33 MAD per night",
             'country_id' => 4,
         ]);
         $michlifenResortGolf->images()->createMany([
@@ -425,8 +425,8 @@ class HotelSeeder extends Seeder
             Private rooms offer en suite facilities.
             Amenities include a bright common lounge, a dining area and a rooftop terrace.
             Advantages: Free Wi-Fi , Breakfast  ,Free parking , Accessible , Indoor pool and Air-conditioned",
-            'rate' => "4.7 out of 5",
-            'price' => "137.44 MAD for the night",
+            'rate' => "4 stars",
+            'price' => "starts with 137.44 MAD per night",
             'country_id' => 4,
         ]);
         $mosaicHostel->images()->createMany([
@@ -452,8 +452,8 @@ class HotelSeeder extends Seeder
             There are 2 fine dining restaurants, plus a Mediterranean eatery with a terrace. There's a chic bar, a sleek piano bar and a cigar bar.
             Other amenities include indoor and outdoor pools, a spa and a kids' club.
             Advantages: Free Wi-Fi , Breakfast  ,Free parking , Accessible ,  Indoor and outdoor pool  ,Air-conditioned",
-            'rate' => "4.8 out of 5",
-            'price' => "10953.63 MAD for the night",
+            'rate' => "4 stars",
+            'price' => "starts with 10953.63 MAD per night",
             'country_id' => 4,
         ]);
         $royalMansourMarrakech->images()->createMany([
@@ -477,8 +477,8 @@ class HotelSeeder extends Seeder
             There are 3 upscale restaurants; 1 with regular live music and 1 with an opulent cocktail bar, plus a relaxed bar by an outdoor pool with a sundeck.
             Other amenities include a gym, an indoor pool and a posh spa.
             Advantages: Free Wi-Fi, Free breakfast, Free parking, Accessible, Outdoor pool, Air-conditioned",
-            'rate' => "4.6 out of 5",
-            'price' => " 3896.89 MAD for the night",
+            'rate' => "4 stars",
+            'price' => "starts with 3896.89 MAD per night",
             'country_id' => 4,
         ]);
         $SelmanMarrakech->images()->createMany([
@@ -501,8 +501,8 @@ class HotelSeeder extends Seeder
             'latitude' => "49.212418422810636",
             'longtiude' => "16.60814143299275",
             'details' => "Located on the edge of Brno's centre, just a few minutes by public transport from the heart of the city. Hotel is part of a multi-purpose sports, culture and business complex and set next to the sport area and shopping centres. Villa Tugendhat is 500 m from the property. Czech and international cuisine can be enjoyed in the restaurant and cafe - bar. All air-conditioned rooms of the hotel feature satellite TV and internet access. Guests can enjoy numerous sports activities within the complex at an additional cost. Various café bars, shops and restaurants can be found in the vicinity. Garage parking safety. Reservation is not needed. Excellent transport connection by car from D1 into all major traffic routes.",
-            'rate' => "4 out of 5",
-            'price' => " start with 45 Euro per night",
+            'rate' => "4 stars",
+            'price' => "starts with 45 Euro per night",
             'country_id' => 5,
         ]);
         $CosmopolitanBobycentrum->images()->createMany([
@@ -518,8 +518,8 @@ class HotelSeeder extends Seeder
             'latitude' => "49.212418422810636",
             'longtiude' => "16.607017900460146",
             'details' => "Newly renovated hotel in the Brno city center with 103 cosy rooms and big convention center. Hotel Passage was completely refurbished and opened again in January 2020. Its location in the city center makes it a perfect place for business or leisure stay and for meetings and conferences. There are enough parking places at the hotel garage. You can enjoy delicious breakfast with a lot of organic and local choices or taste some of the creative coctails at our lobby bar. At the relax zone there are fitness centre, massages and yoga lessons.",
-            'rate' => "3.5 out of 5",
-            'price' => " start with 65E Euro per night",
+            'rate' => "3 stars",
+            'price' => "starts with 65E Euro per night",
             'country_id' => 5,
         ]);
         $HotelPassage->images()->createMany([
@@ -534,8 +534,8 @@ class HotelSeeder extends Seeder
             'latitude' => "49.19637114378888",
             'longtiude' => "16.607160373473526",
             'details' => "Hotel Pegas Brno is a family hotel located in the centre of the City of Brno, directly beneath Špilberk Castle. The hotel is associated with the first private brewery in Moravia, where special beers are brewed right in front of its guests.",
-            'rate' => "4 out of 5",
-            'price' => " start with 92E Euro per night",
+            'rate' => "4 stars",
+            'price' => "starts with 92E Euro per night",
             'country_id' => 5,
         ]);
         $HotelPegasBrno->images()->createMany([
@@ -550,8 +550,8 @@ class HotelSeeder extends Seeder
             'latitude' => "50.22230687701128",
             'longtiude' => "12.881853573433123",
             'details' => "EA Hotel Mozart is located on the left bank of the Tepla river, 350 feet from the main colonnade, in a historical building, where J. W. ... Find thermal spa facilities, the lido, a sauna, tennis courts, a golf course and other services (hairdresser, massage, beauty salon) in the surroundings of the hotel.",
-            'rate' => "4.5 out of 5",
-            'price' => " start with 96E Euro per night",
+            'rate' => "4 stars",
+            'price' => " starts with 96E Euro per night",
             'country_id' => 5,
         ]);
         $EAHotelMozart->images()->createMany([
@@ -566,8 +566,8 @@ class HotelSeeder extends Seeder
             'latitude' => "49.19637114378888",
             'longtiude' => "16.607160373473526",
             'details' => "Garnihotel/Pension FAN, 2006 certificated by the Hotel and Restaurant Associon of Czech Republic is a two-storied building, situated in the spa town of Karlovy Vary, district Bohatice.You can expect polished, cosy and quiet rooms with helpful staff and excellent connectiveness to the city centre with municipal transport. There is a kitchen unit in every room so you can cook your own meal or you can enjoy Czech breakfast every morning downstairs.Rooms are equipped with private bathroom and a toilette, satelite TV, fridge, coffee maker, alarm-clock, cooking stove and anti-allergic pillows and blankets.There is WLAN available in every room on request.Regardin your children, we can provide you children cots,stools and variety of boardgames free of charge.There is also a secured parking lot behind FAN.You can buy municipal transport tickets at the reception and we can store your golf bags/bikes in a secured room.",
-            'rate' => "4.5 out of 5",
-            'price' => " start with 45 Euro per night",
+            'rate' => "4 stars",
+            'price' => " starts with 45 Euro per night",
             'country_id' => 5,
         ]);
         $GarniHotelPensionFan->images()->createMany([
@@ -589,8 +589,8 @@ class HotelSeeder extends Seeder
             For those interested in checking out popular landmarks while visiting Toronto, Hilton Toronto Hotel is located a short distance from The Air Canada Centre (0.6 mi) and Rogers Centre (0.6 mi).
             During your visit, be sure to check out one of Toronto's popular lobster restaurants such as 360 The Restaurant at the CN Tower, ALO RESTAURANT, and Canoe Restaurant & Bar, all a short distance from Hilton Toronto.
             Should time allow, CN Tower, St. Lawrence Market, and Graffiti Alley are some popular attractions that are within walking distance.",
-            'rate' => "4 out of 5",
-            'price' => " start with 172 Euro per night",
+            'rate' => "4 stars",
+            'price' => " starts with 172 Euro per night",
             'country_id' => 6,
         ]);
         $HiltonToronto->images()->createMany([
@@ -605,8 +605,8 @@ class HotelSeeder extends Seeder
             'latitude' => "45.50636319934037",
             'longtiude' => "-73.55437055337364",
             'details' => "Offering a prime location in the heart of old town, SpringHill Suites Old Montreal makes it easy to access both leisure and business destinations along the St. Lawrence River. From our hotel, you can explore the Historic District, as well as visit the Old Port of Montreal (Vieux Port) and see shows at the Bell Center. When it's time to relax, retreat to our stylishly appointed suites, each featuring complimentary high-speed Wi-Fi, spacious layouts and pullout sofas. In the mornings, fuel up for another adventure with our complimentary breakfast with all your morning favorites. You can also visit Avie Spa, directly attached to our hotel and providing soothing body treatments. Wellness enthusiasts can stay on track with access to a fitness centre and indoor pool. Ideal for incoming event guests, we offer exclusive group rates and access to nearby meeting venues. Whatever your reason for traveling, we're ready to meet all your travel needs during a stay at SpringHill Suites Old Montreal.",
-            'rate' => "4 out of 5",
-            'price' => " start with 91 Euro per night",
+            'rate' => "4 stars",
+            'price' => " starts with 91 Euro per night",
             'country_id' => 6,
         ]);
         $SpringHillSuites->images()->createMany([
@@ -629,8 +629,8 @@ class HotelSeeder extends Seeder
             During your visit, be sure to check out one of Montreal's popular lobster restaurants such as Au Pied de Cochon, Le Bremner, and Garde Manger, all a short distance from Montreal Best Western.
             Should time allow, Mount Royal Park, Old Montreal, and Underground City are some popular attractions that are within walking distance.
             At Best Western Ville-Marie Montreal Hotel & Suites, your comfort and satisfaction come first, and they look forward to welcoming you to Montreal.",
-            'rate' => "4 out of 5",
-            'price' => " start with  133 Euro per night",
+            'rate' => "4 stars",
+            'price' => " starts with 133 Euro per night",
             'country_id' => 6,
         ]);
         $BestWesternVilleMarieMontrealHotelSuites->images()->createMany([
@@ -647,8 +647,8 @@ class HotelSeeder extends Seeder
             'latitude' => "43.68633739690533",
             'longtiude' => "-79.59636438399258",
             'details' => "a stylish hotel with contemporary comforts. Walk to major corporations and attractions in the Dixon Road area, and enjoy convenient 24-hour shuttle service to/from Pearson Airport. Business travelers are minutes from the Congress Centre and International Centre, and families will love the proximity to Canada’s Wonderland. From the airport, it’s just a 20-minute train ride downtown on the Union-Pearson Express. Kick off your stay with a warm DoubleTree chocolate chip cookie at check-in. Our modern guest rooms feature complimentary WiFi, a 42-inch TV, mini-fridge, ergonomic workspace and coffee maker, and some rooms offer premium views of the airport in action. Here a few days? Choose a suite for a separate living area and kitchenette. Additional amenities include 7,000 sq. ft. of event space, on-site restaurant and bar, heated indoor pool, fitness center, and business center.",
-            'rate' => "4 out of 5",
-            'price' => " start with  93 Euro per night",
+            'rate' => "4 stars",
+            'price' => " starts with 93 Euro per night",
             'country_id' => 6,
         ]);
         $DoubleTreebyHiltonTorontoAirport->images()->createMany([
@@ -663,8 +663,8 @@ class HotelSeeder extends Seeder
             'latitude' => "43.65199019823386",
             'longtiude' => "-79.60106805330715",
             'details' => "As you fly into Toronto, feel confident and secure knowing that you have a comfortable home away from home located just minutes from baggage claim at the Hampton Inn by Hilton® Toronto Airport Corporate Centre. Whether you're on business or up for a little fun, our airport area hotel in Toronto puts you in touch with Toronto.",
-            'rate' => "4.5 out of 5",
-            'price' => "start with 77 Euro per night",
+            'rate' => "4 stars",
+            'price' => "starts with 77 Euro per night",
             'country_id' => 6,
         ]);
         $HamptonInn->images()->createMany([

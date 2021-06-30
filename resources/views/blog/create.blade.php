@@ -44,19 +44,24 @@
     <div class="container d-flex justify-content-between align-items-center">
 
       <div class="logo">
-        <h1 class="text-light"><a href="index.html"><span>Moderna</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+       
+        <a href="{{ route('home') }}" class="flex items-center ml-3">
+            <img src="{{ url('/images/icons8-tourist-backpack-64.png') }}" alt="" class="w-12">
+            <span class="text-base uppercase font-bold ">TouristFriend</span>
+        </a>
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="" href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
+        @livewire('search-component')
+
+                <a href="{{ route('home') }}" class=" mr-6  p-3 text-base font-bold uppercase ">
+                    {{ __('Home') }}
+                </a>
+                <a href="/blog" class=" mr-6  p-3  text-base font-bold uppercase  ">
+                    {{ __('Blog') }}
+                </a>
+
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -74,9 +79,11 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a class="active" href="contact.html">Contact Us</a></li>
+         
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
+        
+        </div>
       </nav><!-- .navbar -->
 
     </div>

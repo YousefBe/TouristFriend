@@ -168,9 +168,10 @@
               </div>
 
             </article><!-- End blog entry -->
-
+            
             <div class="blog-author d-flex align-items-center">
-              <img src="/assets/img/blog/blog-author.jpg" class="rounded-circle float-left" alt="">
+       
+              <img src="{{ asset('storage/Users/' .$post->user->details->image)}}" class="rounded-circle float-left" alt="">
               <div>
                 <h4>{{ $post->user->name }}</h4>
                 <div class="social-links">
@@ -179,85 +180,40 @@
                   <a href="https://instagram.com/#"><i class="biu bi-instagram"></i></a>
                 </div>
                 <p>
-                  Itaque quidem optio quia voluptatibus dolorem dolor. Modi eum sed possimus accusantium. Quas repellat voluptatem officia numquam sint aspernatur voluptas. Esse et accusantium ut unde voluptas.
-                </p>
+                {!! $post->user->details->about !!}
+                  </p>
               </div>
             </div><!-- End blog author bio -->
 
+
             <div class="blog-comments">
 
-              <h4 class="comments-count">8 Comments</h4>
+              <h4 class="comments-count">{{$post->commentsNum}} Comments</h4>
               @foreach ($post->comments as $comment)
               <div id="comment-1" class="comment">
                 <div class="d-flex">
-                  <div class="comment-img"><img src="/assets/img/blog/comments-1.jpg" alt=""></div>
+                  <div class="comment-img"><img src="{{ asset('storage/Users/' .$comment->user->details->image)}}" alt=""></div>
                   <div>
                     <h5><a href="">{{ $comment->user->name }}</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
                     <time datetime="2020-01-01">{{ date('jS M Y h: i A', strtotime($comment->updated_at)) }}</time>
                     <p>
                     {{ $comment->body }} </p>
-                  </div>
-                  @if (isset(Auth::user()->id) && Auth::user()->id == $comment->user->id)
+                    @if (isset(Auth::user()->id) && Auth::user()->id == $comment->user->id)
 
-                                <form action="{{ route('comment.delete', $comment->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button class="text-red-500 pl-3" type="submit">
-                                        Delete Comment
-                                    </button>
-                                </form>
-                            @endif
+                    <form action="{{ route('comment.delete', $comment->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="text-red-500 pl-3" type="submit">
+                            Delete Comment
+                        </button>
+                    </form>
+                    @endif
+                  </div>
+              
                 </div>
               </div><!-- End comment #1 -->
               @endforeach
-              <div id="comment-2" class="comment">
-                <div class="d-flex">
-                  <div class="comment-img"><img src="/assets/img/blog/comments-2.jpg" alt=""></div>
-                  <div>
-                    <h5><a href="">Aron Alvarado</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
-                    <time datetime="2020-01-01">01 Jan, 2020</time>
-                    <p>
-                      Ipsam tempora sequi voluptatem quis sapiente non. Autem itaque eveniet saepe. Officiis illo ut beatae.
-                    </p>
-                  </div>
-                </div>
-
-                <div id="comment-reply-1" class="comment comment-reply">
-                  <div class="d-flex">
-                    <div class="comment-img"><img src="/assets/img/blog/comments-3.jpg" alt=""></div>
-                    <div>
-                      <h5><a href="">Lynda Small</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
-                      <time datetime="2020-01-01">01 Jan, 2020</time>
-                      <p>
-                        Enim ipsa eum fugiat fuga repellat. Commodi quo quo dicta. Est ullam aspernatur ut vitae quia mollitia id non. Qui ad quas nostrum rerum sed necessitatibus aut est. Eum officiis sed repellat maxime vero nisi natus. Amet nesciunt nesciunt qui illum omnis est et dolor recusandae.
-
-                        Recusandae sit ad aut impedit et. Ipsa labore dolor impedit et natus in porro aut. Magnam qui cum. Illo similique occaecati nihil modi eligendi. Pariatur distinctio labore omnis incidunt et illum. Expedita et dignissimos distinctio laborum minima fugiat.
-
-                        Libero corporis qui. Nam illo odio beatae enim ducimus. Harum reiciendis error dolorum non autem quisquam vero rerum neque.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div id="comment-reply-2" class="comment comment-reply">
-                    <div class="d-flex">
-                      <div class="comment-img"><img src="/assets/img/blog/comments-4.jpg" alt=""></div>
-                      <div>
-                        <h5><a href="">Sianna Ramsay</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
-                        <time datetime="2020-01-01">01 Jan, 2020</time>
-                        <p>
-                          Et dignissimos impedit nulla et quo distinctio ex nemo. Omnis quia dolores cupiditate et. Ut unde qui eligendi sapiente omnis ullam. Placeat porro est commodi est officiis voluptas repellat quisquam possimus. Perferendis id consectetur necessitatibus.
-                        </p>
-                      </div>
-                    </div>
-
-                  </div><!-- End comment reply #2-->
-
-                </div><!-- End comment reply #1-->
-
-              </div><!-- End comment #2-->
-
               
-
               <div class="reply-form">
                 <h4>Leave a comment</h4>
                 <p>Your email address will not be published. Required fields are marked * </p>
@@ -304,38 +260,16 @@
               <h3 class="sidebar-title">Recent Posts</h3>
               <div class="sidebar-item recent-posts">
                 @foreach ($posts as $postitem)
-                    
+                @if($postitem->id<=sizeof($posts)&&$postitem->id>=sizeof($posts)-3)
                 <div class="post-item clearfix">
                   <img src="{{ asset('storage/blog.post/'.$postitem->file_path)}}" alt="">
-                  <h4><a href="blog-single.html">Nihil blanditiis at in nihil autem</a></h4>
-                  <time datetime="2020-01-01">Jan 1, 2020</time>
-                </div>
+                  <h4><a href="blog-single.html">{{ $postitem->title }}</a></h4>
+                  <time datetime="2020-01-01">{{ date('jS M Y', strtotime($postitem->updated_at)) }}</time>
+                  <br>
+              @endif
                 @endforeach
 
-                <div class="post-item clearfix">
-                  <img src="/assets/img/blog/blog-recent-2.jpg" alt="">
-                  <h4><a href="blog-single.html">Quidem autem et impedit</a></h4>
-                  <time datetime="2020-01-01">Jan 1, 2020</time>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="/assets/img/blog/blog-recent-3.jpg" alt="">
-                  <h4><a href="blog-single.html">Id quia et et ut maxime similique occaecati ut</a></h4>
-                  <time datetime="2020-01-01">Jan 1, 2020</time>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="/assets/img/blog/blog-recent-4.jpg" alt="">
-                  <h4><a href="blog-single.html">Laborum corporis quo dara net para</a></h4>
-                  <time datetime="2020-01-01">Jan 1, 2020</time>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="/assets/img/blog/blog-recent-5.jpg" alt="">
-                  <h4><a href="blog-single.html">Et dolores corrupti quae illo quod dolor</a></h4>
-                  <time datetime="2020-01-01">Jan 1, 2020</time>
-                </div>
-
+                
               </div><!-- End sidebar recent posts-->
 
               
@@ -347,8 +281,6 @@
 
       </div>
     </section><!-- End Blog Single Section -->
-
-  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   

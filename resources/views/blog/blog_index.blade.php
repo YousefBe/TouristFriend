@@ -1,81 +1,137 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    <nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
-                        <div class="block sm:hidden">
-                            <a href="#"
-                                class="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
-                                @click="open = !open">
-                                Topics <svg :class="open ? 'fa-chevron-down': 'fa-chevron-up'"
-                                    class="svg-inline--fa fa-chevron-up fa-w-14 ml-2" aria-hidden="true"
-                                    focusable="false" data-prefix="fas" data-icon="chevron-up" role="img"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z">
-                                    </path>
-                                </svg>
-                                <!-- <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2 fa-chevron-up"></i> -->
-                            </a>
-                        </div>
-                        <div :class="open ? 'block': 'hidden'"
-                            class="w-full flex-grow sm:flex sm:items-center sm:w-auto hidden">
-                            <div
-                                class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
-                                @foreach ($channels as $channel)
-                                    <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">{{ $channel->name }}
-                                    </a>
-                                @endforeach
-                            </div>
-                        </div>
-                    </nav>
-                    @if (session()->has('message'))
-                        <div class="w-4/5 m-auto mt-10 pl-2">
-                            <p class="w-2/6 mb-4 text-gray-50 bg-green-500 rounded-2xl py-4">
-                                {{ session()->get('message') }} 
-                            </p>
-                        </div>
-                        
-                    @endif
-                    @if (Auth::check())
-                        <div>
-                            <br>
-                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                                <a href="/blog/create">
-                                    Create Post
-                                </a>
-                            </button>
-                        </div>
-                    @endif
-                    @foreach ($Votedposts as $post)
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+  <title>Blog - Moderna Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-                        <article class="flex flex-col shadow my-4">
-                            <!-- Article Image -->
-                            {{-- <a href="#" class="hover:opacity-75">
-                                <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=1">
-                            </a> --}}
-                            <div class="bg-white flex flex-col justify-start p-6">
-                                <a href="#"
-                                    class="text-blue-700 text-sm font-bold uppercase pb-4">{{ $post->channel->name }}</a>
-                                <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">{{ $post->title }}</a>
-                                <p href="#" class="text-sm pb-3">
-                                    By <a href="#" class="font-semibold hover:text-gray-800">
-                                        {{ $post->user->name }}</a>, Published on
-                                    {{ date('jS M Y', strtotime($post->updated_at)) }}
-                                </p>
-                                <p  class="pb-6">{{ $post->body }}</p>
-                                <a href="{{ URL::to('blog/'. $post->id) }}" class="uppercase text-gray-800 hover:text-black">Continue Reading
-                                    <!-- <i class="fas fa-arrow-right"></i> -->
-                                </a>
-                                @if (isset(Auth::user()->id) && Auth::user()->id == $post->user->id)
+  <!-- Favicons -->
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna - v4.3.0
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index.html"><span>Moderna</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a class="active" href="blog.html">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Blog</h2>
+
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Blog</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+          @foreach ($Votedposts as $post) 
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="{{ asset('storage/blog.post/'.$post->file_path)}}" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="blog-single.html">{{ $post->title }}</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">{{ $post->user->name }}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">{{ date('jS M Y', strtotime($post->updated_at)) }}</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">{{$post->commentsNum}}</a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                {{ $post->body }}</p>
+                <div class="read-more">
+                  <a href="{{ URL::to('blog/'. $post->id) }}">Read More</a>
+                </div>
+                @if (isset(Auth::user()->id) && Auth::user()->id == $post->user->id)
                                     <span class="float-left">
                                         <a href="{{ URL::to('blog/'. $post->id) .'/edit'}}"
                                             class="teext-gray-700 italic hover:text-gray-900 pb-1 border-b-2">
@@ -96,11 +152,92 @@
                                     </span>
                                     
                                 @endif
-                            </div>
-                        </article>
-                    @endforeach
-                </div>
-            </div>
+              </div>
+
+            </article><!-- End blog entry -->
+            @endforeach
+            
+            
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              
+              <div class="sidebar-item search-form">
+              @if (Auth::check())
+                        <div>
+                            <br>
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                                <a href="/blog/create">
+                                    Create Post
+                                </a>
+                            </button>
+                        </div>
+                    @endif
+              </div><!-- End sidebar search formn-->
+
+              <h3 class="sidebar-title">Categories</h3>
+              <div class="sidebar-item categories">
+              @foreach ($channels as $channel)
+                <ul>
+                  <li><a href="#">{{ $channel->name }} <span>(25)</span></a></li>
+                  
+                </ul>
+                @endforeach
+              </div><!-- End sidebar categories-->
+
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <div class="sidebar-item recent-posts">
+              @foreach ($posts as $post)
+            @if($post->id<=sizeof($posts)&&$post->id>=sizeof($posts)-3)
+                <div class="post-item clearfix">
+                  <img src="{{ asset('storage/blog.post/'.$post->file_path)}}" alt="">
+                  <h4><a href="blog-single.html">{{ $post->title }}</a></h4>
+                  <time datetime="2020-01-01">{{ date('jS M Y', strtotime($post->updated_at)) }}</time>
+                  <br>
+              @endif
+                  @endforeach
+
+               
+
+              </div><!-- End sidebar recent posts-->
+
+   
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
         </div>
-    </div>
-</x-app-layout>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+    
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/vendor/purecounter/purecounter.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
+
+

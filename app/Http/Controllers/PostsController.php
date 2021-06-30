@@ -22,7 +22,7 @@ class PostsController extends Controller
     public function index()
     {
         $channels = Channel::all();
-        return view('blog', compact('channels'))
+        return view('blog.blog_index', compact('channels'))
             ->with('posts', Post::orderBy('updated_at', 'DESC')->get())
             ->with('Votedposts', Post::orderBy('vote', 'ASC')->get());
     }
