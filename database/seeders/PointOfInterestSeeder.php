@@ -691,5 +691,137 @@ class PointOfInterestSeeder extends Seeder
             ['file_name' => "Stanley Park6.jpg"],
         ]);
         // eof Canada
+        //egypt
+        $pyramids = PointOfInterest::create([
+            'name' => "Pyramids",
+            'longtiude' => "31.134230",
+            'latitude' => "29.979397",
+            'details' => " The last surviving of the Seven Wonders of the Ancient World, the Pyramids of Giza are one of the world's most recognizable landmarks.
+            Built as tombs for the mighty Pharaohs and guarded by the enigmatic Sphinx, Giza's pyramid complex has awed travelers down through the ages and had archaeologists 
+            (and a fair few conspiracy theorists) scratching their heads over how they were built for centuries.Today, these megalithic memorials to dead kings are still as wondrous a sight as they ever were.
+             An undeniable highlight of any Egypt trip, Giza's pyramids should not be missed.",
+            'cost' => "foreighners 200 egp , student foreighners 100 egp
+            egyptions 30 egp , students 10 egp",
+            'working_hours' => "Every day from 8am to 5pm",
+            'country_id' => 7,
+        ]);
+        $pyramids->images()->createMany([
+            ['file_name' => "pyramids (1).jpg"],
+            ['file_name' => "pyramids (2).jpg"],
+            ['file_name' => "pyramids (3).jpg"],
+            ['file_name' => "pyramids (4).jpg"],
+            ['file_name' => "pyramids (5).jpg"],
+            ['file_name' => "pyramids (6).jpg"],
+            ['file_name' => "pyramids (7).jpg"],
+            ['file_name' => "pyramids (8).jpg"],
+            ['file_name' => "pyramids (9).jpg"],
+            ['file_name' => "pyramids (10).jpg"],
+            ['file_name' => "pyramids (11).jpg"],
+            ['file_name' => "pyramids (12).jpg"],
+            ['file_name' => "pyramids (13).jpg"],
+        ]);
+        $Saqqara = PointOfInterest::create([
+            'name' => "Saqqara Pyramid",
+            'longtiude' => "31.216833",
+            'latitude' => "29.853356",
+            'details' => "Everyone's heard of Giza's Pyramids, but they're not the only pyramids Egypt has up its sleeve. Day-tripping from Cairo, Saqqara is the vast necropolis of the Old Kingdom pharaohs and showcases how the Ancient Egyptians advanced their architectural knowledge to finally create a true pyramid with the Step Pyramid, Bent Pyramid, and Red Pyramid being among the highlights here. The various tombs of court administrators, with interior walls covered with friezes describing daily scenes, scattered throughout the archaeological site are just as much a reason to visit as the pyramids themselves.",
+            'cost' => "foreighner 180 egp , student 90 egp
+            egyptian 20 egp , student 5 ",
+            'working_hours' => "Every day from 9am to 4pm",
+            'country_id' => 7,
+        ]);
+        $Saqqara->images()->createMany([
+            ['file_name' => "saqqara (1).jpg"],
+            ['file_name' => "saqqara (2).jpg"],
+            ['file_name' => "saqqara (3).jpg"],
+            ['file_name' => "saqqara (4).jpg"],
+            
+        ]);
+        $egyptianmuseum = PointOfInterest::create([
+            'name' => "Cairo's Egyptian Museum",
+            'longtiude' => "31.233585",
+            'latitude' => "30.047986",
+            'details' => "A treasure trove of the Pharaonic world, Cairo's Egyptian Museum is one of the world's great museum collections. The faded pink mansion is home to a dazzling amount of exhibits. It's a higgledy-piggledy place with little labeling on offer and not much chronological order, but that's half of its old-school charm.
+
+            Upstairs is the golden glory of King Tutankhamen and the fascinating royal mummies exhibits, but really every corner you turn here is home to some wonderful piece of ancient art or statuary that would form a highlight of any other museum.",
+            'cost' => "foreIGNER:
+                Adult: EGP 200\ Student: EGP 100
+                Photography:
+                (Personal Use –without Flash): EGP 50
+                Video:
+                (Personal Use –without Flash): EGP 300
+                
+                
+                EGYPTIANS\ ARABS:
+                Adult: EGP 30\ Student: EGP 10
+                Photography:
+                (Personal Use –without Flash): EGP 20
+                Video:
+                (Personal Use –without Flash): EGP 300
+                
+                Free entrance for children under 6 years ",
+            'working_hours' => "Thursday 
+            9AM–5PM
+            5:30–9PM
+            Friday
+            9AM–4PM
+            Saturday
+            9AM–5PM
+            Sunday
+            9AM–5PM
+            5:30–9PM
+            Monday
+            9AM–5PM
+            Tuesday
+            9AM–5PM
+            Wednesday
+            9AM–5PM
+            ",
+            'country_id' => 7,
+        ]);
+        $egyptianmuseum->images()->createMany([
+            ['file_name' => "egpMuseum (1).jpg"],
+            ['file_name' => "egpMuseum (2).jpg"],
+            ['file_name' => "egpMuseum (3).jpg"],
+            ['file_name' => "egpMuseum (4).jpg"],
+            ['file_name' => "egpMuseum (5).jpg"],
+            ['file_name' => "egpMuseum (6).jpg"],
+            ['file_name' => "egpMuseum (7).jpg"],
+            ['file_name' => "egpMuseum (8).jpg"],
+            ['file_name' => "egpMuseum (9).jpg"],
+            ['file_name' => "egpMuseum (10).jpg"],
+            ['file_name' => "egpMuseum (11).jpg"],
+            
+            
+        ]);
+        $karnak = PointOfInterest::create([
+            'name' => "Pyramids",
+            'longtiude' => " 32.657284",
+            'latitude' => "25.719479",
+            'details' => " Famed for the Valley of the Kings, Karnak Temple, and the Memorial Temple of Hatshepsut, the Nile-side town of Luxor in Upper Egypt has a glut of tourist attractions. This is ancient Thebes, power base of the New Kingdom pharaohs, and home to more sights than most can see on one visit.
+
+            While the East Bank brims with vibrant souk action, the quieter West Bank is home to a bundle of tombs and temples that has been called the biggest open-air museum in the world. 
+            Spend a few days here exploring the colorful wall art of the tombs and gazing in awe at the colossal columns in the temples, and you'll see why Luxor continues to fascinate historians and archaeologists.",
+            'cost' => "150 egp --> 240 egp for sound and light show ",
+            'working_hours' => "Every day from 6am to 5:30pm",
+            'country_id' => 7,
+        ]);
+        $karnak->images()->createMany([
+            ['file_name' => "karnak (1).jpg"],
+            ['file_name' => "karnak (2).jpg"],
+            ['file_name' => "karnak (3).jpg"],
+            ['file_name' => "karnak (4).jpg"],
+            ['file_name' => "karnak (5).jpg"],
+            ['file_name' => "karnak (6).jpg"],
+            ['file_name' => "karnak (7).jpg"],
+            ['file_name' => "karnak (8).jpg"],
+            ['file_name' => "karnak (9).jpg"],
+            ['file_name' => "karnak (10).jpg"],
+            ['file_name' => "karnak (11).jpg"],
+            ['file_name' => "karnak (12).jpg"],
+            ['file_name' => "karnak (13).jpg"],
+            ['file_name' => "karnak (14).jpg"],
+        ]);
+ 
     }
 }

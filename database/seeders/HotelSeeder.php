@@ -675,5 +675,306 @@ class HotelSeeder extends Seeder
             ['file_name' => "Hampton Inn by Hilton Toronto Airport Corporate Centre5.jpg"],
         ]);
         // eof canda
+        //egypt
+        $cairomariot  = Hotel::create([
+            'name' => 'Cairo Marriott Hotel And Omar Elkhayam Casino',
+            'latitude' => "31.225095",
+            'longtiude' => "30.057234",
+            'details' => "Get the celebrity treatment with world-class service at Cairo Marriott Hotel & Omar Khayyam Casino
+            One of our top picks in Cairo.
+           Located in Cairo’s Zamalek district, the Marriott Omar Khayyam offers luxurious rooms with a balcony overlooking the Nile or the gardens. It features a casino and 15 food and beverage outlets. The hotel's Cairo Twin Towers provide panoramic views of the Nile and six acres of the palace gardens.
+           
+           All guest rooms at the Cairo Marriott feature satellite TV, a minibar, tea/coffee facilities and elegant bathrooms. Some rooms also feature panoramic views of the Nile River.
+           
+           The Cairo Marriott Hotel serves Japanese, Italian and Middle Eastern cuisine at its restaurants. Meals are served indoors and al fresco. The hotel also has 6 cafés and bars where drinks and light refreshments are available.
+           
+           The Gabalaya Park and Aquarium are just a 2-minute walk from the Cairo Marriott.
+           
+           Couples particularly like the location — they rated it 8.8 for a two-person trip.
+           
+           We speak your language!
+           
+           Cairo Marriott Hotel & Omar Khayyam Casino has been welcoming Booking.com guests since 1 Jul 2008.
+           Hotel chain/brand: Marriott Hotels & Resorts",
+            'rate' => "5 stars",
+            'price' => "starts with 1,431 pound per night",
+            'country_id' => 7,
+        ]);
+        $cairomariot->images()->createMany([
+            ['file_name' => "mariot (1).jpg"],
+            ['file_name' => "mariot (2).jpg"],
+            ['file_name' => "mariot (3).jpg"],
+            ['file_name' => "mariot (4).jpg"],
+            ['file_name' => "mariot (5).jpg"],
+            ['file_name' => "mariot (6).jpg"],
+            ['file_name' => "mariot (7).jpg"],
+            ['file_name' => "mariot (8).jpg"],
+            ['file_name' => "mariot (9).jpg"],
+            ['file_name' => "mariot (10).jpg"],
+            ['file_name' => "mariot (11).jpg"],
+            ['file_name' => "mariot (12).jpg"],
+            ['file_name' => "mariot (13).jpg"],
+            ['file_name' => "mariot (14).jpg"],
+            ['file_name' => "mariot (15).jpg"],
+            ['file_name' => "mariot (16).jpg"],
+            ['file_name' => "mariot (17).jpg"],
+            ['file_name' => "mariot (18).jpg"],
+            ['file_name' => "mariot (19).jpg"],
+            ['file_name' => "mariot (20).jpg"],
+            ['file_name' => "mariot (21).jpg"],
+            ['file_name' => "mariot (22).jpg"],
+            ['file_name' => "mariot (23).jpg"],
+            ['file_name' => "mariot (24).jpg"],
+           
+        ]);
+        $fairmont  = Hotel::create([
+            'name' => 'Fairmont Nile City Hotel',
+            'latitude' => "31.227940",
+            'longtiude' => "31.227940",
+            'details' => "Get the celebrity treatment with world-class service at Fairmont Nile City
+            One of our top picks in Cairo.
+           Located in the Nile City Towers by the River Nile, this 5-star hotel features a rooftop pool deck with spectacular views across Cairo to the Pyramids. It offers 7 food and beverage venues.
+           
+           All of the Fairmont Nile City rooms are soundproof and decorated with elegant Art Deco furnishings. They come equipped with a work desk and interactive IPTV. The bathrooms have rain showers with sliding shutters. Some rooms offer a panoramic Nile view or city view.
+           
+           Fairmont Nile City provides modern equipment at its spacious fitness centre. There is also a well equipped business centre on site.
+           
+           Guests can enjoy gourmet dining at the Asian Fusion Saigon Restaurant and Lounge as well as Italian favorites at L’Uliveto. Guests can also enjoy Al fresco dining on the panoramic rooftop terrace. Bab El Nil offers night-time entertainment and Middle Eastern cuisine.
+           
+           Fairmont Nile City is located just 23.5 km from Cairo Int’l Airport and Cairo Museum is within 10 minutes drive away. Nile Towers Mall is footsteps away from the hotel.
+           
+           Couples particularly like the location — they rated it 8.6 for a two-person trip.
+           
+           We speak your language!
+           
+           Fairmont Nile City has been welcoming Booking.com guests since 14 Mar 2010.
+           Hotel chain/brand: Fairmont Hotels & Resorts",
+            'rate' => "5 stars",
+            'price' => "starts with 1,151 pound per night",
+            'country_id' => 7,
+        ]);
+        $firmont->images()->createMany([
+            ['file_name' => "fairmont (1).jpg"],
+            ['file_name' => "fairmont (2).jpg"],
+            ['file_name' => "fairmont (3).jpg"],
+            ['file_name' => "fairmont (4).jpg"],
+            ['file_name' => "fairmont (5).jpg"],
+            ['file_name' => "fairmont (6).jpg"],
+            ['file_name' => "fairmont (7).jpg"],
+            ['file_name' => "fairmont (8).jpg"],
+            ['file_name' => "fairmont (9).jpg"],
+            ['file_name' => "fairmont (10).jpg"],
+            ['file_name' => "fairmont (11).jpg"],
+            ['file_name' => "fairmont (12).jpg"],
+            ['file_name' => "fairmont (13).jpg"],
+            ['file_name' => "fairmont (14).jpg"],
+            ['file_name' => "fairmont (15).jpg"],
+            ['file_name' => "fairmont (16).jpg"],
+            ['file_name' => "fairmont (17).jpg"],
+            ['file_name' => "fairmont (18).jpg"],
+            ['file_name' => "fairmont (19).jpg"],
+            ['file_name' => "fairmont (20).jpg"],
+            ['file_name' => "fairmont (21).jpg"],
+            ['file_name' => "fairmont (22).jpg"],
+            ['file_name' => "fairmont (23).jpg"],
+            ['file_name' => "fairmont (24).jpg"],
+            ['file_name' => "fairmont (25).jpg"],
+            ['file_name' => "fairmont (26).jpg"],
+            ['file_name' => "fairmont (27).jpg"],
+            ['file_name' => "fairmont (28).jpg"],
+            ['file_name' => "fairmont (29).jpg"],
+            ['file_name' => "fairmont (30).jpg"],
+            ['file_name' => "fairmont (31).jpg"],
+            ['file_name' => "fairmont (32).jpg"],
+            ['file_name' => "fairmont (33).jpg"],
+            ['file_name' => "fairmont (34).jpg"],
+        ]);
+        $grandnile  = Hotel::create([
+            'name' => 'Grand Nile Tower Hotel',
+            'latitude' => "31.227057",
+            'longtiude' => "30.034842",
+            'details' => "One of our top picks in Cairo.
+            Luxurious rooms and suites offer views across the River Nile at Grand Nile Tower. The wellness centre also overlooks the Nile and the hotel features 8 restaurants and an outdoor pool.
+            
+            The elegantly decorated rooms and suites at Grand Nile Tower come with a work desk, satellite TV and minibar. Each offers a modern bathroom stocked with amenities and a hairdryer.
+            
+            Guests can enjoy views of the Nile from the revolving restaurant, which serves International dishes. Japanese, Indian and Italian cuisine are also available, and live entertainment is organised regularly on the hotel’s private yacht.
+            
+            Guests can work out in the gym or enjoy a warm hot-tub session. It is also possible to relax on the waterfront terrace or to visit the hotel’s Galleria shopping and entertainment centre. The property offers a supervised kid's club offering activities for children.
+            
+            Cairo International Airport is 20 km from the property. The Egyptian Museum is a 15-minute walk away.
+            
+            Couples particularly like the location — they rated it 8.8 for a two-person trip.
+            
+            We speak your language!
+            
+            Grand Nile Tower has been welcoming Booking.com guests since 15 Nov 2011.",
+            'rate' => "5 stars",
+            'price' => "starts with 906 pound per night",
+            'country_id' => 7,
+        ]);
+        $grandnile->images()->createMany([
+            ['file_name' => "grandnile (1).jpg"],
+            ['file_name' => "grandnile (2).jpg"],
+            ['file_name' => "grandnile (3).jpg"],
+            ['file_name' => "grandnile (4).jpg"],
+            ['file_name' => "grandnile (5).jpg"],
+            ['file_name' => "grandnile (6).jpg"],
+            ['file_name' => "grandnile (7).jpg"],
+            ['file_name' => "grandnile (8).jpg"],
+            ['file_name' => "grandnile (9).jpg"],
+            ['file_name' => "grandnile (10).jpg"],
+            ['file_name' => "grandnile (11).jpg"],
+            ['file_name' => "grandnile (12).jpg"],
+            ['file_name' => "grandnile (13).jpg"],
+            ['file_name' => "grandnile (14).jpg"],
+            ['file_name' => "grandnile (15).jpg"],
+            ['file_name' => "grandnile (16).jpg"],
+            ['file_name' => "grandnile (17).jpg"],
+            ['file_name' => "grandnile (18).jpg"],
+            ['file_name' => "grandnile (19).jpg"],
+            ['file_name' => "grandnile (20).jpg"],
+            ['file_name' => "grandnile (21).jpg"],
+            ['file_name' => "grandnile (23).jpg"],
+            ['file_name' => "grandnile (24).jpg"],
+            ['file_name' => "grandnile (25).jpg"],
+            ['file_name' => "grandnile (26).jpg"],
+            ['file_name' => "grandnile (27).jpg"],
+            ['file_name' => "grandnile (28).jpg"],
+            ['file_name' => "grandnile (29).jpg"],
+            ['file_name' => "grandnile (30).jpg"],
+            ['file_name' => "grandnile (31).jpg"],
+        ]);
+            $kempinski   = Hotel::create([
+                'name' => 'kempinski Nile Hotel ',
+                'latitude' => "31.230441",
+                'longtiude' => "30.038903",
+                'details' => "One of our top picks in Cairo.
+                Located in Cairo’s affluent Garden City district, Kempinski Nile Hotel offers luxurious rooms on the shores of the Nile River. It features a wellness centre and a rooftop swimming pool.
+                
+                Each of Kempinski’s rooms offer free WiFi, high definition LCD TVs with satellite channels and free soft drinks from the mini bar. For guests’ comfort, we offer the butler service, concierge and pillow menu.
+                
+                Kempinski’s full-service spa and wellness centre offers complimentary hot tubs, steam rooms, and saunas. Guests can also enjoy professional massages, or cool off in the outdoor swimming pool on the hotel’s rooftop.
+                
+                Kempinski Nile Hotel boasts variety of restaurants and bars, including the Osmanly restaurant offering Ottoman ( Turkish ) cuisine, The Blue restaurant serving an Italian cuisine and the Jazz Bar on Floor 10. Also guests can stop in anytime throughout the day to recharge with a cup of coffee, tea, cold beverages, fruits and cookies at the Executive Lounge..
+                
+                Kempinski Nile Hotel is 5 minutes’ walk from downtown Cairo and from the Egyptian Museum. Cairo International Airport is 25 km away, the Pyramids of Giza and the Cairo Citadel are 20 minutes away by car.
+                
+                Couples particularly like the location — they rated it 9.0 for a two-person trip.
+                
+                We speak your language!
+                
+                Kempinski Nile Hotel, Cairo has been welcoming Booking.com guests since 22 Jul 2010.",
+                'rate' => "5 stars",
+                'price' => "starts with 1,509 pound per night",
+                'country_id' => 7,
+            ]);
+            $kempinski ->images()->createMany([
+                ['file_name' => "kempniski (1).jpg"],
+                ['file_name' => "kempniski (2).jpg"],
+                ['file_name' => "kempniski (3).jpg"],
+                ['file_name' => "kempniski (4).jpg"],
+                ['file_name' => "kempniski (5).jpg"],
+                ['file_name' => "kempniski (6).jpg"],
+                ['file_name' => "kempniski (7).jpg"],
+                ['file_name' => "kempniski (8).jpg"],
+                ['file_name' => "kempniski (9).jpg"],
+                ['file_name' => "kempniski (10).jpg"],
+                ['file_name' => "kempniski (11).jpg"],
+                ['file_name' => "kempniski (12).jpg"],
+                ['file_name' => "kempniski (13).jpg"],
+                ['file_name' => "kempniski (14).jpg"],
+                ['file_name' => "kempniski (15).jpg"],
+                ['file_name' => "kempniski (16).jpg"],
+                ['file_name' => "kempniski (17).jpg"],
+                ['file_name' => "kempniski (18).jpg"],
+                ['file_name' => "kempniski (19).jpg"],
+                ['file_name' => "kempniski (20).jpg"],
+                ['file_name' => "kempniski (21).jpg"],
+                ['file_name' => "kempniski (22).jpg"],
+                ['file_name' => "kempniski (23).jpg"],
+                ['file_name' => "kempniski (24).jpg"],
+                ['file_name' => "kempniski (25).jpg"],
+                ['file_name' => "kempniski (26).jpg"],
+                ['file_name' => "kempniski (27).jpg"],
+                ['file_name' => "kempniski (28).jpg"],
+                ['file_name' => "kempniski (29).jpg"],
+                ['file_name' => "kempniski (30).jpg"],
+                ['file_name' => "kempniski (31).jpg"],
+                ['file_name' => "kempniski (32).jpg"],
+                ['file_name' => "kempniski (33).jpg"],
+                ['file_name' => "kempniski (34).jpg"],
+                ['file_name' => "kempniski (35).jpg"],
+                ['file_name' => "kempniski (36).jpg"],
+            ]);
+            $ramseshilton  = Hotel::create([
+                'name' => 'Ramses Hilton Hotel And Casino',
+                'latitude' => "31.232076",
+                'longtiude' => "30.050428",
+                'details' => "Overlooking the Nile River and just a 5-minute walk from the Cairo Museum, the Ramses Hilton boasts an elevated pool terrace heated in the winter, an on-site casino and gym. Guest rooms feature balconies offering Nile or panoramic city views.
+
+                All air-conditioned rooms are spacious and feature warm decoration. They come furnished with sofa and chairs and a work desk. There is also satellite flat-screen TV, a safe box and an alarm clock. Some rooms also feature panoramic views of the Nile River.
+                
+                An array of international cuisines along with evening entertainment are available for guests at Ramses Hilton to enjoy. Ranging from Mediterranean specialties to traditional English cuisine at the Sherlock Holmes Pub. Maharaja Indian Restaurant offers a delicious authentic Indian cuisine. An oriental café, Garden Court operates daily with live evening entertainment.
+                
+                This Cairo Hilton features a billiards room and for those seeking relaxation, there is a spa offering massages, saunas and a hot tub. The Ramses also features an on-site shopping galleria with 250 shops and an arcade.
+                
+                Cairo International Airport is 24.1 km away and an airport transfer to the hotel is available (at a charge).
+                
+                Couples particularly like the location — they rated it 8.1 for a two-person trip.
+                
+                We speak your language!
+                
+                Ramses Hilton Hotel & Casino has been welcoming Booking.com guests since 5 Aug 2009.",
+                'rate' => "5 stars",
+                'price' => "starts with 1,026 pound per night",
+                'country_id' => 7,
+            ]);
+            $ramseshilton->images()->createMany([
+                ['file_name' => "ramsishilton (1).jpg"],
+                ['file_name' => "ramsishilton (2).webg"],
+                ['file_name' => "ramsishilton (3).jpg"],
+                ['file_name' => "ramsishilton (4).jpg"],
+                ['file_name' => "ramsishilton (5).jpg"],
+                ['file_name' => "ramsishilton (6).jpg"],
+                ['file_name' => "ramsishilton (7).jpg"],
+                ['file_name' => "ramsishilton (8).jpg"],
+                ['file_name' => "ramsishilton (9).jpg"],
+                ['file_name' => "ramsishilton (10).jpg"],
+                ['file_name' => "ramsishilton (11).jpg"],
+                ['file_name' => "ramsishilton (12).jpg"],
+                ['file_name' => "ramsishilton (13).jpg"],
+                ['file_name' => "ramsishilton (14).jpg"],
+                ['file_name' => "ramsishilton (15).jpg"],
+                ['file_name' => "ramsishilton (16).jpg"],
+                ['file_name' => "ramsishilton (17).jpg"],
+                ['file_name' => "ramsishilton (18).jpg"],
+                ['file_name' => "ramsishilton (19).jpg"],
+                ['file_name' => "ramsishilton (20).jpg"],
+                ['file_name' => "ramsishilton (21).jpg"],
+                ['file_name' => "ramsishilton (22).jpg"],
+                ['file_name' => "ramsishilton (23).jpg"],
+                ['file_name' => "ramsishilton (24).jpg"],
+                ['file_name' => "ramsishilton (25).jpg"],
+                ['file_name' => "ramsishilton (26).jpg"],
+                ['file_name' => "ramsishilton (27).jpg"],
+                ['file_name' => "ramsishilton (28).jpg"],
+                ['file_name' => "ramsishilton (29).jpg"],
+                ['file_name' => "ramsishilton (30).jpg"],
+                ['file_name' => "ramsishilton (31).jpg"],
+                ['file_name' => "ramsishilton (32).jpg"],
+                ['file_name' => "ramsishilton (33).jpg"],
+                ['file_name' => "ramsishilton (34).jpg"],
+                ['file_name' => "ramsishilton (35).jpg"],
+                ['file_name' => "ramsishilton (36).jpg"],
+                ['file_name' => "ramsishilton (37).jpg"],
+                ['file_name' => "ramsishilton (38).jpg"],
+                ['file_name' => "ramsishilton (39).jpg"],
+                ['file_name' => "ramsishilton (40).jpg"],
+                ['file_name' => "ramsishilton (41).jpg"],
+                ['file_name' => "ramsishilton (42).jpg"],
+               
+            ]);
+        // eof egypt
     }
 }
