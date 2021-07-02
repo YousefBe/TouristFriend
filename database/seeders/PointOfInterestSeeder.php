@@ -24,7 +24,7 @@ class PointOfInterestSeeder extends Seeder
            Located in Tannourine, the waterfall drops 255 meters into the Balaa Pothole, a cave of Jurassic limestone located on the Lebanon Mountain Trail.
            Discovered to the western world in 1952 by French bio-speleologist Henri Coiffait, the waterfall and accompanying sinkhole were fully mapped in the 1980s by the Spéléo Club du Liban.",
             'cost' => " free",
-            'working_hours' => "Everyday, all day, but the best time to visit is in the morning",
+            'working_hours' => "Open 24 hours, but the best time to visit is in the morning",
             'country_id' => 1,
         ]);
         $BattaraGorgeWaterfall->images()->createMany([
@@ -136,7 +136,7 @@ class PointOfInterestSeeder extends Seeder
             'details' => " Lake Como is one of Italy's most scenic areas, surrounded by mountains and lined by small picturesque towns. A haunt of the wealthy since Roman times, the lake has many opulent villas and palaces along its wooded shores; Villa Balbianello and Villa Carlotta are the best known, both surrounded by gardens that are open to the public.
             The mild climate that makes the lake shore ideal for gardens is also a draw for tourists, with characteristics similar to that of the Mediterranean. Along with the resort towns around the lake, there's an 11th-century abbey.",
             'cost' => "transportations only",
-            'working_hours' => "all day",
+            'working_hours' => "Open 24 hours",
             'country_id' => 2,
         ]);
         $LakeComo->images()->createMany([
@@ -189,7 +189,7 @@ class PointOfInterestSeeder extends Seeder
             'details' => "A gondola ride through the canals of Venice is a tradition that travelers have been enjoying for centuries. Venice is a city of islands, and the canals have long been the city's main streets, connected by a labyrinth of narrow passageways.
             The Grand Canal is the largest and most famous of these waterways, cutting a wide S-shaped route through the city. Along its sides are the grandest of the palaces once owned by the wealthiest and most powerful families of the Venetian Republic. The best way to see many of the grand palaces, whose fronts face the water, is from a Vaporetto ride along the Grand Canal.",
             'cost' => "30 euro for one person",
-            'working_hours' => "all day",
+            'working_hours' => "Open 24 hours",
             'country_id' => 2,
         ]);
         $VeniceGrandCanal->images()->createMany([
@@ -391,7 +391,7 @@ class PointOfInterestSeeder extends Seeder
             For those with less of an active nature, just sitting amid the sand dune splendor is worthy enough of the long journey out here.
             For most travelers who make it this far, the highlight is spending the evening at a desert camp amid the dunes themselves.",
             'cost' => "Sunset Camel Ride in Sahara Merzouga Desert Erg Chebbi Dunes from $15.85 for one person, Camel Trekking Excursion Overnight Desert Camp Merzouga Desert Erg Chebbi Dunesfrom $73.19",
-            'working_hours' => "all day",
+            'working_hours' => "Open 24 hours",
             'country_id' => 4,
         ]);
         $ErgChebbi->images()->createMany([
@@ -424,7 +424,7 @@ class PointOfInterestSeeder extends Seeder
             It's a great place for a road trip, stopping off at villages along the way to admire the view and delve into the shady, dimly lit passages of the kasbahs.
             In particular check out Kasbah des Caids in Tamnougalt, which has been used as a location in plenty of Hollywood films, and Timidarte village, where the village's kasbah architecture has been finely restored.",
             'cost' => "free",
-            'working_hours' => "all day",
+            'working_hours' => "Open 24 hours",
             'country_id' => 4,
         ]);
         $DaraValley->images()->createMany([
@@ -456,7 +456,7 @@ class PointOfInterestSeeder extends Seeder
             However, according to some locals, the walls were mandated to be painted blue simply to attract tourists at some point in the 1970s.
             The growing tourist industry is geared especially towards Spanish tourists, who are numerous during great Catholic feasts like Semana Santa and Christmas.",
             'cost' => "free",
-            'working_hours' => "all day",
+            'working_hours' => "Open 24 hours",
             'country_id' => 4,
         ]);
         $Chefchaouen->images()->createMany([
@@ -493,7 +493,7 @@ class PointOfInterestSeeder extends Seeder
             But it is still possible to find gorgeous, unspoilt, secluded beaches between the pockets of development.
             Some of the country’s best fish restaurants are also found along this stretch of shoreline. The resorts include M’diq, Cabo Negro (which also has an impressive golf course) and Martil.",
             'cost' => "free",
-            'working_hours' => "all day",
+            'working_hours' => "Open 24 hours",
             'country_id' => 4,
         ]);
         $RiifMountains->images()->createMany([
@@ -612,7 +612,7 @@ class PointOfInterestSeeder extends Seeder
             'latitude' => "50.08662164216385",
             'details' => "Charles Bridge is 516 meters long and 10 meters wide stone bridge across the Vltava River that connects two popular Prague districts, the Old Town and Lesser Town. The well-worn cobblestone bridge is one of the most famous sights and landmarks in Prague, and you shouldn't miss it out while exploring the capital of the Czech Republic.",
             'cost' => "Free",
-            'working_hours' => "all day",
+            'working_hours' => "Open 24 hours",
             'country_id' => 5,
         ]);
         $CharlesBridge->images()->createMany([
@@ -821,6 +821,27 @@ class PointOfInterestSeeder extends Seeder
             ['file_name' => "karnak (12).jpg"],
             ['file_name' => "karnak (13).jpg"],
             ['file_name' => "karnak (14).jpg"],
+        ]);
+        $bluehole = PointOfInterest::create([
+            'name' => "The Blue Hole",
+            'longtiude' => " 28.572387",
+            'latitude' => "34.537337",
+            'details' => " The Blue Hole is a diving location on the southeast Sinai, a few kilometres north of Dahab, Egypt on the coast of the Red Sea.
+
+            The Blue Hole is a submarine sinkhole, with a maximum depth within the hole of just over 100 m (328 feet). There is a shallow opening to the sea around 6 m (20 feet) deep, known as (the saddle), and a 26 m (85 feet) long tunnel, known as (the Arch), whose ceiling is at a depth of 55 m (181 feet),[1] and whose bottom falls away as it reaches the seaward side to about 120 m (394 feet).[2] On the seaward side the floor drops steeply to over 1,000 metres (3,300 ft).[3] The hole and the surrounding area have an abundance of coral and reef fish",
+            'cost' => "$40 for one person ",
+            'working_hours' => "Open 24 hours",
+            'country_id' => 7,
+        ]);
+        $bluehole->images()->createMany([
+            ['file_name' => "bluehole.jpg"],
+            ['file_name' => "bluehole1.jpg"],
+            ['file_name' => "bluehole2.jpg"],
+            ['file_name' => "bluehole3.jpg"],
+            ['file_name' => "bluehole4.jpg"],
+            ['file_name' => "bluehole5.jpg"],
+          
+          
         ]);
  
     }

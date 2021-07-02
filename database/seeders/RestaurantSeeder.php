@@ -629,6 +629,86 @@ class RestaurantSeeder extends Seeder
             ['file_name' => "The Tilted Dog Pub _ Kitchen5.jpg"],
         ]);
         // eof Canada
-
+        //egypt
+        $sobhykaber = Restaurant::create([
+            'name' => "Sobhy Kaber‬‏",
+            'longtiude' => '30.070230',
+            'latitude' => '31.233932',
+            'details' =>  "In the heart of Cabbagetown, this local favorite offers the choice of an array of classic dishes for lunch and dinner - burger, po' boy, steak frites, fajitas and Burritos, pastas and popular pub grub, and of course an amazing Craft Beer Selection!. And weekend brunch offers both egg and savory options. Nightly entertainment includes Trivia Night on Wednesday, live music on Thursdays, and Sunday Jazz.",
+            'rate' => '4 stars',
+            'country_id' => 7,
+        ]);
+        $sobhykaber->images()->createMany([
+            ['file_name' => "sobhy1.jpg"],
+            ['file_name' => "sobhy2.jpg"],
+            ['file_name' => "sobhy3.jpg"],
+            ['file_name' => "sobhy4.jpg"],
+          
+        ]);
+        $tahrirkoshar = Restaurant::create([
+            'name' => "Koshary El-Tahrir‬‏",
+            'longtiude' => '30.066829',
+            'latitude' => '31.336244',
+            'details' =>  "This restaurant is considered by many Cairenes to be the place to come for Egypt’s famous, quasi-­national dish, koshari. Busy and buzzy, it’s worth the wait, queues and crowds particularly at weekends.",
+            'rate' => '4 stars',
+            'country_id' => 7,
+        ]);
+        $tahrirkoshar->images()->createMany([
+            ['file_name' => "kosharytahrir.jpg"],
+            ['file_name' => "kosharytahrir2.jpg"],
+            ['file_name' => "kosharytahrir1.jpg"],
+           
+          
+        ]);
+        $citadel = Restaurant::create([
+            'name' => "Citadel View Restaurant‬‏",
+            'longtiude' => '30.037574',
+            'latitude' => '31.263280',
+            'details' =>  "Aptly named, the Citadel View is a pseudo-Fatimid palace that boasts gorgeous views over the Al Azhar’s formal gardens, the Citadel and Old Cairo from the restaurant terraces and café. Food is French-influenced but specialises in typical with Egyptian-style grilled meat fests. At weekends, there’s a popular open buffet. Lantern-lit and intimate it’s a good place for dinner à deux, or during the day, a cool and tranquil lunch.",
+            'rate' => '3 stars',
+            'country_id' => 7,
+        ]);
+        $citadel->images()->createMany([
+            ['file_name' => "citadel1.jpeg"],
+            ['file_name' => "citadel2.jpg"],
+            ['file_name' => "citadel3.jpg"],
+            ['file_name' => "citadel4.jpg"],
+            ['file_name' => "citadel5.jpg"],
+            ['file_name' => "citadel6.jpg"],
+            ['file_name' => "citadel7.jpg"],
+            
+        ]);
+        $samakmak = Restaurant::create([
+            'name' => "Samakmak Restaurant‬‏",
+            'longtiude' => '30.065702',
+            'latitude' => '31.201142',
+            'details' =>  "Owned by an Alexandrine former belly dancer, this restaurant is best known for its range of fish and seafood (including calamari, clams and crab) and for its imaginative way of preparing them. Cosy and intimate, it also serves delicious bread, mezze, salads and rice accompaniments.",
+            'rate' => '4 stars',
+            'country_id' => 7,
+        ]);
+        $samakmak->images()->createMany([
+            ['file_name' => "samakamk1.jpeg"],
+            ['file_name' => "samakamk2.jpg"],
+            ['file_name' => "samakamk3.jpg"],
+            ['file_name' => "samakamk4.jpg"],
+            ['file_name' => "samakamk5.jpg"],
+            ['file_name' => "samakamk6.jpg"],
+         
+        ]);
+        $Prince = Restaurant::create([
+            'name' => "Kebdet El Prince",
+            'longtiude' => '30.080667',
+            'latitude' => '31.219264',
+            'details' =>  "There’s a lot of local love for Kebdet El Prince, and Culture Trip reckons it’s safe to call it Cairo’s favourite restaurant, given the rhapsodies it inspires. Step into this homely, lively joint and it’s easy to see why. Expect a traditional menu of authentic Egyptian comfort food just like grandma used to make (if you happen to have an Egyptian grandma), including molokhia (jute leaf or Egyptian spinach) served hot from the pot at your table, sujuk sausage and grilled liver – all of it delicious, and all of it in large portions. Top tip: come with an appetite. You’ll need it. Recommended by local insiders Yasmin Doweda and Monia Hamdy",
+            'rate' => '4 stars',
+            'country_id' => 7,
+        ]);
+        $Prince->images()->createMany([
+            ['file_name' => "Prince1.jpeg"],
+            ['file_name' => "Prince2.jpg"],
+            ['file_name' => "Prince3.jpg"],
+            ['file_name' => "Prince4.jpg"],
+           
+        ]);
     }
 }
