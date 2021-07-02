@@ -61,8 +61,8 @@
                 <a href="/blog" class=" mr-6  p-3  text-base font-bold uppercase  ">
                     {{ __('Blog') }}
                 </a>
-
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+           <li class="nav-img"><img style="width: 20px; " class="img-profile rounded-circle" src="{{ asset('storage/Users/' . Auth::user()->userImage()) }}""> </li>     
+          <li class="dropdown"><a href="#"><span>{{ Auth::user()->name }}</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
