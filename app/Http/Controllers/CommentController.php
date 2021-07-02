@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 use App\Models\Comment;
 use App\Models\Post;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\CommentRequest;
+use App\Http\Controllers\PostsController;
 
 
 use Illuminate\Http\Request;
@@ -23,19 +25,16 @@ class CommentController extends Controller
         $comment->user()->associate($request->user());
 
         $post = Post::find($request->post_id);
-
         $post->comments()->save($comment);
-        $post->update(['comments'=>+1]);
-
+        $affected= DB::update('update posts set commentsNum = ?+1 where id = ?', [$post->commentsNum,$request->post_id]);
         return back();
     }
     public function destroy($id)
     {
         $comment =Comment::find($id);
         $post = Post::find($comment->post_id);
-        $post->update(['comments'=>-1]);
-    
         $comment->delete();
+        $affected= DB::update('update posts set commentsNum = ?-1 where id = ?', [$post->commentsNum,$comment->post_id]);
 
         return back();
 

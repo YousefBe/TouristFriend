@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Channel;
+use Illuminate\Support\Facades\DB;
+
 use App\Models\Comment;
 use App\Models\Post;
 use App\Models\Vote;
@@ -24,7 +26,7 @@ class PostsController extends Controller
         $channels = Channel::all();
         return view('blog.blog_index', compact('channels'))
             ->with('posts', Post::orderBy('updated_at', 'DESC')->get())
-            ->with('Votedposts', Post::orderBy('vote', 'ASC')->get());
+            ->with('Vposts', Post::orderBy('vote', 'desc')->get());
     }
 
     /**
@@ -70,6 +72,8 @@ class PostsController extends Controller
             'vote' => 0
 
         ]);
+        $channels=Channel::find($request->input('channel'));
+        DB::update('update channels set postsNumber = ?+1 where id = ?', [$channels->postsNumber,$request->input('channel')]);
         return redirect('/blog')
             ->with('message', 'Your post has been added!');
     }}
@@ -87,7 +91,9 @@ class PostsController extends Controller
 
         return view('/blog/post')
             ->with('post', $post)
-            ->with('posts', Post::orderBy('updated_at', 'DESC')->get());
+            ->with('posts', Post::orderBy('updated_at', 'DESC')->get())
+            ->with('Vposts', Post::orderBy('vote', 'DESC')->get());
+            
     }
 
     /**
@@ -141,6 +147,9 @@ class PostsController extends Controller
     {
         $post = Post::find($id);
         $post->delete();
+        $channels= Channel::all();
+        DB::update('update channels set postsNumber = ?-1 where id = ?', [$channels->postsNumber,$post->channel_id]);
+
 
         return redirect('blog')
             ->with('message', 'Your Post has been Deleted');
@@ -163,4 +172,15 @@ class PostsController extends Controller
         return back();
 
     }
+    public static function commentCounterUp($id)
+    {
+        $post = Post::find($id);
+        $post->update(['commentsNum'=>+1]);
+    }
+    public static function commentCounterDown($id)
+    {
+        $post = Post::find($id);
+        $post->update(['commentsNum'=>-1]);
+    }
+
 }

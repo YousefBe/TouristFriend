@@ -106,7 +106,7 @@
         <div class="row">
 
           <div class="col-lg-8 entries">
-          @foreach ($Votedposts as $post) 
+          @foreach ($Vposts as $post) 
             <article class="entry">
 
               <div class="entry-img">
@@ -183,7 +183,7 @@
               <div class="sidebar-item categories">
               @foreach ($channels as $channel)
                 <ul>
-                  <li><a href="#">{{ $channel->name }} <span>(25)</span></a></li>
+                  <li><a href="#">{{ $channel->name }} <span>{{ $channel->postsNumber }}</span></a></li>
                   
                 </ul>
                 @endforeach
