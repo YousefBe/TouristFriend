@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Blog - Moderna Bootstrap Template</title>
+  <title>Blog</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -91,7 +91,7 @@
           <h2>Blog</h2>
 
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{{ route('home') }}">Home</a></li>
             <li>Blog</li>
           </ol>
         </div>
@@ -114,20 +114,25 @@
               </div>
 
               <h2 class="entry-title">
-                <a href="blog-single.html">{{ $post->title }}</a>
+                <a href="{{ URL::to('blog/'. $post->id) }}">{{ $post->title }}</a>
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">{{ $post->user->name }}</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">{{ date('jS M Y', strtotime($post->updated_at)) }}</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">{{$post->commentsNum}}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{{ URL::to('blog/'. $post->id) }}">{{ $post->user->name }}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{{ URL::to('blog/'. $post->id) }}"><time datetime="2020-01-01">{{ date('jS M Y', strtotime($post->updated_at)) }}</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="{{ URL::to('blog/'. $post->id) }}">{{$post->commentsNum}}</a></li>
                 </ul>
               </div>
 
               <div class="entry-content">
                 <p>
-                {{ $post->body }}</p>
+                
+                <?php
+  
+echo substr_replace(" $post->body ", " .....", 90);
+  
+?></p>
                 <div class="read-more">
                   <a href="{{ URL::to('blog/'. $post->id) }}">Read More</a>
                 </div>
@@ -195,7 +200,7 @@
             @if($post->id<=sizeof($posts)&&$post->id>=sizeof($posts)-3)
                 <div class="post-item clearfix">
                   <img src="{{ asset('storage/blog.post/'.$post->file_path)}}" alt="">
-                  <h4><a href="blog-single.html">{{ $post->title }}</a></h4>
+                  <h4><a href="{{ URL::to('blog/'. $post->id) }}">{{ $post->title }}</a></h4>
                   <time datetime="2020-01-01">{{ date('jS M Y', strtotime($post->updated_at)) }}</time>
                   <br>
               @endif
