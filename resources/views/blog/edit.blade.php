@@ -91,7 +91,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>Edit Post</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{{ route('home') }}">Home</a></li>
             <li>Edit Post</li>
           </ol>
         </div>

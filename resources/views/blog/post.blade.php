@@ -91,8 +91,8 @@
           <h2>Blog</h2>
 
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="{{ route('home') }}">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
             <li>{{ $post->title }}</li>
           </ol>
         </div>
@@ -115,14 +115,14 @@
               </div>
 
               <h2 class="entry-title">
-                <a href="blog-single.html">{{ $post->title }}</a>
+                <a href="#">{{ $post->title }}</a>
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">{{ $post->user->name }}</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">{{ date('jS M Y h: i A', strtotime($post->updated_at)) }}</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#">{{ $post->user->name }}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="2020-01-01">{{ date('jS M Y h: i A', strtotime($post->updated_at)) }}</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="#">12 Comments</a></li>
                 </ul>
               </div>
 
@@ -175,9 +175,9 @@
               <div>
                 <h4>{{ $post->user->name }}</h4>
                 <div class="social-links">
-                  <a href="https://twitters.com/#"><i class="bi bi-twitter"></i></a>
-                  <a href="https://facebook.com/#"><i class="bi bi-facebook"></i></a>
-                  <a href="https://instagram.com/#"><i class="biu bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-twitter"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  <a href="#"><i class="biu bi-instagram"></i></a>
                 </div>
                 <p>
                 {!! $post->user->details->about !!}
@@ -263,7 +263,7 @@
                 @if($postitem->id<=sizeof($posts)&&$postitem->id>=sizeof($posts)-3)
                 <div class="post-item clearfix">
                   <img src="{{ asset('storage/blog.post/'.$postitem->file_path)}}" alt="">
-                  <h4><a href="blog-single.html">{{ $postitem->title }}</a></h4>
+                  <h4><a href="{{ URL::to('blog/'. $postitem->id) }}">{{ $postitem->title }}</a></h4>
                   <time datetime="2020-01-01">{{ date('jS M Y', strtotime($postitem->updated_at)) }}</time>
                   <br>
               @endif
