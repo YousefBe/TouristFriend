@@ -51,6 +51,20 @@
               <div class="absolute w-20 h-20 top-3 right-8 rounded-full  circle"></div>
 
               <form wire:submit.prevent="contactFormSubmit" class=" p-9 z-10 overflow-hidden relative">
+                  <div class="flex flex-col items-center  justify-center">
+                      @error('name')
+                          <span class="text-sm block text-red-600 tracking-wide">{{ $message }}</span>
+                      @enderror
+                      @error('email')
+                          <span class="text-sm block text-red-600 tracking-wide">{{ $message }}</span>
+                      @enderror
+                      @error('phone')
+                          <span class="text-sm block text-red-600 tracking-wide">{{ $message }}</span>
+                      @enderror
+                      @error('message')
+                          <span class="text-sm block text-red-600 tracking-wide">{{ $message }}</span>
+                      @enderror
+                  </div>
                   <h3 class="title text-white font-medium text-2xl  mb-3">Contact Us</h3>
                   <div class="input-container relative m-4  " :class="{'focus': nameLabel}">
                       <input @click=" nameLabel = true" @blur="nameLabel = false" type="text" wire:model.lazy="name"
@@ -61,6 +75,7 @@
                           :class="{'focus': nameLabel }" for="name" @click="nameLabel = !nameLabel "
                           @blur="nameLabel = false ">Name</label>
                       <span>name</span>
+
                   </div>
                   <div class="input-container relative m-4 " :class="{'focus': emailLabel}">
                       <input @click=" emailLabel = true" @blur="emailLabel = false" type="email" wire:model.lazy="email"
@@ -80,6 +95,7 @@
                           class=" absolute  top-1/4 left-4 -translate-y-2/4  px-2 text-base text-white mylabel pointer-events-none duration-500  z-50"
                           for="phone">Phone</label>
                       <span>phone</span>
+
                   </div>
                   <div class="input-container relative m-4  textArea" :class="{'focus': messageLabel}">
                       <textarea @click=" messageLabel = true" @blur="messageLabel = false" wire:model.lazy="message"
@@ -88,6 +104,7 @@
                           class=" absolute  top-4 left-4 -translate-y-2/4  px-2 text-base text-white mylabel pointer-events-none duration-500  z-50"
                           for="name">Message</label>
                       <span>message</span>
+
                   </div>
                   <div class="text-center">
                       <input type="submit"

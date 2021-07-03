@@ -97,7 +97,7 @@ Route::middleware(['auth', 'role:administrator'])->group(function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth' , 'userHasDetails'])->name('dashboard');
 
 
 
