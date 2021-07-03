@@ -22,7 +22,7 @@ class CountrySeeder extends Seeder
             'details' => 'Lebanon is a very old nation rich in natural beauty. It provides charming seashores and internal mountainous area with fresh surroundings. Accommodations vary from extravagance establishments to mid-range hotels providing to families. Leisure can be set up in these hotels for both children and parents. Transportations in Lebanon are easy to access; buses and taxis are all over the place. Lebanon is famous for its old and new attractions for example museums, grottos and ski resorts. Cities as well are attractions to tourists; in each city there is something new to learn about and experience.',
             'contnent' => 'Africa',
             'currency' => 'The Lebanese Pound',
-            'population' => 'almost 7 milion ',
+            'population' => '7 million ',
             'budget' => 'average L£2,318,026 ($1,400) per week',
             'budget_flag' => 'medium',
             'weather_flag' => 'moderate',
@@ -52,8 +52,8 @@ class CountrySeeder extends Seeder
             The crime rates are low which makes it a safer place for the tourists. The Grand Tour Italy is a very nice facility which allows tourists to visit and enjoy popular destination of Italy in a cost effective way.',
             'contnent' => 'Europe',
             'currency' => 'euro',
-            'population' => '60,461,826 person',
-            'budget' => '1000 euro aweek',
+            'population' => '60,461,826 million',
+            'budget' => 'avarage 1000 euro (1192$) per week',
             'budget_flag' => 'medium',
             'weather_flag' => 'moderate',
             'known_for' => 'Tourist Attractions'
@@ -94,11 +94,9 @@ class CountrySeeder extends Seeder
             They also competed in the Space Race, culminating in the 1969 spaceflight that first landed humans on the Moon.
             The Soviet Union's collapse in 1991 ended the Cold War, leaving the United States as the world's sole superpower.",
             'contnent' => 'North America',
-            'currency' => 'The United States dollar (symbol $)',
-            'population' => '328.2 million in 2019',
-            'budget' => 'A vacation to the United States of America for one week usually costs around $1,568 for one person.
-            So, a trip to the United States of America for two people costs around $3,137 for one week.
-            A trip for two weeks for two people costs $6,274 in the United States of America',
+            'currency' => 'The United States dollar',
+            'population' => '328.2 million',
+            'budget' => 'avarage $1,568 per week',
             'budget_flag' => 'medium',
             'weather_flag' => 'hot',
             'known_for' => 'beaches'
@@ -149,9 +147,9 @@ class CountrySeeder extends Seeder
             The two parts of the country are connected by the narrow Taza Gap in the northeast as well as by roads that follow older traditional routes.
              The Atlas and Rif ranges were formed during the Paleogene and Neogene periods (between about 65 to 2.6 million years ago) by the folding and uplifting of sediment that had accumulated in the Tethys Sea, which, at that time, bordered the northern coast of Africa.",
             'contnent' => 'Africa',
-            'currency' => 'The Moroccan Dirham is the currency of Morocco.',
-            'population' => 'has a population of over 37 million.',
-            'budget' => ' a mid range day would cost a person 120-130$ ',
+            'currency' => 'The Moroccan Dirham',
+            'population' => ' 37 million',
+            'budget' => 'avarage 8096.72 Moroccan Dirham (910$) per week ',
             'budget_flag' => 'low',
             'weather_flag' => 'hot',
             'known_for' => 'Tourist Attractions'
@@ -177,8 +175,8 @@ class CountrySeeder extends Seeder
             'contnent' => 'Europe',
             'details' => "The Czech Republic has become one of the major tourist destinations in Europe, receiving over 20 million visitors yearly.[1] The capital, Prague, is the most popular destination, by itself receiving over 8 million visitors annually out of which almost 7 million are foreign.[2] Other highly visited destinations include Karlštejn Castle, Kutná Hora, Brno, Český Krumlov, České Budějovice, Olomouc and the Lednice–Valtice Cultural Landscape. Prague attracts large numbers of foreign tourists, mostly from Germany, Russia, Poland, the United States and the United Kingdom.",
             'currency' => ' Czech Koruna',
-            'population' => ' 10.69 M',
-            'budget' => 'A vacation to the Czech Republic for one week usually costs around Kč13,617  "almost 620 dollar" for one person.',
+            'population' => ' 10.69 million',
+            'budget' => 'avarage Kč13,617 (620$) per week',
             'budget_flag' => 'medium',
             'weather_flag' => 'cold',
             'known_for' => 'shopping'
@@ -198,8 +196,8 @@ class CountrySeeder extends Seeder
             'contnent' => 'Europe',
             'details' => "Canada is a country in the northern part of North America. Its ten provinces and three territories extend from the Atlantic to the Pacific and northward into the Arctic Ocean, covering 9.98 million square kilometres (3.85 million square miles), making it the world's second-largest country by total area. Its southern and western border with the United States, stretching 8,891 kilometres (5,525 mi), is the world's longest bi-national land border. Canada's capital is Ottawa, and its three largest metropolitan areas are Toronto, Montreal, and Vancouver.",
             'currency' => 'Canadian Dollar',
-            'population' => '37.59M',
-            'budget' => 'A vacation to Canada for one week usually costs around CA$1,289 for one person.',
+            'population' => '37.59 million',
+            'budget' => 'avarage CA$1,289 (1045.06$) per week',
             'budget_flag' => 'expensive',
             'weather_flag' => 'cold',
             'known_for' => 'shopping'
@@ -209,6 +207,50 @@ class CountrySeeder extends Seeder
             ['file_name' => "Canada2.jpg"],
             ['file_name' => "Canada3.jpg"],
             ['file_name' => "Canada4.jpg"],
+        ]);
+        $Egypt = Country::create([
+            'name' => 'Egypt',
+            'longtiude' =>  "30.8025",
+            'latitude' => "26.8206",
+            'weather' => "The Egyptian summer is hot and dry in most of the country, and humid in the Delta and along the Mediterranean Coast. In recent years the humidity has spread to Cairo, and the city swelters in August! Winter is mild with some rain, but usually, it is bright, sunny days with cold nights.
+
+            During the summertime, sun protection is the most important single consideration for an Egypt trip, especially for the fair-skinned. Wearing a  sunhat is essential. Cheap, and pure cotton, sunhats are made locally and available everywhere. Travel clothing should be light and comfortable, 100% cotton clothing is the best and dependable shoes are a must! The climate of Egypt is characterized by a hot season from May to October and a cool season from October to May. Extreme temperatures during both seasons are moderated by the prevailing northern winds.",
+            'contnent' => 'Africa',
+            'details' => "Egypt, country located in the northeastern corner of Africa. Egypt’s heartland, the Nile River valley and delta, was the home of one of the principal civilizations of the ancient Middle East and, like Mesopotamia farther east, was the site of one of the world’s earliest urban and literate societies. Pharaonic Egypt thrived for some 3,000 years through a series of native dynasties that were interspersed with brief periods of foreign rule. After Alexander the Great conquered the region in 323 BCE, urban Egypt became an integral part of the Hellenistic world. Under the Greek Ptolemaic dynasty, an advanced literate society thrived in the city of Alexandria, but what is now Egypt was conquered by the Romans in 30 BCE. It remained part of the Roman Republic and Empire and then part of Rome’s successor state, the Byzantine Empire, until its conquest by Arab Muslim armies in 639–642 CE.",
+            'currency' => 'Egyptian pound',
+            'population' => '100.4 million',
+            'budget' => 'avarage (278$) per week',
+            'budget_flag' => 'low',
+            'weather_flag' => 'moderate',
+            'known_for' => 'Tourist Attractions'
+        ]);
+        $Egypt->images()->createMany([
+            ['file_name' => "egypt1.jpg"],
+            ['file_name' => "egypt2.jpg"],
+            ['file_name' => "egypt3.jpg"],
+            ['file_name' => "egypt4.jpg"],
+            ['file_name' => "egypt5.jpg"],
+            ['file_name' => "egypt6.jpg"],
+            ['file_name' => "egypt7.jpg"],
+            ['file_name' => "egypt8.jpg"],
+            ['file_name' => "egypt9.jpg"],
+            ['file_name' => "egypt10.jpg"],
+            ['file_name' => "egypt11.jpeg"],
+            ['file_name' => "egypt12.jpg"],
+            ['file_name' => "egypt13.jpg"],
+            ['file_name' => "egypt14.jpg"],
+            ['file_name' => "egypt15.jpg"],
+            ['file_name' => "egypt16.jpg"],
+            ['file_name' => "egypt17.jpg"],
+            ['file_name' => "egypt18.jpg"],
+            ['file_name' => "egypt19.jpg"],
+            ['file_name' => "egypt20.png"],
+            ['file_name' => "egypt21.jpg"],
+            ['file_name' => "egypt22.jpg"],
+            ['file_name' => "egypt23.jpg"],
+            ['file_name' => "egypt24.jpg"],
+            ['file_name' => "egypt25.jpg"],
+            ['file_name' => "egypt26.jpg"],
         ]);
     }
 }

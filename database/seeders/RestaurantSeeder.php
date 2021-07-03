@@ -20,7 +20,7 @@ class RestaurantSeeder extends Seeder
             'longtiude' => '35.4921537',
             'latitude' => '33.8957422',
             'details' =>  'Jaï is a take-out restaurant with an open kitchen, where hungry customers can watch chef Wael Lazkani cook their dinner right in front of them. The concept is relaxed and intimate, and certainly conducive to fun conversations from across the bar. The menu itself is ripe with items such as chicken, shrimp rolls, fish cakes, noodle soups and curry. You will find an irresistible mix of spicy Indian, Thai and Vietnamese dishes, making Jaï the ideal destination for all lovers of Asian cuisine. All food can be taken away and enjoyed while strolling around Beirut’s Kantari neighborhood',
-            'rate' => '4',
+            'rate' => '4 stars',
             'country_id' => 1,
         ]);
         $Jai->images()->createMany([
@@ -34,7 +34,7 @@ class RestaurantSeeder extends Seeder
             'longtiude' => '35.50076273098912',
             'latitude' => '33.900271833041096',
             'details' =>  'In the Achrafieh district, Em Sherif restaurant is fine dining of the old world. The decor recalls that of a lavish, antique mansion in the Oriental style. A seasonal menu encompasses local delicacies from manakish zaatar to lahme mechwiye',
-            'rate' => '5',
+            'rate' => '5 stars',
             'country_id' => 1,
         ]);
         $EmShrief->images()->createMany([
@@ -54,7 +54,7 @@ class RestaurantSeeder extends Seeder
             'longtiude' => '35.4781816',
             'latitude' => '33.8964876',
             'details' =>  'This affable restaurant is one of the best places for Italian cuisine in the city. The venue has a cosy, slightly ramshackle quality – fulfilling the promise of the "trattoria" in the name. All the hallmarks of the traditional Italian eaterie are present and correct, from red and white chequered tablecloths to the paintings of the Tuscan countryside that adorn the walls. The menu is packed with genuine Italian "soul food", prepared freshly and authentically. Alongside the usual suspects (pizzas, linguini), the menu throws up some less classic dishes – leave space for the quirky pizza di mele, a sort of cross between a pizza and a tarte tatin. ',
-            'rate' => '4',
+            'rate' => '4 stars',
             'country_id' => 1,
         ]);
         $AppetitoTrattoria->images()->createMany([
@@ -71,7 +71,7 @@ class RestaurantSeeder extends Seeder
             'longtiude' => '35.5260571',
             'latitude' => '33.8971136',
             'details' =>  'Tawlet has a great concept behind it. A branch of Souk el Tayeb, a market where small-scale farmers from every region of Lebanon come together to sell their produce, Tawlet offers typical Lebanese food made with fresh ingredients brought by the farmers themselves, served as a buffet. But in addition to the high-quality food, Tawlet’s most characteristic feature is that every day, a different guest chef from a different village in Lebanon cooks a lunch based on the culinary delicacies of his or her area, making Tawlet the venue to sample Lebanese cuisine in all its regional variations. At Tawlet, food reflects culture and for those who really want to get in touch with Lebanon’s culinary culture, the restaurant also offers cooking classes.',
-            'rate' => '4',
+            'rate' => '4 stars',
             'country_id' => 1,
         ]);
         $Tawlet->images()->createMany([
@@ -87,7 +87,7 @@ class RestaurantSeeder extends Seeder
             'longtiude' => '35.4830318',
             'latitude' => '33.8957816',
             'details' =>  'Tucked away in the corner of a shopping plaza, this socially focused cafe and restaurant is quite a surprise to discover, with its buzzy garden atrium. Good-quality food is served in generous portions at a decent price; the meat platters come with pita, chips and hummus and are a substantial feed by themselves. Service is very scatty.',
-            'rate' => '4',
+            'rate' => '4 stars',
             'country_id' => 1,
         ]);
         $TMarbouta->images()->createMany([
@@ -106,7 +106,7 @@ class RestaurantSeeder extends Seeder
             'longtiude' => '12.333442',
             'latitude' => '45.4316922',
             'details' =>  "Situated along the Grand Canal in the luxurious Gritti Palace hotel, Club del Doge Restaurant is the place to go for a Venetian meal with a view. Condé Nast Traveler voted it one of the world's most spectacular waterfront restaurants. Make sure to plan your visit between May and October to enjoy the terrace.",
-            'rate' => 'three Michelin stars',
+            'rate' => '3 stars',
             'country_id' => 2,
         ]);
         $ClubdelDoge->images()->createMany([
@@ -123,7 +123,7 @@ class RestaurantSeeder extends Seeder
             'longtiude' => '9.7720184',
             'latitude' => '45.6774187',
             'details' =>  "Da Vittorio restaurant, located in the Da Vittorio Relais & Chateaux resort, has earned three Michelin stars for its cuisine. Some of the ingredients you'll find on the menu include meat from Piedmont and langoustines from Mazara del Vallo.",
-            'rate' => 'three Michelin stars',
+            'rate' => '3 stars',
             'country_id' => 2,
         ]);
         $DaVittorio->images()->createMany([
@@ -136,7 +136,7 @@ class RestaurantSeeder extends Seeder
             'longtiude' => '11.2623411',
             'latitude' => '43.7699524',
             'details' =>  'Chef Annie Féolde is the first woman in Italy to earn three Michelin stars. Her innovative Italian cooking is heightened by an incredible wine selection by sommelier Giorgio Pinchiorri. Dishes range from a risotto of fregola, pumpkin flowers, saffron, and prawns to a rack of lamb crusted with dried fruit.',
-            'rate' => 'three Michelin stars',
+            'rate' => '3 stars',
             'country_id' => 2,
         ]);
         $EnotecaPinchiorri->images()->createMany([
@@ -149,7 +149,7 @@ class RestaurantSeeder extends Seeder
             'longtiude' => '10.9999599',
             'latitude' => '45.4416842',
             'details' =>  "Il Desco made superstar chef Mario Batali's list of places to eat in Italy. Chef Elio Rizzo and his son Matteo work together in the kitchen to create beautiful dishes made with traditional Italian ingredients.",
-            'rate' => 'Michelin Star',
+            'rate' => '1 Star',
             'country_id' => 2,
         ]);
         $ilDesco->images()->createMany([
@@ -164,7 +164,7 @@ class RestaurantSeeder extends Seeder
             'longtiude' => '12.4466625',
             'latitude' => '41.9189349',
             'details' =>  "Located in the Waldorf Astoria's esteemed Rome Cavalieri hotel, La Pergola is the only restaurant in Rome with a three Michelin star rating. In addition to seven- and nine-course tasting menus, and a water menu with 29 selections, there's also a cheese cart. ",
-            'rate' => 'three Michelin stars',
+            'rate' => '3 stars',
             'country_id' => 2,
         ]);
         $LaPergola->images()->createMany([
@@ -192,7 +192,7 @@ class RestaurantSeeder extends Seeder
             The great food spoke for itself, but customers also marveled at the huge portions available at reasonable prices.
             Each dining experience was enhanced by the long lineup of cocktails spilling over the edge of enormous glasses, and a wine list featuring great value and a strong selection of varieties from Italy and the rest of the world.
             The Upper West Side could not get enough, and Carmine’s became the New York institution it is to this day. ",
-            'rate' => '4.5 out of 5',
+            'rate' => '4 stars',
             'country_id' => 3,
         ]);
         $CarminesItalian->images()->createMany([
@@ -222,7 +222,7 @@ class RestaurantSeeder extends Seeder
             It was one of only five restaurants awarded four stars by The New York Times,however it was downgraded to three stars by restaurant critic Pete Wells.
             It is two-star rated by the Michelin Guide.
              In October 2019, Forbes magazine rated Daniel 'top-ranked restaurant in America'.",
-            'rate' => '4.6  out of 5',
+            'rate' => '4 stars',
             'country_id' => 3,
         ]);
         $Daniel->images()->createMany([
@@ -255,7 +255,7 @@ class RestaurantSeeder extends Seeder
             Our knowledgeable staff is happy to recommend the perfect wine to complement your dining selections.
             The energy in GW Fins’ dining room is constantly palpable. 
             The contemporary space is at once relaxed and exhilarating, creating a magnificent dining experience",
-            'rate' => '4.8  out of 5',
+            'rate' => '4 stars',
             'country_id' => 3,
         ]);
         $GWFins->images()->createMany([
@@ -278,7 +278,7 @@ class RestaurantSeeder extends Seeder
             Complemented by signature desserts, an extensive wine list, a vibrant bar and innovative, rich decor true to old-world steakhouses, Halls Chophouse is the latest restaurant offering in the heart of Charleston's Upper King Street design and dining district.
             A traditional American steakhouse with superior service and a knowledgeable staff, Halls Chophouse offers a classic and comfortable dining experience that will entice our guests to visit and enjoy time after time.
             We offer 2 private dining rooms for groups of up to 32 guests each with audio visual capabilities.",
-            'rate' => '4.8 out of 5',
+            'rate' => '4 stars',
             'country_id' => 3,
         ]);
         $HallsChophouse->images()->createMany([
@@ -309,7 +309,7 @@ class RestaurantSeeder extends Seeder
             Free wired internet access is available in the public areas.
             During your stay, stroll in the nearby gardens and visit the snow-peaked mountains.
             Just a short walk away you will find a cinema and shopping complex.",
-            'rate' => '4.3 out of 5',
+            'rate' => '4 stars',
             'country_id' => 4,
         ]);
         $AlFassia->images()->createMany([
@@ -337,7 +337,7 @@ class RestaurantSeeder extends Seeder
             Aside from the main dining area there’s a series of more intimate alcoves, rooms and patios to dine in, as well as a charming roof terrace where you can enjoy an aperitif.
             The menu is resolutely Moroccan – pastilles, tajines and couscous galore – and comes in the shape of a couple of fixed menu options (350dh/400dh), and à la carte.
             Musicians play lively Arabo-Andalucian music nightly.",
-            'rate' => '4.5 out of 5',
+            'rate' => '4 stars',
             'country_id' => 4,
         ]);
         $DarZellij->images()->createMany([
@@ -365,7 +365,7 @@ class RestaurantSeeder extends Seeder
             One of the most impressive qualities of the Royal Mansour is its gastronomic offering.
             The hotel has three restaurants; La Table offers an informal choice for those looking for simplicity.
              La Grande Table Marocaine is a place synonymous with sublime Moroccan flavours that are served in a traditional ambiance, combined with refinedness and flavourful servings.",
-            'rate' => '4.5 out of 5',
+            'rate' => '4 stars',
             'country_id' => 4,
         ]);
         $LaGrandeTableFrançaise->images()->createMany([
@@ -397,7 +397,7 @@ class RestaurantSeeder extends Seeder
             Originally a sub-Saharan slave at the service of privileged families, the dada in time became a cook, nanny and confidante.
             Loved and feared at the same time, she represented the guard of the home and passed on her traditional cuisine.
             Some of these dadas became famous for having a particular dish",
-            'rate' => '4.6 out of 5',
+            'rate' => '4 stars',
             'country_id' => 4,
         ]);
         $LaTablebyMadada->images()->createMany([
@@ -428,7 +428,7 @@ class RestaurantSeeder extends Seeder
             Lunch, Dinner
             FEATURES
             Delivery, Takeout, Seating, Wine and Beer, Accepts Mastercard, Accepts Visa, Digital Payments, Free Wifi, Table Service",
-            'rate' => '4.5 out of 5',
+            'rate' => '4 stars',
             'country_id' => 5,
         ]);
         $AmiciPizzaBurgers->images()->createMany([
@@ -453,7 +453,7 @@ class RestaurantSeeder extends Seeder
             Lunch, Dinner
             FEATURES
             Reservations, Outdoor Seating, Private Dining, Seating, Parking Available, Validated Parking, Highchairs Available, Wheelchair Accessible, Serves Alcohol, Full Bar, Free Wifi, Accepts Credit Cards, Table Service",
-            'rate' => '4.5 out of 5',
+            'rate' => '4 stars',
             'country_id' => 5,
         ]);
         $borgoAgnese->images()->createMany([
@@ -477,7 +477,7 @@ class RestaurantSeeder extends Seeder
             Breakfast, Lunch, Dinner, Drinks
             FEATURES
             Delivery, Takeout, Reservations, Outdoor Seating, Seating, Television, Highchairs Available, Wheelchair Accessible, Serves Alcohol, Wine and Beer, Accepts American Express, Accepts Mastercard, Accepts Visa, Digital Payments, Free Wifi, Accepts Discover, Accepts Credit Cards, Table Service",
-            'rate' => '5 out of 5',
+            'rate' => '5 stars',
             'country_id' => 5,
         ]);
         $bageLounge->images()->createMany([
@@ -501,7 +501,7 @@ class RestaurantSeeder extends Seeder
             Lunch, Dinner, Drinks
             FEATURES
             Gift Cards Available, Reservations, Outdoor Seating, Seating, Parking Available, Highchairs Available, Serves Alcohol, Free Wifi, Accepts Credit Cards, Table Service, Street Parking, Wine and Beer, Digital Payments",
-            'rate' => '4.5 out of 5',
+            'rate' => '4 stars',
             'country_id' => 5,
         ]);
         $LeMarche->images()->createMany([
@@ -518,7 +518,7 @@ class RestaurantSeeder extends Seeder
             'latitude' => '50.085998991930495',
             'details' =>  "The entrance is located in the busy passage between Kžízovnické namesti and Novotného Lávka. Make your way to us and you will find a stylish environment, a quiet private area by the water and friendly staff. Our main goal is to have satisfied customers from tourists, but equally welcome Czech customers with a perfectly prepared meal from fresh and quality ingredients. Customers can also enjoy the atmosphere of the historical part of Prague right on the water on a pontoon with a view of Charles Bridge or in the historical hall of the restaurant. The restaurant serves international and traditional Czech cuisine. In addition to the permanent menu we also prepare seasonally themed dishes. A wide range of hot and cold drinks, delicious coffee and homemade desserts are on offer. All this is complemented by a wide range of Czech and foreign wines, which the staff will be happy to recommend. The wine list is varied with something to suit everyone's palette.
             ",
-            'rate' => '4.2 out of 5',
+            'rate' => '4 stars',
             'country_id' => 5,
         ]);
         $charlesbridgerestaurant->images()->createMany([
@@ -545,7 +545,7 @@ class RestaurantSeeder extends Seeder
             French, European
             FEATURES
             Gift Cards Available, Reservations, Outdoor Seating, Wheelchair Accessible, Serves Alcohol, Accepts Credit Cards, Street Parking, Wine and Beer, BYOB, Non-smoking restaurants",
-            'rate' => '4.5 out of 5',
+            'rate' => '4 stars',
             'country_id' => 6,
         ]);
         $‪AbsintheBistro‬‏->images()->createMany([
@@ -562,7 +562,7 @@ class RestaurantSeeder extends Seeder
             'latitude' => '45.522762901911214',
             'details' =>  "Damas, an upscale Syrian restaurant located on Avenue Van Horne. You will be charmed by the Oriental decor and most impressed by their refined and rich cuisine. This modern but authentic gastronomy will make your mouth water with all their specialties starting from the fattouche, the appetizing mouth-melting lamb leg to the cherry kebab. The blend of aromas and the tasting of the delicious preparations will make the experience worthwhile.
             ",
-            'rate' => '4.5 out of 5',
+            'rate' => '4 stars',
             'country_id' => 6,
         ]);
         $Damas->images()->createMany([
@@ -578,7 +578,7 @@ class RestaurantSeeder extends Seeder
             'longtiude' => '-79.87719586864458',
             'latitude' => '43.51815076217271',
             'details' =>  "Goodfellas is a fully licensed restaurant concept that specializes in the preparation of authentic Neapolitan-style wood oven pizza, salad, and Italian inspired dishes. Our traditional home made recipes are created with a rustic Italian 'backyard' flavour only found south of Rome. More than just a pizza, Goodfellas it's an exceptional food experience to be shared with family or friends. Whether it's a quick lunch or an evening out, Goodfellas will romance you with our exclusive Italian wines and dishes that made southern Italy infamous",
-            'rate' => '4.5 out of 5',
+            'rate' => '4 stars',
             'country_id' => 6,
         ]);
         $goodfellasWoodOvenPizza->images()->createMany([
@@ -602,7 +602,7 @@ class RestaurantSeeder extends Seeder
             Bar, Pub, Brew Pub, Fusion
             FEATURES
             Reservations, Outdoor Seating, Seating, Serves Alcohol, Full Bar, Free Wifi, Accepts Credit Cards, Table Service, Wine and Beer, Digital Payments",
-            'rate' => '4.5 out of 5',
+            'rate' => '4 stars',
             'country_id' => 6,
         ]);
         $saintHoublonqQartierLatin->images()->createMany([
@@ -618,7 +618,7 @@ class RestaurantSeeder extends Seeder
             'longtiude' => '-79.36754292262324',
             'latitude' => '43.66302436827946',
             'details' =>  "In the heart of Cabbagetown, this local favorite offers the choice of an array of classic dishes for lunch and dinner - burger, po' boy, steak frites, fajitas and Burritos, pastas and popular pub grub, and of course an amazing Craft Beer Selection!. And weekend brunch offers both egg and savory options. Nightly entertainment includes Trivia Night on Wednesday, live music on Thursdays, and Sunday Jazz.",
-            'rate' => '4.5 out of 5',
+            'rate' => '4 stars',
             'country_id' => 6,
         ]);
         $theTiltedDogPubKitchen->images()->createMany([
@@ -629,6 +629,86 @@ class RestaurantSeeder extends Seeder
             ['file_name' => "The Tilted Dog Pub _ Kitchen5.jpg"],
         ]);
         // eof Canada
-
+        //egypt
+        $sobhykaber = Restaurant::create([
+            'name' => "Sobhy Kaber‬‏",
+            'longtiude' => '30.070230',
+            'latitude' => '31.233932',
+            'details' =>  "In the heart of Cabbagetown, this local favorite offers the choice of an array of classic dishes for lunch and dinner - burger, po' boy, steak frites, fajitas and Burritos, pastas and popular pub grub, and of course an amazing Craft Beer Selection!. And weekend brunch offers both egg and savory options. Nightly entertainment includes Trivia Night on Wednesday, live music on Thursdays, and Sunday Jazz.",
+            'rate' => '4 stars',
+            'country_id' => 7,
+        ]);
+        $sobhykaber->images()->createMany([
+            ['file_name' => "sobhy1.jpg"],
+            ['file_name' => "sobhy2.jpg"],
+            ['file_name' => "sobhy3.jpg"],
+            ['file_name' => "sobhy4.jpg"],
+          
+        ]);
+        $tahrirkoshar = Restaurant::create([
+            'name' => "Koshary El-Tahrir‬‏",
+            'longtiude' => '30.066829',
+            'latitude' => '31.336244',
+            'details' =>  "This restaurant is considered by many Cairenes to be the place to come for Egypt’s famous, quasi-­national dish, koshari. Busy and buzzy, it’s worth the wait, queues and crowds particularly at weekends.",
+            'rate' => '4 stars',
+            'country_id' => 7,
+        ]);
+        $tahrirkoshar->images()->createMany([
+            ['file_name' => "kosharytahrir.jpg"],
+            ['file_name' => "kosharytahrir2.jpg"],
+            ['file_name' => "kosharytahrir1.jpg"],
+           
+          
+        ]);
+        $citadel = Restaurant::create([
+            'name' => "Citadel View Restaurant‬‏",
+            'longtiude' => '30.037574',
+            'latitude' => '31.263280',
+            'details' =>  "Aptly named, the Citadel View is a pseudo-Fatimid palace that boasts gorgeous views over the Al Azhar’s formal gardens, the Citadel and Old Cairo from the restaurant terraces and café. Food is French-influenced but specialises in typical with Egyptian-style grilled meat fests. At weekends, there’s a popular open buffet. Lantern-lit and intimate it’s a good place for dinner à deux, or during the day, a cool and tranquil lunch.",
+            'rate' => '3 stars',
+            'country_id' => 7,
+        ]);
+        $citadel->images()->createMany([
+            ['file_name' => "citadel1.jpeg"],
+            ['file_name' => "citadel2.jpg"],
+            ['file_name' => "citadel3.jpg"],
+            ['file_name' => "citadel4.jpg"],
+            ['file_name' => "citadel5.jpg"],
+            ['file_name' => "citadel6.jpg"],
+            ['file_name' => "citadel7.jpg"],
+            
+        ]);
+        $samakmak = Restaurant::create([
+            'name' => "Samakmak Restaurant‬‏",
+            'longtiude' => '30.065702',
+            'latitude' => '31.201142',
+            'details' =>  "Owned by an Alexandrine former belly dancer, this restaurant is best known for its range of fish and seafood (including calamari, clams and crab) and for its imaginative way of preparing them. Cosy and intimate, it also serves delicious bread, mezze, salads and rice accompaniments.",
+            'rate' => '4 stars',
+            'country_id' => 7,
+        ]);
+        $samakmak->images()->createMany([
+            ['file_name' => "samakamk1.jpeg"],
+            ['file_name' => "samakamk2.jpg"],
+            ['file_name' => "samakamk3.jpg"],
+            ['file_name' => "samakamk4.jpg"],
+            ['file_name' => "samakamk5.jpg"],
+            ['file_name' => "samakamk6.jpg"],
+         
+        ]);
+        $Prince = Restaurant::create([
+            'name' => "Kebdet El Prince",
+            'longtiude' => '30.080667',
+            'latitude' => '31.219264',
+            'details' =>  "There’s a lot of local love for Kebdet El Prince, and Culture Trip reckons it’s safe to call it Cairo’s favourite restaurant, given the rhapsodies it inspires. Step into this homely, lively joint and it’s easy to see why. Expect a traditional menu of authentic Egyptian comfort food just like grandma used to make (if you happen to have an Egyptian grandma), including molokhia (jute leaf or Egyptian spinach) served hot from the pot at your table, sujuk sausage and grilled liver – all of it delicious, and all of it in large portions. Top tip: come with an appetite. You’ll need it. Recommended by local insiders Yasmin Doweda and Monia Hamdy",
+            'rate' => '4 stars',
+            'country_id' => 7,
+        ]);
+        $Prince->images()->createMany([
+            ['file_name' => "Prince1.jpeg"],
+            ['file_name' => "Prince2.jpg"],
+            ['file_name' => "Prince3.jpg"],
+            ['file_name' => "Prince4.jpg"],
+           
+        ]);
     }
 }
