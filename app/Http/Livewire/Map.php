@@ -7,7 +7,7 @@ use Livewire\Component;
 class Map extends Component
 {
 
-    protected $listeners = ['resultsAreFound'];
+    protected $listeners = ['resultsAreFound' , 'setUserLocationToTrue'];
 
     public $longtiude;
     public $latitude;
@@ -29,6 +29,12 @@ class Map extends Component
     public $destination;
     public $results;
 
+    public $currentUserLocation;
+
+    public function setUserLocationToTrue($location)
+    {
+        $this->currentUserLocation = $location;
+    }
 
     // when we create a route its either from a hotel to any location  (in the country page) so the user choses both locations
     public function createRoute()
@@ -36,6 +42,10 @@ class Map extends Component
         if ($this->mapType !== 'country' && $this->mapType !== 'hotel') {
             $this->endPos=trim($this->destination->longtiude).','.trim($this->destination->latitude);
             // dd($this->endPos);
+        }
+        if ($this->currentUserLocation) {
+            $this->emit('createRoute',['startPos'=> $this->currentUserLocation , 'endPos'=>$this->endPos]);
+            return;
         }
         // \dd($this->hotelLocation);
         $this->emit('createRoute',['startPos'=> $this->hotelLocation , 'endPos'=>$this->endPos]);
