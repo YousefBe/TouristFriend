@@ -9,6 +9,8 @@ use App\Models\Comment;
 use App\Models\Post;
 use App\Models\Vote;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class PostsController extends Controller
 {
@@ -74,6 +76,7 @@ class PostsController extends Controller
         ]);
         $channels=Channel::find($request->input('channel'));
         DB::update('update channels set postsNumber = ?+1 where id = ?', [$channels->postsNumber,$request->input('channel')]);
+
         return redirect('/blog')
             ->with('message', 'Your post has been added!');
     }}
@@ -170,6 +173,13 @@ class PostsController extends Controller
         $user->downVote($post);
         $post->update(['vote'=>-1]);
         return back();
+    }
+    public function getChannel($id){
+        $channel = Channel::find($id);
+        return view("blog/channels",compact('channel'))
+        ->with('Votedposts', Post::orderBy('vote', 'ASC')->get())
+        ->with('posts', Post::orderBy('updated_at', 'DESC')->get())
+        ->with('channels',Channel::all());
 
     }
     public static function commentCounterUp($id)
