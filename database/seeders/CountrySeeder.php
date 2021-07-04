@@ -208,5 +208,49 @@ class CountrySeeder extends Seeder
             ['file_name' => "Canada3.jpg"],
             ['file_name' => "Canada4.jpg"],
         ]);
+        $Egypt = Country::create([
+            'name' => 'Egypt',
+            'longtiude' =>  "30.8025",
+            'latitude' => "26.8206",
+            'weather' => "The Egyptian summer is hot and dry in most of the country, and humid in the Delta and along the Mediterranean Coast. In recent years the humidity has spread to Cairo, and the city swelters in August! Winter is mild with some rain, but usually, it is bright, sunny days with cold nights.
+
+            During the summertime, sun protection is the most important single consideration for an Egypt trip, especially for the fair-skinned. Wearing a  sunhat is essential. Cheap, and pure cotton, sunhats are made locally and available everywhere. Travel clothing should be light and comfortable, 100% cotton clothing is the best and dependable shoes are a must! The climate of Egypt is characterized by a hot season from May to October and a cool season from October to May. Extreme temperatures during both seasons are moderated by the prevailing northern winds.",
+            'contnent' => 'Africa',
+            'details' => "Egypt, country located in the northeastern corner of Africa. Egypt’s heartland, the Nile River valley and delta, was the home of one of the principal civilizations of the ancient Middle East and, like Mesopotamia farther east, was the site of one of the world’s earliest urban and literate societies. Pharaonic Egypt thrived for some 3,000 years through a series of native dynasties that were interspersed with brief periods of foreign rule. After Alexander the Great conquered the region in 323 BCE, urban Egypt became an integral part of the Hellenistic world. Under the Greek Ptolemaic dynasty, an advanced literate society thrived in the city of Alexandria, but what is now Egypt was conquered by the Romans in 30 BCE. It remained part of the Roman Republic and Empire and then part of Rome’s successor state, the Byzantine Empire, until its conquest by Arab Muslim armies in 639–642 CE.",
+            'currency' => 'Egyptian pound',
+            'population' => '100.4 million',
+            'budget' => 'avarage (278$) per week',
+            'budget_flag' => 'low',
+            'weather_flag' => 'moderate',
+            'known_for' => 'Tourist Attractions'
+        ]);
+        $Egypt->images()->createMany([
+            ['file_name' => "egypt1.jpg"],
+            ['file_name' => "egypt2.jpg"],
+            ['file_name' => "egypt3.jpg"],
+            ['file_name' => "egypt4.jpg"],
+            ['file_name' => "egypt5.jpg"],
+            ['file_name' => "egypt6.jpg"],
+            ['file_name' => "egypt7.jpg"],
+            ['file_name' => "egypt8.jpg"],
+            ['file_name' => "egypt9.jpg"],
+            ['file_name' => "egypt10.jpg"],
+            ['file_name' => "egypt11.jpeg"],
+            ['file_name' => "egypt12.jpg"],
+            ['file_name' => "egypt13.jpg"],
+            ['file_name' => "egypt14.jpg"],
+            ['file_name' => "egypt15.jpg"],
+            ['file_name' => "egypt16.jpg"],
+            ['file_name' => "egypt17.jpg"],
+            ['file_name' => "egypt18.jpg"],
+            ['file_name' => "egypt19.jpg"],
+            ['file_name' => "egypt20.png"],
+            ['file_name' => "egypt21.jpg"],
+            ['file_name' => "egypt22.jpg"],
+            ['file_name' => "egypt23.jpg"],
+            ['file_name' => "egypt24.jpg"],
+            ['file_name' => "egypt25.jpg"],
+            ['file_name' => "egypt26.jpg"],
+        ]);
     }
 }
