@@ -40,28 +40,28 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center ">
+  <header id="header" class="fixed-top d-flex align-items-center " style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <div class="container d-flex justify-content-between align-items-center">
 
       <div class="logo">
        
         <a href="{{ route('home') }}" class="flex items-center ml-3">
             <img src="{{ url('/images/icons8-tourist-backpack-64.png') }}" alt="" class="w-12">
-            <span class="text-base uppercase font-bold ">TouristFriend</span>
+            <span class="text-base uppercase font-bold " style="color:black">TouristFriend</span>
         </a>
       </div>
 
-      <nav id="navbar" class="navbar">
+      <nav id="navbar" class="navbar" >
         <ul>
         @livewire('search-component')
 
-                <a href="{{ route('home') }}" class=" mr-6  p-3 text-base font-bold uppercase ">
+                <a href="{{ route('home') }}" class=" mr-6  p-3 text-base font-bold uppercase " style="color:black">
                     {{ __('Home') }}
                 </a>
-                <a href="/blog" class=" mr-6  p-3  text-base font-bold uppercase  ">
+                <a href="/blog" class=" mr-6  p-3  text-base font-bold uppercase  " style="color:black">
                     {{ __('Blog') }}
                 </a>
-                <li class="nav-img"><img style="width: 20px; " class="img-profile rounded-circle" src="{{ asset('storage/Users/' . Auth::user()->userImage()) }}"> {{ Auth::user()->name }}</li>  
+                <li class="nav-img" style="color:black"><img style="width: 20px; " class="img-profile rounded-circle" src="{{ asset('storage/Users/' . Auth::user()->userImage()) }}"> {{ Auth::user()->name }}</li>  
           
         <i class="bi bi-list mobile-nav-toggle"></i>
         
