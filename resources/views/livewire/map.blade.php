@@ -7,7 +7,7 @@
             <select class="form-select mt-1 appearance-none mr-2  w-2/3" wire:model="hotelLocation">
                 <option value="">choose your hotel</option>
                 @foreach ($hotels as $hotel)
-                    <option value="{{ trim($hotel->longtiude) . ',' . trim($hotel->latitude) }}">
+                    <option value="{{trim($hotel->longtiude) . ',' . trim($hotel->latitude) }}">
                         {{ $hotel->name }}</option>
                 @endforeach
             </select>
@@ -18,14 +18,17 @@
                 <select class="form-select mt-1 appearance-none mr-2 w-2/3" wire:model="endPos">
                     <option value="">to point</option>
                     @foreach ($restaurants as $restaurant)
-                        <option value="{{ $restaurant->longtiude . ',' . $restaurant->latitude }}">
+                        <option value="{{ trim($restaurant->longtiude) . ',' . trim($restaurant->latitude) }}">
                             {{ $restaurant->name }}</option>
                     @endforeach
                     @foreach ($POIS as $poi)
-                        <option value="{{ $poi->longtiude . ',' . $poi->latitude }}">{{ $poi->name }}</option>
+                        <option value="{{ trim($poi->longtiude) . ',' . trim($poi->latitude) }}">{{ $poi->name }}</option>
                     @endforeach
                     @foreach ($cities as $city)
-                        <option value="{{ $city->longtiude . ',' . $city->latitude }}">{{ $city->name }}</option>
+                        <option value="{{ trim($city->longtiude) . ',' . trim($city->latitude) }}">{{ $city->name }}</option>
+                    @endforeach
+                    @foreach ($hotels as $hotel)
+                        <option value="{{ trim($hotel->longtiude) . ',' . trim($hotel->latitude) }}">{{ $hotel->name }}</option>
                     @endforeach
                 </select>
             </div>
@@ -84,7 +87,8 @@
                     },
                     trackUserLocation: true,
                 }).on('geolocate', (res) => {
-                    console.log(res);
+                    // console.log(res.coords);
+                    Livewire.emit('setUserLocationToTrue' ,`${res.coords.longitude+','+res.coords.latitude}`);
                 })
             );
 

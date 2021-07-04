@@ -1,5 +1,7 @@
+
 @extends('layouts.blog')
 @section('content')
+
   <main id="main">
 
     <!-- ======= Contact Section ======= -->

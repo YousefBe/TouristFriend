@@ -492,5 +492,132 @@ class CitySeeder extends Seeder
             ['file_name' => "Montreal6.jpg"],
             ['file_name' => "Montreal7.jpg"],
         ]);
+        $Cairo   = City::create([
+            'name' => 'Cairo',
+            'longtiude' => '31.2357',
+            'latitude' => '30.0444',
+            'weather' => 'Cairo has only two seasons: approximately eight months of summer and four months of winter. 
+            In the hottest of the summer months—June, July, and August—the average daily maximum temperature is 95 °F (35 °C), and the average daily minimum is 70 °F (21 °C). 
+            The summer temperature has reached as high as 117 °F (47 °C). During winter the strong Tropic of Cancer sun makes for warm, dry days, but nights are cool and humid, often freshened by breezes from the Nile. 
+            The average daily maximum temperature in January–February is 67 °F (19 °C), and the average daily minimum is 47 °F (8.5 °C).',
+            'details' => 'Cairo (ؓالقاهرة al-Qāhirah) is the capital of Egypt and, with a total population in excess of 16 million people, one of the largest cities in both Africa and the Middle East (the regions which it conveniently straddles). 
+            It is also the 19th largest city in the world, and among the worlds most densely populated cities.
+            On the Nile river, Cairo is famous for its own history, preserved in the fabulous medieval Islamic city and Coptic sites in Old Cairo. 
+            The Egyptian Museum in the centre of town is a must see, with its countless Acient Egyptian artefacts, as is shopping at the Khan al-Khalili bazaar. 
+            No trip to Cairo would be complete, for example, without a visit to the Giza Pyramids, and to the nearby Saqqara Pyramid Complex, where visitors will see Egypts first step pyramid built by the architect Imhotep for the third dynasty Pharaoh, Djoser.
+            Cairo evening view from the Tower of Cairo 
+            Though firmly attached to the past, Cairo is also home to a vibrant modern society. The Midan Tahrir area situated in downtown Cairo area, built in the 19th century under the rule of Khedive Ismail, has strived to be a "Paris on the Nile".
+            There also are a number of more modern suburbs including Maadi and Heliopolis, while Zamalek is a quiet area on Gezira Island, with upmarket shopping. 
+            Cairo is best in the fall or spring, when the weather is not so hot. A felucca ride on the Nile is a good way to escape from the busy city, as is a visit to Al-Azhar Park.
+            Since the revolution in 2011, the tourists have fled Cairo to a large extent. This has created an opportunity for unique experiences of Cairo and Egypts cultural treasures without the crowds. 
+            Finding yourself alone inside a pyramid is now a real possibility. Prices are also lower.',
+            'country_id' => 7,
+        ]);
+        $Cairo->images()->createMany([
+            ['file_name' => "cairo1.jpg"],
+            ['file_name' => "cairo2.jpg"],
+            ['file_name' => "cairo3.jpg"],
+            ['file_name' => "cairo4.jpg"],
+            ['file_name' => "cairo5.jpg"],
+            ['file_name' => "cairo6.jpg"],
+            ['file_name' => "cairo7.jpg"],
+            ['file_name' => "cairo8.jpg"],
+            ['file_name' => "cairo9.jpg"],
+            ['file_name' => "cairo10.jpg"],
+            ['file_name' => "cairo11.jpg"],
+            ['file_name' => "cairo12.png"],
+            ['file_name' => "cairo13.jpg"],
+            ['file_name' => "cairo14.png"],
+            ['file_name' => "cairo15.jpg"],
+        ]);
+        $sharm   = City::create([
+            'name' => 'Sharm El-Shiekh',
+            'longtiude' => '34.3618',
+            'latitude' => '27.9654',
+            'weather' => 'In winter, the temperatures are very mild, and the sky is usually clear. The rains are very rare also in this season. 
+            Every now and then, a bit of cold air can arrive, and can lower the night temperature below 10 °C (50 °F), from December to February and more rarely in March.
+            Spring is pleasantly warm at the beginning, in March, and it becomes hot already in April, when the weather is similar to the Mediterranean summer, while by May, the heat is already intense.
+            Summer, from mid-May to September, is really hot, with blazing sunshine. It is true that the air is usually dry, especially on hotter days, 
+            but the heat is intense, and the temperature exceeds quite often 40 °C (104 °F), with peaks of 45 °C (113 °F).
+            Autumn, in October and November, is hot and sunny; sometimes, the heat is still intense in early October, then the temperature gradually decreases.
+            ',
+            'details' => 'With sunshine and warm waters all year round, Sharm El Sheikh is the closest destination to Europe where you can soak up sun, dive amazing corals reefs, and enjoy the sea any time you need a break from routine. 
+            The climate is lovely and dry all year long with temperatures ranging between 20Â° and 25Â° C in the winter months, whereas in summer the temperatures go up a little reaching highs of 30 to 35Â° C. 
+            Sharm El Sheikh boasts the widest array of fun, exciting and even crazy water and extreme sports: besides diving, snorkeling, sailing, wind and kite-surfing, you can even try sky diving or parachuting from a helicopter on your next holiday in Sharm El Sheikh.
+            Moreover, from Sharm El Sheikh, you can easily book trips and safaris into the nearby Sinai desert and discover the amazing St Catherine Monastery, or the majestic Sinai Mountains. You can also head to Sharm for a wellness and pampering holiday; the town is home to Egypt is most famous and professional Spas in Egypt.
+            Add to that endless nights spent at local bars, nightclubs and beaches dancing the night away or the magic of an existing safari into the mountainous Sinai desert landscape and you will know why Sharm is ranked among the best vacation destinations in the world. 
+            Sharm El Sheikh has it all to make your holiday an unforgettable experience. Sharm El Sheikh is located on the Gulf of Aqaba, about 300 km from Suez and 19 km from Ras Mohammed National Park. Inside Sharm, Naama Bay is where the action is to be found whereas the Old Town is where you should head for your daily shopping and souvenirs.
+            If you are in the market for some serenity Hadaba (near Ras Um Sid) would be your choice, here you find calm hotels and resorts. To explore the Ras Mohammed National Park and Nabq Protectorate, or to go on diving and snorkelling trips head down to the marina or to one of the town docking ports.',
+            'country_id' => 7,
+        ]);
+        $sharm->images()->createMany([
+            ['file_name' => "sharm (1).jpeg"],
+            ['file_name' => "sharm (2).jpg"],
+            ['file_name' => "sharm (3).jpg"],
+            ['file_name' => "sharm (4).jpg"],
+            ['file_name' => "sharm (5).jpg"],
+            ['file_name' => "sharm (6).jpg"],
+            ['file_name' => "sharm (7).jpg"],
+            ['file_name' => "sharm (8).jpg"],
+            ['file_name' => "sharm (9).jpg"],
+            ['file_name' => "sharm (10).jpg"],
+            ['file_name' => "sharm (11).jpg"],
+            ['file_name' => "sharm (12).jpg"],
+            ['file_name' => "sharm (13).jpg"],
+            ['file_name' => "sharm (14).jpg"],
+            ['file_name' => "sharm (15).jpg"],
+            ['file_name' => "sharm (16).jpg"],
+            ['file_name' => "sharm (17).jpg"],
+            ['file_name' => "sharm (18).jpg"],
+            ['file_name' => "sharm (19).jpg"],
+            ['file_name' => "sharm (20).jpg"],
+            ['file_name' => "sharm (21).jpg"],
+            ['file_name' => "sharm (22).jpg"],
+            ['file_name' => "sharm (23).jpg"],
+            ['file_name' => "sharm (24).png"],
+        ]);
+        $luxor   = City::create([
+            'name' => 'Luxor',
+            'longtiude' => '32.6396',
+            'latitude' => '25.6872',
+            'weather' => 'ILuxor has a desert climate. Temperatures soar May–Sep. Dec–Apr is warm, dry and the peak travel time.
+            ',
+            'details' => 'Luxor is often called the world’s greatest open-air museum, but that comes nowhere near describing this extraordinary place. 
+            Nothing in the world compares to the scale and grandeur of the monuments that have survived from ancient Thebes.
+            
+            The setting is breathtakingly beautiful, the Nile flowing between the modern city and west-bank necropolis, backed by the enigmatic Theban escarpment.
+            Scattered across the landscape is an embarrassment of riches, from the temples of Karnak and Luxor in the east to the many tombs and temples on the west bank.
+            
+            Thebes’ wealth and power, legendary in antiquity, began to lure Western travellers from the end of the 18th century. 
+            Depending on the political situation, today’s traveller might be alone at the sights, or be surrounded by coachloads of tourists from around the world. 
+            Whichever it is, a little planning will help you get the most from the magic of Thebes.',
+            'country_id' => 7,
+        ]);
+        $luxor->images()->createMany([
+            ['file_name' => "luxor (1).jpg"],
+            ['file_name' => "luxor (2).jpg"],
+            ['file_name' => "luxor (3).jpg"],
+            ['file_name' => "luxor (4).jpg"],
+            ['file_name' => "luxor (5).jpg"],
+            ['file_name' => "luxor (6).jpg"],
+            ['file_name' => "luxor (7).jpg"],
+            ['file_name' => "luxor (8).jpg"],
+            ['file_name' => "luxor (9).jpg"],
+            ['file_name' => "luxor (10).jpg"],
+            ['file_name' => "luxor (11).jpg"],
+            ['file_name' => "luxor (12).jpg"],
+            ['file_name' => "luxor (13).jpg"],
+            ['file_name' => "luxor (14).jpg"],
+            ['file_name' => "luxor (15).jpg"],
+            ['file_name' => "luxor (16).jpg"],
+            ['file_name' => "luxor (17).jpg"],
+            ['file_name' => "luxor (18).jpg"],
+            ['file_name' => "luxor (19).jpg"],
+            ['file_name' => "luxor (20).jpg"],
+            ['file_name' => "luxor (21).jpg"],
+            ['file_name' => "luxor (22).jpg"],
+            ['file_name' => "luxor (23).jpg"],
+            ['file_name' => "luxor (24).jpg"],
+        ]);
     }
 }

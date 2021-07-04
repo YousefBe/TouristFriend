@@ -25,7 +25,7 @@
         <div class="row">
 
           <div class="col-lg-8 entries">
-          @foreach ($Votedposts as $post) 
+          @foreach ($Vposts as $post) 
             <article class="entry">
 
               <div class="entry-img">
@@ -95,7 +95,9 @@ echo substr_replace(" $post->body ", " .....", 90);
               <div class="sidebar-item categories">
               @foreach ($channels as $channel)
                 <ul>
+
                   <li><a href="{{route('Channel',$channel->id)}}">{{ $channel->name }} <span>{{$channel->postsNumber}}</span></a></li>
+
                   
                 </ul>
                 @endforeach

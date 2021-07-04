@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Channel;
+use Illuminate\Support\Facades\DB;
+
 use App\Models\Comment;
 use App\Models\Post;
 use App\Models\Vote;
@@ -26,7 +28,7 @@ class PostsController extends Controller
         $channels = Channel::all();
         return view('blog.blog_index', compact('channels'))
             ->with('posts', Post::orderBy('updated_at', 'DESC')->get())
-            ->with('Votedposts', Post::orderBy('vote', 'ASC')->get());
+            ->with('Vposts', Post::orderBy('vote', 'desc')->get());
     }
 
     /**
@@ -92,7 +94,9 @@ class PostsController extends Controller
 
         return view('/blog/post')
             ->with('post', $post)
-            ->with('posts', Post::orderBy('updated_at', 'DESC')->get());
+            ->with('posts', Post::orderBy('updated_at', 'DESC')->get())
+            ->with('Vposts', Post::orderBy('vote', 'DESC')->get());
+            
     }
 
     /**
@@ -178,4 +182,15 @@ class PostsController extends Controller
         ->with('channels',Channel::all());
 
     }
+    public static function commentCounterUp($id)
+    {
+        $post = Post::find($id);
+        $post->update(['commentsNum'=>+1]);
+    }
+    public static function commentCounterDown($id)
+    {
+        $post = Post::find($id);
+        $post->update(['commentsNum'=>-1]);
+    }
+
 }

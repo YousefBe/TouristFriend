@@ -104,7 +104,7 @@ Route::middleware(['auth', 'role:administrator'])->group(function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth' , 'userHasDetails'])->name('dashboard');
 
 //Comment Route
 Route::post('/comment/store', 'App\Http\Controllers\CommentController@store')->name('comment.add');
