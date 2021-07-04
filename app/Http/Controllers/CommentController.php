@@ -5,6 +5,8 @@ use App\Models\Comment;
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\CommentRequest;
+use Illuminate\Support\Facades\DB;
+
 
 
 use Illuminate\Http\Request;
@@ -25,7 +27,7 @@ class CommentController extends Controller
         $post = Post::find($request->post_id);
 
         $post->comments()->save($comment);
-        $post->update(['comments'=>+1]);
+         DB::update('update posts set commentsNum = ?+1 where id = ?', [$post->commentsNum,$request->post_id]);
 
         return back();
     }
@@ -33,9 +35,9 @@ class CommentController extends Controller
     {
         $comment =Comment::find($id);
         $post = Post::find($comment->post_id);
-        $post->update(['comments'=>-1]);
     
         $comment->delete();
+        DB::update('update posts set commentsNum = ?-1 where id = ?', [$post->commentsNum,$comment->post_id]);
 
         return back();
 

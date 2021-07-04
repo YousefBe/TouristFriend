@@ -26,6 +26,7 @@
 
           <div class="col-lg-8 entries">
           @foreach ($Votedposts as $post) 
+          @if($post->channel_id == $channel->id)
             <article class="entry">
 
               <div class="entry-img">
@@ -79,6 +80,7 @@ echo substr_replace(" $post->body ", " .....", 90);
               </div>
 
             </article><!-- End blog entry -->
+            @endif
             @endforeach
             
             
@@ -90,7 +92,19 @@ echo substr_replace(" $post->body ", " .....", 90);
             <div class="sidebar">
 
               
-              
+              <div class="sidebar-item search-form">
+              @if (Auth::check())
+                        <div>
+                            <br>
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                                <a href="/blog/create">
+                                    Create Post
+                                </a>
+                            </button>
+                        </div>
+                    @endif
+              </div><!-- End sidebar search formn-->
+
               <h3 class="sidebar-title">Categories</h3>
               <div class="sidebar-item categories">
               @foreach ($channels as $channel)
@@ -117,28 +131,7 @@ echo substr_replace(" $post->body ", " .....", 90);
 
               </div><!-- End sidebar recent posts-->
 
-              <div class="sidebar-item search-form">
-              @if (Auth::check())
-                        <div>
-                            <br>
-                            <button style="border-radius: 12px;background-color: #e6ffe6; /* Green */
-  border: none;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 0px 0px;
-  cursor: pointer;" >
-                                <a href="/blog/create">
-                                    Create Post
-                                </a>
-                            </button>
-                        </div>
-                    @endif
-              </div><!-- End sidebar search formn-->
-
+   
             </div><!-- End sidebar -->
 
           </div><!-- End blog sidebar -->

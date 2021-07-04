@@ -56,16 +56,25 @@
                 <i class="bi bi-folder"></i>
                 <ul class="cats">
                   <li><a href="#">{{ $post->channel->name }}</a></li>
-                </ul>
+                </ul> <br><br>
 
                                 <!-- vote settings -->
-                <div class="inline-flex">
-                            <form method="post" action="{{ route('upvote', $post->id) }}">
+                <div class="inline-flex" style="display:inline;">
+                            <form method="post"style="display:inline;" action="{{ route('upvote', $post->id) }}">
                                 @csrf
 
 
                     <button type="submit"
-                        class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
+                    style="border-radius: 12px;background-color: #255269; /* Green */
+border: none;
+color: white;
+padding: 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 0px 0px;
+cursor: pointer;">
                         Upvote
                     </button>
                     </form>
@@ -76,10 +85,19 @@
                         </span>
                     <!-- <form method="post" action=""> -->
 
-                            <form method="post" action="{{ route('downvote', $post->id) }}">
+                            <form style="display:inline;" method="post" action="{{ route('downvote', $post->id) }}">
                                 @csrf
-                    <button type="submit"
-                        class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
+                    <button  type="submit"
+                    style="border-radius: 12px;background-color:#255269; /* Green */
+border: none;
+color: white;
+padding: 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 0px 0px;
+cursor: pointer;">
                         Downvote
                     </button>
                     </form>
@@ -122,7 +140,16 @@
                     <form action="{{ route('comment.delete', $comment->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button class="text-red-500 pl-3" type="submit">
+                        <button style="border-radius: 12px;background-color: #255269; /* Green */
+border: none;
+color: white;
+padding: 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 0px 0px;
+cursor: pointer;"  type="submit">
                             Delete Comment
                         </button>
                     </form>
@@ -159,20 +186,7 @@
             <div class="sidebar">
 
               
-              <div class="sidebar-item ">
-                <form action="">
-                @if (Auth::check())
-                        <div>
-                            <br>
-                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                                <a href="/blog/create">
-                                    Create Post
-                                </a>
-                            </button>
-                        </div>
-                    @endif
-                </form>
-              </div><!-- End sidebar search formn-->
+              
 
               
 
@@ -191,6 +205,32 @@
                 
               </div><!-- End sidebar recent posts-->
 
+              
+
+              
+<div class="sidebar-item ">
+  <form action="">
+  @if (Auth::check())
+          <div>
+              <br>
+              <button style="border-radius: 12px;background-color: #e6ffe6; /* Green */
+border: none;
+color: white;
+padding: 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 0px 0px;
+cursor: pointer;" >
+                  <a href="/blog/create">
+                      Create Post
+                  </a>
+              </button>
+          </div>
+      @endif
+  </form>
+</div><!-- End sidebar search formn-->
               
             </div><!-- End sidebar -->
 
