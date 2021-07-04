@@ -687,7 +687,7 @@ class RestaurantSeeder extends Seeder
             'country_id' => 7,
         ]);
         $samakmak->images()->createMany([
-            ['file_name' => "samakamk1.jpeg"],
+            ['file_name' => "samakamk1.jpg"],
             ['file_name' => "samakamk2.jpg"],
             ['file_name' => "samakamk3.jpg"],
             ['file_name' => "samakamk4.jpg"],
@@ -704,7 +704,7 @@ class RestaurantSeeder extends Seeder
             'country_id' => 7,
         ]);
         $Prince->images()->createMany([
-            ['file_name' => "Prince1.jpeg"],
+            ['file_name' => "Prince1.jpg"],
             ['file_name' => "Prince2.jpg"],
             ['file_name' => "Prince3.jpg"],
             ['file_name' => "Prince4.jpg"],

@@ -753,7 +753,7 @@ class HotelSeeder extends Seeder
             'price' => "starts with 1,151 pound per night",
             'country_id' => 7,
         ]);
-        $firmont->images()->createMany([
+        $fairmont->images()->createMany([
             ['file_name' => "fairmont (1).jpg"],
             ['file_name' => "fairmont (2).jpg"],
             ['file_name' => "fairmont (3).jpg"],

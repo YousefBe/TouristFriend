@@ -17,14 +17,14 @@ class ContactUs extends Component
     protected $rules = [
         'name' => 'required|min:5',
         'email' => 'required|email',
-        'phone' => 'required|integer',
+        'phone' => 'required|numeric',
         'message' => 'required|min:20',
     ];
     public function contactFormSubmit()
     {
         $data =$this->validate();
-        Mail::to('test@test.com')->send(new ContactMail($data));
         $this->clearData();
+        Mail::to('test@test.com')->send(new ContactMail($data));
     }
     private function clearData()
     {

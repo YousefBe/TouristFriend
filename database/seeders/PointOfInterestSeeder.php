@@ -694,8 +694,8 @@ class PointOfInterestSeeder extends Seeder
         //egypt
         $pyramids = PointOfInterest::create([
             'name' => "Pyramids",
-            'longtiude' => "31.134230",
-            'latitude' => "29.979397",
+            'longtiude' => "29.979397",
+            'latitude' => "31.134230",
             'details' => " The last surviving of the Seven Wonders of the Ancient World, the Pyramids of Giza are one of the world's most recognizable landmarks.
             Built as tombs for the mighty Pharaohs and guarded by the enigmatic Sphinx, Giza's pyramid complex has awed travelers down through the ages and had archaeologists 
             (and a fair few conspiracy theorists) scratching their heads over how they were built for centuries.Today, these megalithic memorials to dead kings are still as wondrous a sight as they ever were.
@@ -746,37 +746,9 @@ class PointOfInterestSeeder extends Seeder
             Upstairs is the golden glory of King Tutankhamen and the fascinating royal mummies exhibits, but really every corner you turn here is home to some wonderful piece of ancient art or statuary that would form a highlight of any other museum.",
             'cost' => "foreIGNER:
                 Adult: EGP 200\ Student: EGP 100
-                Photography:
-                (Personal Use –without Flash): EGP 50
-                Video:
-                (Personal Use –without Flash): EGP 300
-                
-                
                 EGYPTIANS\ ARABS:
-                Adult: EGP 30\ Student: EGP 10
-                Photography:
-                (Personal Use –without Flash): EGP 20
-                Video:
-                (Personal Use –without Flash): EGP 300
-                
-                Free entrance for children under 6 years ",
-            'working_hours' => "Thursday 
-            9AM–5PM
-            5:30–9PM
-            Friday
-            9AM–4PM
-            Saturday
-            9AM–5PM
-            Sunday
-            9AM–5PM
-            5:30–9PM
-            Monday
-            9AM–5PM
-            Tuesday
-            9AM–5PM
-            Wednesday
-            9AM–5PM
-            ",
+                Adult: EGP 30\ Student: EGP 10s",
+            'working_hours' => "Everyday from 9AM To 5PM",
             'country_id' => 7,
         ]);
         $egyptianmuseum->images()->createMany([
@@ -795,11 +767,10 @@ class PointOfInterestSeeder extends Seeder
             
         ]);
         $karnak = PointOfInterest::create([
-            'name' => "Pyramids",
-            'longtiude' => " 32.657284",
+            'name' => "karnak",
+            'longtiude' => "32.657284",
             'latitude' => "25.719479",
             'details' => " Famed for the Valley of the Kings, Karnak Temple, and the Memorial Temple of Hatshepsut, the Nile-side town of Luxor in Upper Egypt has a glut of tourist attractions. This is ancient Thebes, power base of the New Kingdom pharaohs, and home to more sights than most can see on one visit.
-
             While the East Bank brims with vibrant souk action, the quieter West Bank is home to a bundle of tombs and temples that has been called the biggest open-air museum in the world. 
             Spend a few days here exploring the colorful wall art of the tombs and gazing in awe at the colossal columns in the temples, and you'll see why Luxor continues to fascinate historians and archaeologists.",
             'cost' => "150 egp --> 240 egp for sound and light show ",
@@ -840,8 +811,6 @@ class PointOfInterestSeeder extends Seeder
             ['file_name' => "bluehole3.jpg"],
             ['file_name' => "bluehole4.jpg"],
             ['file_name' => "bluehole5.jpg"],
-          
-          
         ]);
  
     }

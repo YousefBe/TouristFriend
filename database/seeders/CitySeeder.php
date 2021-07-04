@@ -494,8 +494,8 @@ class CitySeeder extends Seeder
         ]);
         $Cairo   = City::create([
             'name' => 'Cairo',
-            'longtiude' => '31.2357° E',
-            'latitude' => '30.0444° N',
+            'longtiude' => '31.2357',
+            'latitude' => '30.0444',
             'weather' => 'Cairo has only two seasons: approximately eight months of summer and four months of winter. 
             In the hottest of the summer months—June, July, and August—the average daily maximum temperature is 95 °F (35 °C), and the average daily minimum is 70 °F (21 °C). 
             The summer temperature has reached as high as 117 °F (47 °C). During winter the strong Tropic of Cancer sun makes for warm, dry days, but nights are cool and humid, often freshened by breezes from the Nile. 
@@ -532,8 +532,8 @@ class CitySeeder extends Seeder
         ]);
         $sharm   = City::create([
             'name' => 'Sharm El-Shiekh',
-            'longtiude' => '34.3618° E',
-            'latitude' => '27.9654° N',
+            'longtiude' => '34.3618',
+            'latitude' => '27.9654',
             'weather' => 'In winter, the temperatures are very mild, and the sky is usually clear. The rains are very rare also in this season. 
             Every now and then, a bit of cold air can arrive, and can lower the night temperature below 10 °C (50 °F), from December to February and more rarely in March.
             Spring is pleasantly warm at the beginning, in March, and it becomes hot already in April, when the weather is similar to the Mediterranean summer, while by May, the heat is already intense.
@@ -578,8 +578,8 @@ class CitySeeder extends Seeder
         ]);
         $luxor   = City::create([
             'name' => 'Luxor',
-            'longtiude' => '32.6396° E ',
-            'latitude' => '25.6872° N',
+            'longtiude' => '32.6396',
+            'latitude' => '25.6872',
             'weather' => 'ILuxor has a desert climate. Temperatures soar May–Sep. Dec–Apr is warm, dry and the peak travel time.
             ',
             'details' => 'Luxor is often called the world’s greatest open-air museum, but that comes nowhere near describing this extraordinary place. 
