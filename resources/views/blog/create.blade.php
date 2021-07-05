@@ -66,7 +66,16 @@
                 <div class="error-message"></div>
                 
               </div>
-              <div class="text-center"><button type="submit">Submit Post</button></div>
+              <div class="text-center"><button type="submit" style="border-radius: 12px;background-color:#255269; 
+border: none;
+color: white;
+padding: 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 0px 0px;
+cursor: pointer;">Submit Post</button></div>
             </form>
           </div>
 

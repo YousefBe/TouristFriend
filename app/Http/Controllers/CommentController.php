@@ -6,7 +6,7 @@ use App\Models\Post;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\CommentRequest;
-use Illuminate\Support\Facades\DB;
+
 
 use Illuminate\Http\Request;
 

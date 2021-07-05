@@ -57,19 +57,29 @@ echo substr_replace(" $post->body ", " .....", 90);
                   <a href="{{ URL::to('blog/'. $post->id) }}">Read More</a>
                 </div>
                 @if (isset(Auth::user()->id) && Auth::user()->id == $post->user->id)
-                                    <span class="float-left">
+                                    <span class="float-left" style="display:inline">
                                         <a href="{{ URL::to('blog/'. $post->id) .'/edit'}}"
-                                            class="teext-gray-700 italic hover:text-gray-900 pb-1 border-b-2">
+                                            class="teext-gray-700 italic hover:text-gray-900 pb-1 border-b-2" style="display:inline">
                                             Edit
                                         </a>
                                         <form
                                             action="/blog/{{ $post->id }}"
-                                            method="POST">
+                                            method="POST" style="display:inline">
                                             @csrf
                                             @method('delete')
                                             <button
-                                                class="text-red-500 pl-3"
-                                                type="submit">
+                                                
+                                                type="submit" style="border-radius: 12px;background-color: #eb3d4c; 
+border: none;
+color: white;
+padding:5px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 0px 0px;
+cursor: pointer;
+display:inline">
                                                 Delete
                                             </button>
                                         </form>
@@ -92,18 +102,7 @@ echo substr_replace(" $post->body ", " .....", 90);
             <div class="sidebar">
 
               
-              <div class="sidebar-item search-form">
-              @if (Auth::check())
-                        <div>
-                            <br>
-                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                                <a href="/blog/create">
-                                    Create Post
-                                </a>
-                            </button>
-                        </div>
-                    @endif
-              </div><!-- End sidebar search formn-->
+              
 
               <h3 class="sidebar-title">Categories</h3>
               <div class="sidebar-item categories">
@@ -130,7 +129,27 @@ echo substr_replace(" $post->body ", " .....", 90);
                
 
               </div><!-- End sidebar recent posts-->
-
+              <div class="sidebar-item search-form">
+              @if (Auth::check())
+                        <div>
+                            <br>
+                            <button style="border-radius: 12px;background-color: #e6ffe6; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 0px;
+  cursor: pointer;" >
+                                <a href="/blog/create">
+                                    Create Post
+                                </a>
+                            </button>
+                        </div>
+                    @endif
+              </div><!-- End sidebar search formn-->
    
             </div><!-- End sidebar -->
 

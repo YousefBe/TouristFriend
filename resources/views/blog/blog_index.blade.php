@@ -40,7 +40,7 @@
                 <ul>
                   <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{{ URL::to('blog/'. $post->id) }}">{{ $post->user->name }}</a></li>
                   <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{{ URL::to('blog/'. $post->id) }}"><time datetime="2020-01-01">{{ date('jS M Y', strtotime($post->updated_at)) }}</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="{{ URL::to('blog/'. $post->id) }}">{{$post->commentsNum}}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="{{ URL::to('blog/'. $post->id) }}">{{$post->commentsNum}} Comments</a></li>
                 </ul>
               </div>
 
@@ -56,19 +56,29 @@ echo substr_replace(" $post->body ", " .....", 90);
                   <a href="{{ URL::to('blog/'. $post->id) }}">Read More</a>
                 </div>
                 @if (isset(Auth::user()->id) && Auth::user()->id == $post->user->id)
-                                    <span class="float-left">
+                                    <span class="float-left" style="display:inline">
                                         <a href="{{ URL::to('blog/'. $post->id) .'/edit'}}"
-                                            class="teext-gray-700 italic hover:text-gray-900 pb-1 border-b-2">
+                                            class="teext-gray-700 italic hover:text-gray-900 pb-1 border-b-2" style="display:inline">
                                             Edit
                                         </a>
                                         <form
                                             action="/blog/{{ $post->id }}"
-                                            method="POST">
+                                            method="POST" style="display:inline">
                                             @csrf
                                             @method('delete')
                                             <button
-                                                class="text-red-500 pl-3"
-                                                type="submit">
+                                                
+                                                type="submit" style="border-radius: 12px;background-color: #eb3d4c; 
+border: none;
+color: white;
+padding:5px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 0px 0px;
+cursor: pointer;
+display:inline">
                                                 Delete
                                             </button>
                                         </form>

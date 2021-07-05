@@ -41,7 +41,7 @@
                 <ul>
                   <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#">{{ $post->user->name }}</a></li>
                   <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="2020-01-01">{{ date('jS M Y h: i A', strtotime($post->updated_at)) }}</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="#">12 Comments</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="{{ URL::to('blog/'. $post->id) }}">{{$post->commentsNum}} Comments</a></li>
                 </ul>
               </div>
 
@@ -65,7 +65,7 @@
 
 
                     <button type="submit"
-                    style="border-radius: 12px;background-color: #255269; /* Green */
+                    style="border-radius: 12px;background-color: #255269; 
 border: none;
 color: white;
 padding: 10px;
@@ -88,7 +88,7 @@ cursor: pointer;">
                             <form style="display:inline;" method="post" action="{{ route('downvote', $post->id) }}">
                                 @csrf
                     <button  type="submit"
-                    style="border-radius: 12px;background-color:#255269; /* Green */
+                    style="border-radius: 12px;background-color:#255269; 
 border: none;
 color: white;
 padding: 10px;
