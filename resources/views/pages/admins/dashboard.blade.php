@@ -12,7 +12,7 @@
             @livewire('admins.countries')
         </x-slot>
     @endif
-    @if (request()->is('admin/blog'))
+    @if (request()->is('admin/manage-channels'))
         <x-slot name="content">
             @livewire('admins.blog')
         </x-slot>

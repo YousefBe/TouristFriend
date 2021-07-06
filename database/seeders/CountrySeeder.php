@@ -42,7 +42,7 @@ class CountrySeeder extends Seeder
         // italy
         $italy = Country::create([
             'name' => 'italy',
-            'longtiude' =>  " 12.646361",
+            'longtiude' =>  "12.646361",
             'latitude' => "42.504154",
             'weather' => "In Italy, there are different types of climate: mild continental in the Po Valley, cold in the Alps, Mediterranean on coasts and islands, and finally, cool and windy in the Apennines. July and August are the hottest and sunniest months, except in the Alpine region, where thunderstorms in the afternoon are quite frequent. ",
             'details' => 'Italy has a rich cultural heritage and it is a heaven for the tourists who love art.

@@ -19,6 +19,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/shared.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+
     @yield('styles')
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

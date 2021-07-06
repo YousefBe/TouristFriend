@@ -26,8 +26,8 @@
                 <tbody>
                     <tr class="border-b relative">
                         <th class="text-left p-3 px-5">Name</th>
-                        <th class="text-left p-3 px-5 hidden sm:table-cell">Email</th>
-                        <th class="text-left p-3 px-5 hidden sm:table-cell">Role</th>
+                        <th class="text-left p-3 px-5 hidden lg:table-cell">Email</th>
+                        <th class="text-left p-3 px-5 hidden lg:table-cell">Role</th>
                         <th class=""></th>
                     </tr>
                     @foreach ($users as $user)
@@ -41,11 +41,11 @@
                                 </p>
                             </td>
                             <td class="p-3 px-5  w-64">
-                                <p class=" text-base tracking-wider font-semibold hidden sm:table-cell">
+                                <p class=" text-base tracking-wider font-semibold hidden lg:table-cell">
                                     {{ $user->email }}</p>
                             </td>
                             <td class="p-3 px-5">
-                                <p class=" text-base tracking-wider font-semibold hidden sm:table-cell">
+                                <p class=" text-base tracking-wider font-semibold hidden lg:table-cell">
                                     @if ($user->roles()->first())
                                         {{ $user->roles()->first()->display_name }}
                                     @else
@@ -93,7 +93,7 @@
                                 <x-modal class="mb-2">
                                     <x-slot name="trigger">
                                         <button type="button"
-                                            class="text-sm bg-yellow-500 hover:bg-yellow-700 text-white py-1 px-2 rounded w-24 focus:outline-none focus:shadow-outline ml-2"><i
+                                            class="text-sm bg-yellow-500 hover:bg-yellow-700 text-white py-1 px-2 rounded w-24 focus:outline-none focus:shadow-outline sm:ml-2"><i
                                                 class="fas fa-eye mt-1 mr-1"></i>View</button>
                                     </x-slot>
                                     <x-slot name="title">View User</x-slot>

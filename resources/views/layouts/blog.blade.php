@@ -46,7 +46,7 @@
       <div class="logo">
        
         <a href="{{ route('home') }}" class="flex items-center ml-3">
-            <img src="{{ url('/images/icons8-tourist-backpack-64.png') }}" alt="" class="w-12">
+            <img src="{{ asset('favicon.ico') }}" alt="" class="w-12">
             <span class="text-base uppercase font-bold " style="color:black;font-size: 1rem;line-height: 1.5rem;font-weight: 700;margin-right: 1.5rem;padding: 0.75rem;">TouristFriend</span>
         </a>
       </div>

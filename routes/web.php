@@ -19,7 +19,6 @@ use App\Http\Livewire\User\RestaurantsList;
 use App\Models\PointOfInterest as ModelsPointOfInterest;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PostsController;
-use BinshopsBlog\Laravel\Fulltext\Commands\Index;
 
 /*
 |--------------------------------------------------------------------------
@@ -95,9 +94,9 @@ Route::middleware(['auth', 'role:administrator'])->group(function () {
         return view('pages.admins.country', ['id' => $id, 'country' => $country]);
     })->name('admin.country.manage.restaurants');
 
-    route::get('/admin/blog', function () {
+    route::get('/admin/manage-channels', function () {
         return view('pages.admins.dashboard');
-    })->name('admin.blog');
+    })->name('admin.manage-channels');
 });
 
 

@@ -118,7 +118,7 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */
+D     */
     public function update(Request $request, $id)
     {
         $request->validate([
@@ -149,10 +149,11 @@ class PostsController extends Controller
     public function destroy($id)
     {
         $post = Post::find($id);
+        $post->channel->update([
+            'postsNumber'=> $post->channel->postsNumber -1
+        ]);
         $post->delete();
         $channels= Channel::all();
-        DB::update('update channels set postsNumber = ?-1 where id = ?', [$channels->postsNumber,$post->channel_id]);
-
 
         return redirect('blog')
             ->with('message', 'Your Post has been Deleted');

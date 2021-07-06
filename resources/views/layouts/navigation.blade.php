@@ -2,7 +2,7 @@
     {{-- Main NavBar --}}
     <div class="flex items-center  justify-between ">
         <a href="{{ route('home') }}" class="flex items-center ml-3">
-            <img src="{{ url('/images/icons8-tourist-backpack-64.png') }}" alt="" class="w-12">
+            <img src="{{ asset('favicon.ico') }}" alt="" class="w-12">
             <span class="text-base uppercase font-bold ">TouristFriend</span>
         </a>
         <div class="px-4 cursor-pointer ml-auto lg:hidden" id="navToggler" @click="open = !open">
@@ -84,7 +84,7 @@
 
         <div class="Logo w-1/2 mx-auto">
             <a href="/" class="block mb-3 mt-4">
-                <img src="{{ url('/images/icons8-tourist-backpack-64.png') }}" alt="" class=" rounded-md m-auto ">
+                <img src="{{ asset('favicon.ico') }}" alt="" class=" rounded-md m-auto ">
                 <span class=" text-center mt-2 text-sm font-bold    uppercase block m-auto ">TouristFriend</span>
             </a>
         </div>

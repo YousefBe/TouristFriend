@@ -39,7 +39,7 @@
                 @elseif ($type === 'restaurant')
                     <p class=" text-lg font-semibold tracking-wide mb-2">
                         <i class="fas fa-star"></i>
-                        Rate:  {{ $rate }}
+                        Rate: {{ $rate }}
                     </p>
                 @elseif ($type ==='POI')
                     <p class=" text-lg font-semibold tracking-wide mb-2">
@@ -58,7 +58,7 @@
                     <i class="fas fa-info-circle mr-1 sm:mr-4"></i>
                     some details about the {{ $type }}
                 </h3>
-                <p class=" italic  text-justify text-xl font-semibold tracking-wide">{!! $details !!}</p>
+                <p class=" italic  text-justify text-xl font-semibold tracking-wide">{{$details }}</p>
             </div>
             @if ($type === 'country')
                 @livewire('country-feature', ['CountryId' => $object->id , 'type'=>'cities' ])
@@ -75,7 +75,8 @@
         <div class=" lg:col-span-1 mb-12">
             <div class="bg-white h-96 shadow-lg rounded-xl">
                 @livewire('map' , ['longtiude' => $longtiude , 'latitude'=> $latitude ,'mapType'=>$type , 'zoomLevel'
-                => $zoomLevel , 'POIS'=>$POI , 'hotels'=>$hotels , 'restaurants'=>$restaurants , 'destination'=> $object , 'cities'=>$cities 
+                => $zoomLevel , 'POIS'=>$POI , 'hotels'=>$hotels , 'restaurants'=>$restaurants , 'destination'=> $object
+                , 'cities'=>$cities
                 ])
             </div>
             @if ($weather)
